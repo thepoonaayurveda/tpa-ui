@@ -1,73 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #222222;
-  --primary-teal: #049f82;
-  --primary-teal-dark: #008f72;
-  --secondary-gray: #353535;
-  --text-gray: #454545;
-  --light-gray: #f7f7f7;
-  --lighter-gray: #eeeeee;
+@layer base {
+  body {
+    font-family: 'Kumbh Sans', system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--primary-teal);
-  --color-primary-dark: var(--primary-teal-dark);
-  --color-secondary: var(--secondary-gray);
-  --color-gray-text: var(--text-gray);
-  --color-gray-light: var(--light-gray);
-  --color-gray-lighter: var(--lighter-gray);
-  
-  --font-sans: 'Kumbh Sans', system-ui, sans-serif;
-  --font-display: 'Kumbh Sans', system-ui, sans-serif;
-  --font-nav: 'Raleway', system-ui, sans-serif;
-  
-  --radius-lg: 50px;
-  --spacing-button-x: 38px;
-  --spacing-button-y: 20px;
-}
+@layer components {
+  /* Button base styles */
+  .btn {
+    @apply inline-flex items-center justify-center font-medium uppercase tracking-wide transition-all duration-200;
+    border-radius: 50px;
+    padding: 20px 38px;
+    text-decoration: none;
+  }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 1.6;
-}
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-dark;
+  }
 
-/* Button base styles */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-button-y) var(--spacing-button-x);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.025em;
-  transition: all 0.2s ease;
-  text-decoration: none;
-}
-
-.btn-primary {
-  background-color: var(--primary-teal);
-  color: white;
-}
-
-.btn-primary:hover {
-  background-color: var(--primary-teal-dark);
-}
-
-.btn-outline {
-  border: 2px solid var(--primary-teal);
-  color: var(--primary-teal);
-}
-
-.btn-outline:hover {
-  background-color: var(--primary-teal);
-  color: white;
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white;
+  }
 }

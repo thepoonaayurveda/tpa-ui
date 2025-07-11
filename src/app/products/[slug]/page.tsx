@@ -5,6 +5,7 @@ import { ProductGallery } from "@/components/product/ProductGallery";
 import { ProductInfo } from "@/components/product/ProductInfo";
 import { ProductTabs } from "@/components/product/ProductTabs";
 import { RelatedProducts } from "@/components/product/RelatedProducts";
+import { ProductBenefits } from "@/components/product/ProductBenefits";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 
 // Generate static params for better performance
@@ -100,6 +101,7 @@ export default async function ProductPage({
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Hero Section with Product Gallery and Info */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Breadcrumb */}
         <Breadcrumb items={breadcrumbItems} />
@@ -119,17 +121,24 @@ export default async function ProductPage({
             <ProductInfo product={product} />
           </div>
         </div>
-
-        {/* Product Details Tabs */}
-        <div className="mb-16">
-          <ProductTabs product={product} />
-        </div>
-
-        {/* Related Products */}
-        {relatedProducts.length > 0 && (
-          <RelatedProducts products={relatedProducts} />
-        )}
       </div>
+
+      {/* Product Benefits Section */}
+      <ProductBenefits product={product} />
+
+      {/* Product Details Tabs */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <ProductTabs product={product} />
+      </div>
+
+      {/* Related Products */}
+      {relatedProducts.length > 0 && (
+        <div className="bg-gray-light">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <RelatedProducts products={relatedProducts} />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
