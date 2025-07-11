@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { getProductBySlug, getProducts } from "@/lib/woocommerce";
 import { ProductGallery } from "@/components/product/ProductGallery";
-import { ProductInfo } from "@/components/product/ProductInfo";
+import { CompactProductInfo } from "@/components/product/CompactProductInfo";
 import { ProductTabs } from "@/components/product/ProductTabs";
 import { RelatedProducts } from "@/components/product/RelatedProducts";
 import { ProductBenefits } from "@/components/product/ProductBenefits";
@@ -101,28 +101,30 @@ export default async function ProductPage({
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero Section with Product Gallery and Info */}
+      {/* Above the Fold Section - Exact Layout from product_page.png */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Breadcrumb */}
         <Breadcrumb items={breadcrumbItems} />
 
-        {/* Product Details Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          {/* Product Gallery */}
-          <div>
+        {/* Main Product Section - Two Column Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          {/* Left Side - Product Gallery */}
+          <div className="lg:sticky lg:top-8 lg:self-start">
             <ProductGallery
               images={product.images || []}
               productName={product.name}
             />
           </div>
 
-          {/* Product Info */}
-          <div>
-            <ProductInfo product={product} />
+          {/* Right Side - Compact Product Info (Scrollable) */}
+          <div className="lg:max-h-screen">
+            <CompactProductInfo product={product} />
           </div>
         </div>
       </div>
 
+      {/* Below the Fold Content */}
+      
       {/* Product Benefits Section */}
       <ProductBenefits product={product} />
 
