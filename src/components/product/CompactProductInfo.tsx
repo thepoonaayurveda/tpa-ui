@@ -259,14 +259,14 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
           return (
             <div
               key={index}
-              className="group bg-white hover:bg-gray-50 rounded-lg p-3 transition-all duration-300 hover:shadow-md border border-gray-100 hover:border-primary/20"
+              className="group bg-primary/10 rounded-lg p-3 transition-all duration-300 border border-gray-100"
             >
               <div className="flex items-center space-x-3">
-                <div className="flex-shrink-0 w-8 h-8 bg-primary/10 group-hover:bg-primary/20 rounded-lg flex items-center justify-center transition-colors">
+                <div className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center transition-colors">
                   <IconComponent className="h-4 w-4 text-primary" />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h4 className="font-medium text-foreground text-sm group-hover:text-primary transition-colors">
+                  <h4 className="font-medium text-foreground text-sm transition-colors">
                     {benefit.name}
                   </h4>
                 </div>
@@ -279,33 +279,32 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
       {/* Consumption Instructions */}
       <div className="rounded-lg p-4">
         <h3 className="font-semibold text-foreground mb-4 flex items-center">
-          <ClockIcon className="h-4 w-4 mr-2 text-blue-600" />
           How to Use
         </h3>
         <div className="grid grid-cols-3 gap-4">
           <div className="text-center">
-            <div className="w-10 h-10 bg-blue-100 rounded-lg mx-auto mb-2 flex items-center justify-center">
-              <SparklesIcon className="h-5 w-5 text-blue-600" />
+            <div className="w-10 h-10 rounded-lg mx-auto mb-2 flex items-center justify-center">
+              <SparklesIcon className="h-5 w-5" />
             </div>
-            <div className="text-xs font-medium text-blue-800 mb-1">Dosage</div>
+            <div className="text-xs font-medium mb-1">Dosage</div>
             <div className="text-xs text-gray-600 leading-tight">
               {instructions.dosage}
             </div>
           </div>
           <div className="text-center">
-            <div className="w-10 h-10 bg-blue-100 rounded-lg mx-auto mb-2 flex items-center justify-center">
-              <ClockIcon className="h-5 w-5 text-blue-600" />
+            <div className="w-10 h-10 rounded-lg mx-auto mb-2 flex items-center justify-center">
+              <ClockIcon className="h-5 w-5" />
             </div>
-            <div className="text-xs font-medium text-blue-800 mb-1">Timing</div>
+            <div className="text-xs font-medium mb-1">Timing</div>
             <div className="text-xs text-gray-600 leading-tight">
               {instructions.timing}
             </div>
           </div>
           <div className="text-center">
-            <div className="w-10 h-10 bg-blue-100 rounded-lg mx-auto mb-2 flex items-center justify-center">
-              <CalendarDaysIcon className="h-5 w-5 text-blue-600" />
+            <div className="w-10 h-10 rounded-lg mx-auto mb-2 flex items-center justify-center">
+              <CalendarDaysIcon className="h-5 w-5" />
             </div>
-            <div className="text-xs font-medium text-blue-800 mb-1">
+            <div className="text-xs font-medium mb-1">
               Duration
             </div>
             <div className="text-xs text-gray-600 leading-tight">
@@ -363,7 +362,6 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
           className="w-full flex items-center justify-between text-left"
         >
           <h3 className="font-semibold text-foreground flex items-center">
-            <ShieldCheckIcon className="h-4 w-4 mr-2 text-amber-600" />
             Ideal For
           </h3>
           {showWhoShouldTake ? (
@@ -391,7 +389,6 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
           className="w-full flex items-center justify-between text-left"
         >
           <h3 className="font-semibold text-foreground flex items-center">
-            <BeakerIcon className="h-4 w-4 mr-2 text-purple-600" />
             Ingredients
           </h3>
           {showIngredients ? (
@@ -424,7 +421,6 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
           className="w-full flex items-center justify-between text-left"
         >
           <h3 className="font-semibold text-foreground flex items-center">
-            <TruckIcon className="h-4 w-4 mr-2 text-green-600" />
             Delivery Info
           </h3>
           {showDeliveryInfo ? (
