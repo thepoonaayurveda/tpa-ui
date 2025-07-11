@@ -11,6 +11,8 @@ import {
   BeakerIcon,
   CalendarDaysIcon,
   SparklesIcon,
+  ChevronDownIcon,
+  ChevronUpIcon,
 } from "@heroicons/react/24/outline";
 import { StarIcon as StarIconSolid } from "@heroicons/react/24/solid";
 import { ClientOnly } from "@/components/ui/ClientOnly";
@@ -66,6 +68,9 @@ function AddToCartButton({
 
 export function CompactProductInfo({ product }: CompactProductInfoProps) {
   const [quantity, setQuantity] = useState(1);
+  const [showWhoShouldTake, setShowWhoShouldTake] = useState(false);
+  const [showIngredients, setShowIngredients] = useState(false);
+  const [showDeliveryInfo, setShowDeliveryInfo] = useState(false);
 
   const isOnSale = product.on_sale;
   const inStock = product.stock_status === "instock";
@@ -118,7 +123,12 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
   const getConsumptionInstructions = (productName: string) => {
     const name = productName.toLowerCase();
 
-    if (name.includes("uristo") || name.includes("allergenie") || name.includes("endurio") || name.includes("vario")) {
+    if (
+      name.includes("uristo") ||
+      name.includes("allergenie") ||
+      name.includes("endurio") ||
+      name.includes("vario")
+    ) {
       return {
         dosage: "1-2 tablets twice daily",
         timing: "After meals with warm water",
@@ -278,43 +288,29 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
               <SparklesIcon className="h-5 w-5 text-blue-600" />
             </div>
             <div className="text-xs font-medium text-blue-800 mb-1">Dosage</div>
-            <div className="text-xs text-gray-600 leading-tight">{instructions.dosage}</div>
+            <div className="text-xs text-gray-600 leading-tight">
+              {instructions.dosage}
+            </div>
           </div>
           <div className="text-center">
             <div className="w-10 h-10 bg-blue-100 rounded-lg mx-auto mb-2 flex items-center justify-center">
               <ClockIcon className="h-5 w-5 text-blue-600" />
             </div>
             <div className="text-xs font-medium text-blue-800 mb-1">Timing</div>
-            <div className="text-xs text-gray-600 leading-tight">{instructions.timing}</div>
+            <div className="text-xs text-gray-600 leading-tight">
+              {instructions.timing}
+            </div>
           </div>
           <div className="text-center">
             <div className="w-10 h-10 bg-blue-100 rounded-lg mx-auto mb-2 flex items-center justify-center">
               <CalendarDaysIcon className="h-5 w-5 text-blue-600" />
             </div>
-            <div className="text-xs font-medium text-blue-800 mb-1">Duration</div>
-            <div className="text-xs text-gray-600 leading-tight">{instructions.duration}</div>
-          </div>
-        </div>
-      </div>
-
-      {/* Delivery Instructions */}
-      <div className="bg-green-50 rounded-lg p-4">
-        <h3 className="font-semibold text-foreground mb-3 flex items-center">
-          <TruckIcon className="h-4 w-4 mr-2 text-green-600" />
-          Delivery Info
-        </h3>
-        <div className="space-y-2 text-sm text-gray-text">
-          <div className="flex items-center">
-            <CheckIcon className="h-3 w-3 mr-2 text-green-600" />
-            Free shipping on orders above ₹500
-          </div>
-          <div className="flex items-center">
-            <CheckIcon className="h-3 w-3 mr-2 text-green-600" />
-            Delivery in 3-7 business days
-          </div>
-          <div className="flex items-center">
-            <CheckIcon className="h-3 w-3 mr-2 text-green-600" />
-            Cash on delivery available
+            <div className="text-xs font-medium text-blue-800 mb-1">
+              Duration
+            </div>
+            <div className="text-xs text-gray-600 leading-tight">
+              {instructions.duration}
+            </div>
           </div>
         </div>
       </div>
@@ -356,58 +352,107 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
             >
               <AddToCartButton product={product} quantity={quantity} />
             </ClientOnly>
-
-            <div className="flex space-x-3">
-              <button className="flex-1 border border-primary text-primary py-2 px-4 rounded-lg hover:bg-primary hover:text-white transition-colors text-sm font-medium">
-                Buy Now
-              </button>
-              <button className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
-                <HeartIcon className="h-5 w-5 text-gray-600" />
-              </button>
-            </div>
           </div>
         </div>
       )}
 
       {/* Who Should Take It */}
-      <div className="bg-amber-50 rounded-lg p-4">
-        <h3 className="font-semibold text-foreground mb-3 flex items-center">
-          <ShieldCheckIcon className="h-4 w-4 mr-2 text-amber-600" />
-          Ideal For
-        </h3>
-        <div className="grid grid-cols-1 gap-2">
-          {whoShouldTake.map((item, index) => (
-            <div key={index} className="flex items-center text-sm">
-              <CheckIcon className="h-3 w-3 mr-2 text-amber-600 flex-shrink-0" />
-              <span className="text-gray-text">{item}</span>
-            </div>
-          ))}
-        </div>
+      <div className="bg-white border border-gray-200 rounded-lg p-4">
+        <button
+          onClick={() => setShowWhoShouldTake(!showWhoShouldTake)}
+          className="w-full flex items-center justify-between text-left"
+        >
+          <h3 className="font-semibold text-foreground flex items-center">
+            <ShieldCheckIcon className="h-4 w-4 mr-2 text-amber-600" />
+            Ideal For
+          </h3>
+          {showWhoShouldTake ? (
+            <ChevronUpIcon className="h-4 w-4 text-amber-600" />
+          ) : (
+            <ChevronDownIcon className="h-4 w-4 text-amber-600" />
+          )}
+        </button>
+        {showWhoShouldTake && (
+          <div className="grid grid-cols-1 gap-2 mt-3">
+            {whoShouldTake.map((item, index) => (
+              <div key={index} className="flex items-center text-sm">
+                <CheckIcon className="h-3 w-3 mr-2 text-amber-600 flex-shrink-0" />
+                <span className="text-gray-text">{item}</span>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Ingredients Table */}
       <div className="bg-white border border-gray-200 rounded-lg p-4">
-        <h3 className="font-semibold text-foreground mb-3 flex items-center">
-          <BeakerIcon className="h-4 w-4 mr-2 text-purple-600" />
-          Ingredients
-        </h3>
-        <div className="space-y-2">
-          {ingredients.map((ingredient, index) => (
-            <div
-              key={index}
-              className="flex justify-between items-center py-1 border-b border-gray-100 last:border-b-0"
-            >
-              <span className="text-sm text-gray-text">{ingredient.name}</span>
-              <span className="text-sm font-medium text-foreground">
-                {ingredient.amount}
-              </span>
+        <button
+          onClick={() => setShowIngredients(!showIngredients)}
+          className="w-full flex items-center justify-between text-left"
+        >
+          <h3 className="font-semibold text-foreground flex items-center">
+            <BeakerIcon className="h-4 w-4 mr-2 text-purple-600" />
+            Ingredients
+          </h3>
+          {showIngredients ? (
+            <ChevronUpIcon className="h-4 w-4 text-purple-600" />
+          ) : (
+            <ChevronDownIcon className="h-4 w-4 text-purple-600" />
+          )}
+        </button>
+        {showIngredients && (
+          <div className="space-y-2 mt-3">
+            {ingredients.map((ingredient, index) => (
+              <div
+                key={index}
+                className="flex justify-between items-center py-1 border-b border-gray-100 last:border-b-0"
+              >
+                <span className="text-sm text-gray-text">{ingredient.name}</span>
+                <span className="text-sm font-medium text-foreground">
+                  {ingredient.amount}
+                </span>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      {/* Delivery Instructions */}
+      <div className="bg-white border border-gray-200 rounded-lg p-4">
+        <button
+          onClick={() => setShowDeliveryInfo(!showDeliveryInfo)}
+          className="w-full flex items-center justify-between text-left"
+        >
+          <h3 className="font-semibold text-foreground flex items-center">
+            <TruckIcon className="h-4 w-4 mr-2 text-green-600" />
+            Delivery Info
+          </h3>
+          {showDeliveryInfo ? (
+            <ChevronUpIcon className="h-4 w-4 text-green-600" />
+          ) : (
+            <ChevronDownIcon className="h-4 w-4 text-green-600" />
+          )}
+        </button>
+        {showDeliveryInfo && (
+          <div className="space-y-2 text-sm text-gray-text mt-3">
+            <div className="flex items-center">
+              <CheckIcon className="h-3 w-3 mr-2 text-green-600" />
+              Free shipping on orders above ₹500
             </div>
-          ))}
-        </div>
+            <div className="flex items-center">
+              <CheckIcon className="h-3 w-3 mr-2 text-green-600" />
+              Delivery in 3-7 business days
+            </div>
+            <div className="flex items-center">
+              <CheckIcon className="h-3 w-3 mr-2 text-green-600" />
+              Cash on delivery available
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Trust Badges */}
-      <div className="bg-gray-50 rounded-lg p-4">
+      {/* <div className="bg-gray-50 rounded-lg p-4">
         <div className="grid grid-cols-2 gap-3 text-xs">
           <div className="flex items-center space-x-2">
             <CheckIcon className="h-3 w-3 text-primary" />
@@ -426,7 +471,7 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
             <span className="text-gray-text">Safe & Effective</span>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
