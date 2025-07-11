@@ -107,9 +107,9 @@ export function ProductTabs({ product }: ProductTabsProps) {
               className={({ selected }) =>
                 cn(
                   "w-full rounded-lg py-2.5 text-sm font-medium leading-5",
-                  "ring-white ring-opacity-60 ring-offset-2 ring-offset-green-400 focus:outline-none focus:ring-2",
+                  "ring-white ring-opacity-60 ring-offset-2 ring-offset-primary focus:outline-none focus:ring-2",
                   selected
-                    ? "bg-white text-green-700 shadow"
+                    ? "bg-white text-primary-700 shadow"
                     : "text-gray-600 hover:bg-white/[0.12] hover:text-gray-800"
                 )
               }
@@ -146,7 +146,7 @@ export function ProductTabs({ product }: ProductTabsProps) {
                       <h4 className="font-semibold text-gray-900 mb-2">
                         Therapeutic Usage:
                       </h4>
-                      <p className="italic text-green-700">
+                      <p className="italic text-primary-700">
                         {therapeuticUsage}
                       </p>
                     </div>
@@ -171,7 +171,7 @@ export function ProductTabs({ product }: ProductTabsProps) {
                   <ul className="space-y-2">
                     {ingredients.ingredients.map((ingredient, index) => (
                       <li key={index} className="flex items-start">
-                        <span className="inline-block w-2 h-2 bg-green-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        <span className="inline-block w-2 h-2 bg-primary00 rounded-full mt-2 mr-3 flex-shrink-0"></span>
                         <span className="text-gray-700">{ingredient}</span>
                       </li>
                     ))}
@@ -193,34 +193,34 @@ export function ProductTabs({ product }: ProductTabsProps) {
               {/* Herb Benefits */}
               {product.name.toLowerCase().includes("sports edge") && (
                 <div className="mt-6 bg-green-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-green-900 mb-3">
+                  <h4 className="font-semibold text-primary-900 mb-3">
                     Key Herb Benefits:
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                     <div>
-                      <strong className="text-green-800">Ashwagandha:</strong>
-                      <span className="text-green-700">
+                      <strong className="text-primary-800">Ashwagandha:</strong>
+                      <span className="text-primary-700">
                         {" "}
                         Reduces fatigue, enhances physical strength and recovery
                       </span>
                     </div>
                     <div>
-                      <strong className="text-green-800">Bala:</strong>
-                      <span className="text-green-700">
+                      <strong className="text-primary-800">Bala:</strong>
+                      <span className="text-primary-700">
                         {" "}
                         Improves muscle tone and endurance, strengthens joints
                       </span>
                     </div>
                     <div>
-                      <strong className="text-green-800">Shatavari:</strong>
-                      <span className="text-green-700">
+                      <strong className="text-primary-800">Shatavari:</strong>
+                      <span className="text-primary-700">
                         {" "}
                         Supports muscle repair
                       </span>
                     </div>
                     <div>
-                      <strong className="text-green-800">Yashtimadhu:</strong>
-                      <span className="text-green-700">
+                      <strong className="text-primary-800">Yashtimadhu:</strong>
+                      <span className="text-primary-700">
                         {" "}
                         Reduces inflammation, soothes muscles
                       </span>
@@ -325,26 +325,26 @@ export function ProductTabs({ product }: ProductTabsProps) {
               </div>
 
               {/* Quality Assurance */}
-              <div className="border border-green-200 bg-green-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-green-900 mb-3">
+              <div className="border border-primary/200 bg-green-50 p-4 rounded-lg">
+                <h4 className="font-semibold text-primary-900 mb-3">
                   Quality Assurance
                 </h4>
                 <div className="grid grid-cols-2 gap-4 text-sm">
                   <div className="flex items-center space-x-2">
-                    <span className="w-2 h-2 bg-green-600 rounded-full"></span>
-                    <span className="text-green-800">GMP Certified</span>
+                    <span className="w-2 h-2 bg-primary00 rounded-full"></span>
+                    <span className="text-primary-800">GMP Certified</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <span className="w-2 h-2 bg-green-600 rounded-full"></span>
-                    <span className="text-green-800">Lab Tested</span>
+                    <span className="w-2 h-2 bg-primary00 rounded-full"></span>
+                    <span className="text-primary-800">Lab Tested</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <span className="w-2 h-2 bg-green-600 rounded-full"></span>
-                    <span className="text-green-800">Natural Ingredients</span>
+                    <span className="w-2 h-2 bg-primary00 rounded-full"></span>
+                    <span className="text-primary-800">Natural Ingredients</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <span className="w-2 h-2 bg-green-600 rounded-full"></span>
-                    <span className="text-green-800">
+                    <span className="w-2 h-2 bg-primary00 rounded-full"></span>
+                    <span className="text-primary-800">
                       Traditional Formulation
                     </span>
                   </div>

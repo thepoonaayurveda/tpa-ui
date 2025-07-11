@@ -16,7 +16,7 @@ export function RelatedProducts({ products }: RelatedProductsProps) {
         <h2 className="text-2xl font-bold text-gray-900">Related Products</h2>
         <Link
           href="/products"
-          className="text-green-600 hover:text-green-700 font-medium transition-colors"
+          className="text-primary hover:text-primary-dark font-medium transition-colors"
         >
           View All Products →
         </Link>

@@ -152,7 +152,7 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
               onClick={() => setSelectedImageIndex(index)}
               className={`relative aspect-square bg-gray-100 rounded-md overflow-hidden border-2 transition-all duration-200 ${
                 index === selectedImageIndex
-                  ? "border-green-600 shadow-md"
+                  ? "border-primary shadow-md"
                   : "border-transparent hover:border-gray-300"
               }`}
               aria-label={`View image ${index + 1}`}
@@ -165,7 +165,7 @@ export function ProductGallery({ images, productName }: ProductGalleryProps) {
 
               {/* Overlay for selected thumbnail */}
               {index === selectedImageIndex && (
-                <div className="absolute inset-0 bg-green-600/10"></div>
+                <div className="absolute inset-0 bg-primary/10"></div>
               )}
             </button>
           ))}

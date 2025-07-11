@@ -1,26 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #222222;
+  --primary-teal: #049f82;
+  --primary-teal-dark: #008f72;
+  --secondary-gray: #353535;
+  --text-gray: #454545;
+  --light-gray: #f7f7f7;
+  --lighter-gray: #eeeeee;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-primary: var(--primary-teal);
+  --color-primary-dark: var(--primary-teal-dark);
+  --color-secondary: var(--secondary-gray);
+  --color-gray-text: var(--text-gray);
+  --color-gray-light: var(--light-gray);
+  --color-gray-lighter: var(--lighter-gray);
+  
+  --font-sans: 'Kumbh Sans', system-ui, sans-serif;
+  --font-display: 'Kumbh Sans', system-ui, sans-serif;
+  --font-nav: 'Raleway', system-ui, sans-serif;
+  
+  --radius-lg: 50px;
+  --spacing-button-x: 38px;
+  --spacing-button-y: 20px;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Button base styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-button-y) var(--spacing-button-x);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-teal);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-teal-dark);
+}
+
+.btn-outline {
+  border: 2px solid var(--primary-teal);
+  color: var(--primary-teal);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-teal);
+  color: white;
 }

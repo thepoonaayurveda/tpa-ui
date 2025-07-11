@@ -48,13 +48,13 @@ export function ProductCard({ product }: ProductCardProps) {
         <div className="p-4">
           {/* Product Category */}
           {product.categories?.length > 0 && (
-            <p className="text-xs text-green-600 font-medium mb-1 uppercase tracking-wide">
+            <p className="text-xs text-primary font-medium mb-1 uppercase tracking-wide">
               {product.categories[0].name}
             </p>
           )}
 
           {/* Product Name */}
-          <h3 className="font-medium text-gray-900 group-hover:text-green-600 line-clamp-2 mb-2 transition-colors">
+          <h3 className="font-medium text-gray-900 group-hover:text-primary line-clamp-2 mb-2 transition-colors">
             {product.name}
           </h3>
 
@@ -85,7 +85,7 @@ export function ProductCard({ product }: ProductCardProps) {
                 {formatPrice(product.regular_price)}
               </span>
             )}
-            <span className="font-semibold text-green-600">
+            <span className="font-semibold text-primary">
               {formatPrice(product.price)}
             </span>
           </div>
@@ -106,7 +106,7 @@ export function ProductCard({ product }: ProductCardProps) {
           {/* Stock Status */}
           <div className="mt-3">
             {product.stock_status === "instock" ? (
-              <span className="text-xs text-green-600 font-medium">
+              <span className="text-xs text-primary font-medium">
                 In Stock
               </span>
             ) : (

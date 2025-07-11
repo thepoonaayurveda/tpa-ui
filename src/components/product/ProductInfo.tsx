@@ -41,7 +41,7 @@ function AddToCartButton({
     <>
       {showSuccess && (
         <div
-          className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4"
+          className="bg-green-50 border border-primary text-primary-dark px-4 py-3 rounded relative mb-4"
           role="alert"
         >
           <span className="block sm:inline">
@@ -52,7 +52,7 @@ function AddToCartButton({
 
       <button
         onClick={handleAddToCart}
-        className="flex-1 bg-green-600 text-white py-3 px-6 rounded-lg font-medium hover:bg-green-700 transition-colors"
+        className="flex-1 bg-primary text-white py-3 px-6 rounded-lg font-medium hover:bg-primary-dark transition-colors"
       >
         Add to Cart
       </button>
@@ -128,7 +128,7 @@ export function ProductInfo({ product }: ProductInfoProps) {
         </h1>
 
         {product.categories?.length > 0 && (
-          <p className="text-lg text-green-600 font-medium">
+          <p className="text-lg text-primary font-medium">
             {product.categories.map((cat: any) => cat.name).join(", ")}
           </p>
         )}
@@ -161,7 +161,7 @@ export function ProductInfo({ product }: ProductInfoProps) {
             {formatPrice(product.regular_price)}
           </span>
         )}
-        <span className="text-3xl font-bold text-green-600">
+        <span className="text-3xl font-bold text-primary">
           {formatPrice(product.price)}
         </span>
         {isOnSale && product.regular_price && (
@@ -178,8 +178,8 @@ export function ProductInfo({ product }: ProductInfoProps) {
       <div className="flex items-center space-x-2">
         {inStock ? (
           <>
-            <CheckIcon className="h-5 w-5 text-green-600" />
-            <span className="text-green-600 font-medium">In Stock</span>
+            <CheckIcon className="h-5 w-5 text-primary" />
+            <span className="text-primary font-medium">In Stock</span>
             {product.stock_quantity && (
               <span className="text-gray-500 text-sm">
                 ({product.stock_quantity} available)
@@ -201,16 +201,16 @@ export function ProductInfo({ product }: ProductInfoProps) {
 
       {/* Benefits */}
       {benefits.length > 0 && (
-        <div className="bg-green-50 p-6 rounded-lg border border-green-200">
-          <h3 className="font-semibold text-green-900 mb-4 flex items-center">
+        <div className="bg-green-50 p-6 rounded-lg border border-primary/20">
+          <h3 className="font-semibold text-primary-dark mb-4 flex items-center">
             <CheckIcon className="h-5 w-5 mr-2" />
             Key Benefits
           </h3>
           <ul className="space-y-2">
             {benefits.map((benefit, index) => (
               <li key={index} className="flex items-start">
-                <CheckIcon className="h-4 w-4 text-green-600 mr-2 mt-0.5 flex-shrink-0" />
-                <span className="text-green-800">{benefit}</span>
+                <CheckIcon className="h-4 w-4 text-primary mr-2 mt-0.5 flex-shrink-0" />
+                <span className="text-primary-dark">{benefit}</span>
               </li>
             ))}
           </ul>
@@ -277,7 +277,7 @@ export function ProductInfo({ product }: ProductInfoProps) {
                 <span key={cat.id}>
                   <a
                     href={`/products?category=${cat.slug}`}
-                    className="text-green-600 hover:underline"
+                    className="text-primary hover:underline"
                   >
                     {cat.name}
                   </a>
@@ -302,19 +302,19 @@ export function ProductInfo({ product }: ProductInfoProps) {
       <div className="bg-gray-50 p-4 rounded-lg">
         <div className="grid grid-cols-2 gap-4 text-sm">
           <div className="flex items-center space-x-2">
-            <CheckIcon className="h-4 w-4 text-green-600" />
+            <CheckIcon className="h-4 w-4 text-primary" />
             <span className="text-gray-700">Authentic Ayurvedic</span>
           </div>
           <div className="flex items-center space-x-2">
-            <CheckIcon className="h-4 w-4 text-green-600" />
+            <CheckIcon className="h-4 w-4 text-primary" />
             <span className="text-gray-700">Lab Tested</span>
           </div>
           <div className="flex items-center space-x-2">
-            <CheckIcon className="h-4 w-4 text-green-600" />
+            <CheckIcon className="h-4 w-4 text-primary" />
             <span className="text-gray-700">Natural Ingredients</span>
           </div>
           <div className="flex items-center space-x-2">
-            <CheckIcon className="h-4 w-4 text-green-600" />
+            <CheckIcon className="h-4 w-4 text-primary" />
             <span className="text-gray-700">Safe & Effective</span>
           </div>
         </div>

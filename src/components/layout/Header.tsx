@@ -26,11 +26,11 @@ function CartButton() {
   return (
     <button
       onClick={toggleCart}
-      className="relative text-gray-700 hover:text-green-600 transition-colors"
+      className="relative text-gray-text hover:text-primary transition-colors"
     >
       <ShoppingBagIcon className="h-6 w-6" />
       {totalItems > 0 && (
-        <span className="absolute -top-2 -right-2 bg-green-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium">
+        <span className="absolute -top-2 -right-2 bg-primary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-medium">
           {totalItems}
         </span>
       )}
@@ -44,7 +44,7 @@ export function Header() {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       {/* Top announcement bar */}
-      <div className="bg-green-700 text-white py-2 px-4 text-center text-sm">
+      <div className="bg-primary-dark text-white py-2 px-4 text-center text-sm">
         Get Authentic Ayurvedic Treatment Today! | Book FREE Consultation
       </div>
 
@@ -53,7 +53,7 @@ export function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="h-12 w-12 bg-green-600 rounded-full flex items-center justify-center">
+              <div className="h-12 w-12 bg-primary rounded-full flex items-center justify-center">
                 <span className="text-white font-bold text-lg">PA</span>
               </div>
               <div>
@@ -73,7 +73,7 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-700 hover:text-green-600 px-3 py-2 text-sm font-medium transition-colors"
+                className="text-gray-text hover:text-primary px-3 py-2 text-sm font-medium transition-colors font-nav"
               >
                 {item.name}
               </Link>
@@ -83,19 +83,19 @@ export function Header() {
           {/* Right side icons */}
           <div className="flex items-center space-x-4">
             {/* Search */}
-            <button className="text-gray-700 hover:text-green-600 transition-colors">
+            <button className="text-gray-text hover:text-primary transition-colors">
               <MagnifyingGlassIcon className="h-6 w-6" />
             </button>
 
             {/* User Account */}
-            <button className="text-gray-700 hover:text-green-600 transition-colors">
+            <button className="text-gray-text hover:text-primary transition-colors">
               <UserIcon className="h-6 w-6" />
             </button>
 
             {/* Cart - Client Only */}
             <ClientOnly
               fallback={
-                <button className="relative text-gray-700 hover:text-green-600 transition-colors">
+                <button className="relative text-gray-text hover:text-primary transition-colors">
                   <ShoppingBagIcon className="h-6 w-6" />
                 </button>
               }
@@ -105,7 +105,7 @@ export function Header() {
 
             {/* Mobile menu button */}
             <button
-              className="md:hidden text-gray-700 hover:text-green-600 transition-colors"
+              className="md:hidden text-gray-text hover:text-primary transition-colors"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? (
@@ -125,7 +125,7 @@ export function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-gray-700 hover:text-green-600 px-3 py-2 text-base font-medium transition-colors"
+                  className="text-gray-text hover:text-primary px-3 py-2 text-base font-medium transition-colors font-nav"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}

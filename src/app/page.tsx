@@ -13,7 +13,7 @@ export default async function HomePage() {
       <HeroSection />
 
       {/* Mission Section */}
-      <section className="py-16 bg-green-50">
+      <section className="py-16 bg-gray-light">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
           <p className="text-lg text-gray-700 max-w-4xl mx-auto">
@@ -33,17 +33,17 @@ export default async function HomePage() {
       )}
 
       {/* CTA Section */}
-      <section className="py-16 bg-green-600">
+      <section className="py-16 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
             Get Authentic Ayurvedic Treatment Today!
           </h2>
-          <p className="text-xl text-green-100 mb-8">
+          <p className="text-xl text-white/90 mb-8">
             Book your FREE consultation with our Ayurveda experts
           </p>
           <a
             href="/consultation"
-            className="inline-block bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            className="inline-block bg-white text-primary px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Book FREE Consultation
           </a>
