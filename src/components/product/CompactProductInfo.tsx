@@ -9,6 +9,8 @@ import {
   ShieldCheckIcon,
   ClockIcon,
   BeakerIcon,
+  CalendarDaysIcon,
+  SparklesIcon,
 } from "@heroicons/react/24/outline";
 import { StarIcon as StarIconSolid } from "@heroicons/react/24/solid";
 import { ClientOnly } from "@/components/ui/ClientOnly";
@@ -116,7 +118,7 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
   const getConsumptionInstructions = (productName: string) => {
     const name = productName.toLowerCase();
 
-    if (name.includes("tablet")) {
+    if (name.includes("uristo") || name.includes("allergenie") || name.includes("endurio") || name.includes("vario")) {
       return {
         dosage: "1-2 tablets twice daily",
         timing: "After meals with warm water",
@@ -194,7 +196,7 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
         </h1>
 
         {product.categories?.length > 0 && (
-          <p className="text-primary font-medium mb-2">
+          <p className="text-secondary font-medium mb-2">
             {product.categories.map((cat: any) => cat.name).join(", ")}
           </p>
         )}
@@ -265,20 +267,32 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
       </div>
 
       {/* Consumption Instructions */}
-      <div className="bg-blue-50 rounded-lg p-4">
-        <h3 className="font-semibold text-foreground mb-3 flex items-center">
+      <div className="rounded-lg p-4">
+        <h3 className="font-semibold text-foreground mb-4 flex items-center">
           <ClockIcon className="h-4 w-4 mr-2 text-blue-600" />
           How to Use
         </h3>
-        <div className="space-y-2 text-sm">
-          <div>
-            <strong>Dosage:</strong> {instructions.dosage}
+        <div className="grid grid-cols-3 gap-4">
+          <div className="text-center">
+            <div className="w-10 h-10 bg-blue-100 rounded-lg mx-auto mb-2 flex items-center justify-center">
+              <SparklesIcon className="h-5 w-5 text-blue-600" />
+            </div>
+            <div className="text-xs font-medium text-blue-800 mb-1">Dosage</div>
+            <div className="text-xs text-gray-600 leading-tight">{instructions.dosage}</div>
           </div>
-          <div>
-            <strong>Timing:</strong> {instructions.timing}
+          <div className="text-center">
+            <div className="w-10 h-10 bg-blue-100 rounded-lg mx-auto mb-2 flex items-center justify-center">
+              <ClockIcon className="h-5 w-5 text-blue-600" />
+            </div>
+            <div className="text-xs font-medium text-blue-800 mb-1">Timing</div>
+            <div className="text-xs text-gray-600 leading-tight">{instructions.timing}</div>
           </div>
-          <div>
-            <strong>Duration:</strong> {instructions.duration}
+          <div className="text-center">
+            <div className="w-10 h-10 bg-blue-100 rounded-lg mx-auto mb-2 flex items-center justify-center">
+              <CalendarDaysIcon className="h-5 w-5 text-blue-600" />
+            </div>
+            <div className="text-xs font-medium text-blue-800 mb-1">Duration</div>
+            <div className="text-xs text-gray-600 leading-tight">{instructions.duration}</div>
           </div>
         </div>
       </div>
