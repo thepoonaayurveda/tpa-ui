@@ -18,40 +18,40 @@ interface WhyPoonaAyurvedaBestProps {
 export function WhyPoonaAyurvedaBest({ product }: WhyPoonaAyurvedaBestProps) {
   const uniqueSellingPoints = [
     {
-      icon: TrophyIcon,
-      title: "75+ Years of Expertise",
-      description: "Three generations of Ayurvedic practitioners with deep knowledge of traditional formulations",
-      highlight: "Legacy of Excellence"
-    },
-    {
-      icon: BeakerIcon,
-      title: "Scientific Validation",
-      description: "Modern research meets ancient wisdom - all products are clinically tested for safety and efficacy",
-      highlight: "Evidence-Based"
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: "GMP Certified Manufacturing",
-      description: "State-of-the-art facility with international quality standards and rigorous testing protocols",
-      highlight: "Quality Assured"
-    },
-    {
       icon: SparklesIcon,
-      title: "Authentic Formulations",
-      description: "Original recipes from classical Ayurvedic texts, preserved and perfected over generations",
+      title: "Authentic Ayurvedic Heritage",
+      description: "Ancient Ayurveda for modern lives - bringing traditional wellness wisdom to contemporary health needs",
       highlight: "Traditional Purity"
     },
     {
-      icon: UserGroupIcon,
-      title: "Personalized Approach",
-      description: "Individual constitution analysis and customized treatment plans by qualified Ayurveda doctors",
-      highlight: "Tailored Care"
+      icon: BeakerIcon,
+      title: "Quality Manufacturing",
+      description: "Products manufactured with attention to quality and traditional Ayurvedic principles",
+      highlight: "Quality Focus"
+    },
+    {
+      icon: ShieldCheckIcon,
+      title: "Safe & Natural",
+      description: "Formulated using traditional Ayurvedic methods with natural ingredients for holistic wellness",
+      highlight: "Natural Care"
     },
     {
       icon: HeartIcon,
-      title: "Patient-Centric Focus",
-      description: "Dedicated customer support and post-treatment follow-up for optimal health outcomes",
-      highlight: "Caring Service"
+      title: "Comprehensive Range",
+      description: "Diverse product categories including body oils, men's health, and children's wellness products",
+      highlight: "Complete Care"
+    },
+    {
+      icon: UserGroupIcon,
+      title: "Customer-Focused",
+      description: "Dedicated customer care and support to help you on your wellness journey",
+      highlight: "Personal Touch"
+    },
+    {
+      icon: TrophyIcon,
+      title: "Maharashtra-Based",
+      description: "Located in Daund, Pune - bringing authentic Ayurvedic products from the heart of Maharashtra",
+      highlight: "Local Heritage"
     }
   ];
 
@@ -76,24 +76,24 @@ export function WhyPoonaAyurvedaBest({ product }: WhyPoonaAyurvedaBestProps) {
 
   const achievements = [
     {
-      number: "50,000+",
-      label: "Satisfied Customers",
-      description: "Trust our products for their health and wellness needs"
+      number: "3",
+      label: "Product Categories",
+      description: "Body oils, men's health, and children's wellness products"
     },
     {
-      number: "95%",
-      label: "Success Rate",
-      description: "Customers report positive results within recommended usage period"
+      number: "100%",
+      label: "Natural Ingredients",
+      description: "Traditional Ayurvedic formulations using natural components"
     },
     {
-      number: "25+",
-      label: "Product Range",
-      description: "Comprehensive Ayurvedic solutions for various health conditions"
+      number: "24/7",
+      label: "Customer Support",
+      description: "Available via phone, email, and WhatsApp for your queries"
     },
     {
-      number: "0",
-      label: "Reported Side Effects",
-      description: "Safe formulations with zero reported adverse effects"
+      number: "1",
+      label: "Mission",
+      description: "Bringing ancient Ayurveda wisdom to modern lives"
     }
   ];
 
@@ -185,56 +185,65 @@ export function WhyPoonaAyurvedaBest({ product }: WhyPoonaAyurvedaBestProps) {
           </div>
         </div>
 
-        {/* Heritage Story */}
+        {/* Company Information */}
         <div className="bg-gradient-to-r from-primary/5 to-primary/10 rounded-2xl p-8 lg:p-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <div className="flex items-center mb-4">
                 <ClockIcon className="h-8 w-8 text-primary mr-3" />
                 <span className="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-medium">
-                  Heritage & Legacy
+                  About Our Company
                 </span>
               </div>
               
               <h3 className="text-2xl lg:text-3xl font-bold text-foreground mb-4">
-                Three Generations of Healing Excellence
+                Ancient Ayurveda for Modern Lives
               </h3>
               
               <p className="text-gray-text mb-6 leading-relaxed">
-                Founded by Vaidya Gandhi, The Poona Ayurveda has been serving the community 
-                for over 75 years. Our legacy is built on the foundation of authentic Ayurvedic 
-                knowledge, compassionate care, and unwavering commitment to patient wellness.
+                The Poona Ayurveda is dedicated to bringing the wisdom of traditional Ayurveda 
+                to contemporary wellness needs. Based in Daund, Pune, Maharashtra, we focus on 
+                creating authentic Ayurvedic products that honor traditional practices.
               </p>
               
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-gray-text text-sm">Established in 1948 by Vaidya Gandhi</span>
+                  <span className="text-gray-text text-sm">Located in Daund, Pune, Maharashtra</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-gray-text text-sm">Traditional knowledge passed through generations</span>
+                  <span className="text-gray-text text-sm">Traditional Ayurvedic formulations</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-gray-text text-sm">Modern facilities with traditional values</span>
+                  <span className="text-gray-text text-sm">Natural ingredients and authentic methods</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-gray-text text-sm">Trusted by generations of families</span>
+                  <span className="text-gray-text text-sm">Committed to customer wellness and care</span>
                 </div>
               </div>
             </div>
             
             <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <h4 className="font-semibold text-foreground mb-4 text-center">What Our Customers Say</h4>
-              <blockquote className="text-gray-text italic text-center mb-4">
-                &ldquo;The Poona Ayurveda has been our family&apos;s trusted healthcare partner for over 20 years. 
-                Their products are authentic, effective, and made with genuine care.&rdquo;
-              </blockquote>
-              <div className="text-center">
-                <div className="font-medium text-foreground">- Satisfied Customer Family</div>
-                <div className="text-gray-text text-sm">Using our products since 2003</div>
+              <h4 className="font-semibold text-foreground mb-4 text-center">Contact Information</h4>
+              <div className="space-y-4 text-sm">
+                <div className="text-center">
+                  <div className="font-medium text-foreground mb-1">Gandhi Building, Vadgaonkar Chawl</div>
+                  <div className="text-gray-text">Shivaji Chowk, Daund</div>
+                  <div className="text-gray-text">Pune, Maharashtra 413801</div>
+                </div>
+                <div className="border-t pt-4 space-y-2">
+                  <div className="flex justify-between">
+                    <span className="text-gray-text">Phone:</span>
+                    <span className="font-medium text-foreground">+91-9730005222</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-text">Email:</span>
+                    <span className="font-medium text-foreground">care@thepoonaayurveda.com</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -244,18 +253,18 @@ export function WhyPoonaAyurvedaBest({ product }: WhyPoonaAyurvedaBestProps) {
         <div className="text-center mt-12">
           <div className="bg-primary/5 rounded-2xl p-8 max-w-4xl mx-auto border border-primary/20">
             <h3 className="text-2xl font-semibold text-foreground mb-4">
-              Experience the Poona Ayurveda Difference
+              Experience Authentic Ayurvedic Wellness
             </h3>
             <p className="text-gray-text mb-6 max-w-2xl mx-auto">
-              Join thousands of satisfied customers who have chosen authentic Ayurvedic healthcare. 
-              Start your wellness journey with products backed by tradition, science, and generations of expertise.
+              Discover the benefits of traditional Ayurvedic products designed for modern lifestyles. 
+              Start your wellness journey with natural formulations rooted in ancient wisdom.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="btn btn-primary px-8 py-3">
                 Shop {product.name} Now
               </button>
               <button className="btn btn-outline px-8 py-3">
-                Book Free Consultation
+                Contact Our Team
               </button>
             </div>
           </div>
