@@ -259,11 +259,11 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
           return (
             <div
               key={index}
-              className="group bg-primary/10 rounded-lg p-3 transition-all duration-300 border border-gray-100"
+              className="group bg-secondary/10 rounded-lg p-3 transition-all duration-300 border border-gray-100"
             >
               <div className="flex items-center space-x-3">
                 <div className="flex-shrink-0 w-8 h-8 rounded-lg flex items-center justify-center transition-colors">
-                  <IconComponent className="h-4 w-4 text-primary" />
+                  <IconComponent className="h-4 w-4 text-secondary" />
                 </div>
                 <div className="flex-1 min-w-0">
                   <h4 className="font-medium text-foreground text-sm transition-colors">
@@ -283,7 +283,7 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
         </h3>
         <div className="grid grid-cols-3 gap-4">
           <div className="text-center">
-            <div className="w-10 h-10 rounded-lg mx-auto mb-2 flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg mx-auto mb-2 flex items-center justify-center">
               <SparklesIcon className="h-5 w-5" />
             </div>
             <div className="text-xs font-medium mb-1">Dosage</div>
@@ -292,7 +292,7 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
             </div>
           </div>
           <div className="text-center">
-            <div className="w-10 h-10 rounded-lg mx-auto mb-2 flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg mx-auto mb-2 flex items-center justify-center">
               <ClockIcon className="h-5 w-5" />
             </div>
             <div className="text-xs font-medium mb-1">Timing</div>
@@ -301,7 +301,7 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
             </div>
           </div>
           <div className="text-center">
-            <div className="w-10 h-10 rounded-lg mx-auto mb-2 flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg mx-auto mb-2 flex items-center justify-center">
               <CalendarDaysIcon className="h-5 w-5" />
             </div>
             <div className="text-xs font-medium mb-1">
