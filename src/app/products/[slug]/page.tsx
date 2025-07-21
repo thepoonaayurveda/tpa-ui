@@ -108,17 +108,17 @@ export default async function ProductPage({
         <Breadcrumb items={breadcrumbItems} />
 
         {/* Main Product Section - Two Column Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Left Side - Product Gallery */}
-          <div className="lg:sticky lg:top-8 lg:self-start">
+          <div className="lg:sticky lg:top-8 lg:h-fit lg:max-h-screen">
             <ProductGallery
               images={product.images || []}
               productName={product.name}
             />
           </div>
 
-          {/* Right Side - Compact Product Info (Scrollable) */}
-          <div className="lg:max-h-screen">
+          {/* Right Side - Compact Product Info */}
+          <div>
             <CompactProductInfo product={product} />
           </div>
         </div>

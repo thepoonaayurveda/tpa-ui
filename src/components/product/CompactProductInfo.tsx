@@ -5,7 +5,6 @@ import {
   CheckIcon,
   StarIcon,
   HeartIcon,
-  TruckIcon,
   ShieldCheckIcon,
   ClockIcon,
   BeakerIcon,
@@ -199,7 +198,7 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
   const whoShouldTake = getWhoShouldTake(product.name);
 
   return (
-    <div className="max-h-screen overflow-y-auto space-y-6 pr-2">
+    <div className="space-y-6 pr-2">
       {/* Product Title and Rating */}
       <div>
         <h1 className="text-2xl font-bold text-foreground mb-2">
