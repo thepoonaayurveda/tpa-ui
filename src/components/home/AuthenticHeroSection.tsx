@@ -90,7 +90,7 @@ export function AuthenticHeroSection() {
     <section className="relative">
 
       {/* Slider Container */}
-      <div className="relative h-[500px] md:h-[600px] overflow-hidden">
+      <div className="relative h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden">
         {heroSlides.map((slide, index) => (
           <div
             key={slide.id}
