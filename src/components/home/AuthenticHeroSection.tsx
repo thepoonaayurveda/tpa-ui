@@ -6,51 +6,51 @@ import Link from "next/link";
 const heroSlides = [
   {
     id: 1,
-    title: "The Poona Ayurveda",
-    subtitle: "Ancient Ayurveda for Modern Lives",
+    title: "Uristo Tablet",
+    subtitle: "Natural Urinary Health Support",
     buttonText: "Shop now",
     buttonLink: "https://thepoonaayurveda.com/shop/",
-    backgroundImage: "https://thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-7-scaled.png"
+    backgroundImage: "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Uristo-Tablet-Hero-Image.png"
   },
   {
     id: 2,
-    title: "Premium Quality Products",
-    subtitle: "Authentic Ayurvedic Solutions",
+    title: "Vario Oil",
+    subtitle: "Effective Varicose Vein Treatment",
     buttonText: "Shop now",
     buttonLink: "https://thepoonaayurveda.com/shop/",
-    backgroundImage: "https://thepoonaayurveda.com/wp-content/uploads/2025/04/Render_Mockup_4000_3000_2025-05-11-6-scaled.png"
+    backgroundImage: "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Vario-Oil-Hero-Image.png"
   },
   {
     id: 3,
-    title: "Natural Wellness",
-    subtitle: "Effective & Safe Remedies",
+    title: "AllerGenie Tablet",
+    subtitle: "Natural Allergy Relief",
     buttonText: "Shop now",
     buttonLink: "https://thepoonaayurveda.com/shop/",
-    backgroundImage: "https://thepoonaayurveda.com/wp-content/uploads/2025/04/Render_Mockup_4000_3000_2025-05-11-scaled.png"
+    backgroundImage: "https://thepoonaayurveda.com/wp-content/uploads/2025/05/AllerGenie-Tablet-Hero-Image.png"
   },
   {
     id: 4,
-    title: "Modern Healthcare",
-    subtitle: "Ancient Wisdom Solutions",
+    title: "Sports Edge Oil",
+    subtitle: "Performance Enhancement Oil",
     buttonText: "Shop now",
     buttonLink: "https://thepoonaayurveda.com/shop/",
-    backgroundImage: "https://thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-4-scaled.png"
+    backgroundImage: "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Sports-Edge-Oil-Hero-Image.png"
   },
   {
     id: 5,
-    title: "Holistic Healing",
-    subtitle: "Traditional Ayurveda",
+    title: "Sports Edge Oil Junior",
+    subtitle: "Safe for Young Athletes",
     buttonText: "Shop now",
     buttonLink: "https://thepoonaayurveda.com/shop/",
-    backgroundImage: "https://thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-2-scaled.png"
+    backgroundImage: "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Sports-Edge-Oil-Junior-Hero-Image.png"
   },
   {
     id: 6,
-    title: "Pure & Effective",
-    subtitle: "Natural Health Solutions",
+    title: "Endurio 35+ Tablet",
+    subtitle: "Energy & Vitality Booster",
     buttonText: "Shop now",
     buttonLink: "https://thepoonaayurveda.com/shop/",
-    backgroundImage: "https://thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-8-scaled.png"
+    backgroundImage: "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Endurio-35-Tablet-Hero-Image.png"
   }
 ];
 
@@ -88,10 +88,6 @@ export function AuthenticHeroSection() {
 
   return (
     <section className="relative">
-      {/* Main Title */}
-      <div className="bg-primary text-white text-center py-6">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-wide">THE POONA AYURVEDA</h1>
-      </div>
 
       {/* Slider Container */}
       <div className="relative h-[500px] md:h-[600px] overflow-hidden">
