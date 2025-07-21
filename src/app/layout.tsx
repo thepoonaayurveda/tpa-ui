@@ -2,6 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { Roboto } from 'next/font/google';
+
+const roboto = Roboto({
+  weight: ['300', '400', '500', '700'],
+  subsets: ['latin'],
+  variable: '--font-roboto',
+});
 
 export const metadata: Metadata = {
   title: "The Poona Ayurveda - Authentic Ayurvedic Products",
@@ -28,7 +35,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className={roboto.variable}>
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />

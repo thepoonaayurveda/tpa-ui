@@ -10,7 +10,8 @@ const heroSlides = [
     subtitle: "Natural Urinary Health Support",
     buttonText: "Shop now",
     buttonLink: "https://thepoonaayurveda.com/shop/",
-    backgroundImage: "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Uristo-Tablet-Hero-Image.png"
+    backgroundImage:
+      "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Uristo-Tablet-Hero-Image.png",
   },
   {
     id: 2,
@@ -18,7 +19,8 @@ const heroSlides = [
     subtitle: "Effective Varicose Vein Treatment",
     buttonText: "Shop now",
     buttonLink: "https://thepoonaayurveda.com/shop/",
-    backgroundImage: "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Vario-Oil-Hero-Image.png"
+    backgroundImage:
+      "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Vario-Oil-Hero-Image.png",
   },
   {
     id: 3,
@@ -26,7 +28,8 @@ const heroSlides = [
     subtitle: "Natural Allergy Relief",
     buttonText: "Shop now",
     buttonLink: "https://thepoonaayurveda.com/shop/",
-    backgroundImage: "https://thepoonaayurveda.com/wp-content/uploads/2025/05/AllerGenie-Tablet-Hero-Image.png"
+    backgroundImage:
+      "https://thepoonaayurveda.com/wp-content/uploads/2025/05/AllerGenie-Tablet-Hero-Image.png",
   },
   {
     id: 4,
@@ -34,7 +37,8 @@ const heroSlides = [
     subtitle: "Performance Enhancement Oil",
     buttonText: "Shop now",
     buttonLink: "https://thepoonaayurveda.com/shop/",
-    backgroundImage: "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Sports-Edge-Oil-Hero-Image.png"
+    backgroundImage:
+      "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Sports-Edge-Oil-Hero-Image.png",
   },
   {
     id: 5,
@@ -42,7 +46,8 @@ const heroSlides = [
     subtitle: "Safe for Young Athletes",
     buttonText: "Shop now",
     buttonLink: "https://thepoonaayurveda.com/shop/",
-    backgroundImage: "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Sports-Edge-Oil-Junior-Hero-Image.png"
+    backgroundImage:
+      "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Sports-Edge-Oil-Junior-Hero-Image.png",
   },
   {
     id: 6,
@@ -50,8 +55,9 @@ const heroSlides = [
     subtitle: "Energy & Vitality Booster",
     buttonText: "Shop now",
     buttonLink: "https://thepoonaayurveda.com/shop/",
-    backgroundImage: "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Endurio-35-Tablet-Hero-Image.png"
-  }
+    backgroundImage:
+      "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Endurio-35-Tablet-Hero-Image.png",
+  },
 ];
 
 export function AuthenticHeroSection() {
@@ -60,7 +66,7 @@ export function AuthenticHeroSection() {
 
   useEffect(() => {
     if (!isAutoPlaying) return;
-    
+
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
     }, 2000);
@@ -81,32 +87,33 @@ export function AuthenticHeroSection() {
   };
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+    setCurrentSlide(
+      (prev) => (prev - 1 + heroSlides.length) % heroSlides.length
+    );
     setIsAutoPlaying(false);
     setTimeout(() => setIsAutoPlaying(true), 5000);
   };
 
   return (
     <section className="relative">
-
       {/* Slider Container */}
       <div className="relative h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden">
         {heroSlides.map((slide, index) => (
           <div
             key={slide.id}
             className={`absolute inset-0 transition-opacity duration-400 ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
+              index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
             style={{
               backgroundImage: `url(${slide.backgroundImage})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              backgroundRepeat: 'no-repeat'
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
             }}
           >
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/30"></div>
-            
+
             {/* Content */}
             <div className="relative h-full flex items-end">
               <div className="container mx-auto px-4 pb-16">
@@ -123,7 +130,7 @@ export function AuthenticHeroSection() {
                     <div>
                       <Link
                         href={slide.buttonLink}
-                        className="inline-block bg-white text-primary px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors"
+                        className="inline-block bg-primary-dark text-white px-8 py-6 rounded-full tracking-widest transition-colors text-sm uppercase font-roboto"
                       >
                         {slide.buttonText}
                       </Link>
@@ -141,8 +148,18 @@ export function AuthenticHeroSection() {
           className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center text-gray-700 hover:text-primary transition-all shadow-lg opacity-0 group-hover:opacity-100"
           aria-label="Previous slide"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M15 19l-7-7 7-7"
+            />
           </svg>
         </button>
 
@@ -151,8 +168,18 @@ export function AuthenticHeroSection() {
           className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center text-gray-700 hover:text-primary transition-all shadow-lg opacity-0 group-hover:opacity-100"
           aria-label="Next slide"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 5l7 7-7 7"
+            />
           </svg>
         </button>
 
@@ -164,8 +191,8 @@ export function AuthenticHeroSection() {
               onClick={() => goToSlide(index)}
               className={`w-3 h-3 rounded-full transition-all ${
                 index === currentSlide
-                  ? 'bg-white shadow-lg'
-                  : 'bg-white/50 hover:bg-white/75'
+                  ? "bg-white shadow-lg"
+                  : "bg-white/50 hover:bg-white/75"
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

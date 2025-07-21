@@ -21,6 +21,7 @@ module.exports = {
         sans: ['Kumbh Sans', 'system-ui', 'sans-serif'],
         display: ['Kumbh Sans', 'system-ui', 'sans-serif'],
         nav: ['Raleway', 'system-ui', 'sans-serif'],
+        roboto: ['Roboto', 'system-ui', 'sans-serif'],
       },
     },
   },
