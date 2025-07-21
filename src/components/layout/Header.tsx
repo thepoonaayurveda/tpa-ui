@@ -43,7 +43,7 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-white shadow-sm">
       {/* Top announcement bar */}
       <div className="bg-primary-dark text-white py-2 px-4 text-center text-sm">
         Get Authentic Ayurvedic Treatment Today! | Book FREE Consultation
