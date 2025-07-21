@@ -192,6 +192,7 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
     ];
   };
 
+
   const benefits = getBenefits(product.name);
   const instructions = getConsumptionInstructions(product.name);
   const ingredients = getIngredients(product.name);
@@ -275,6 +276,16 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
           );
         })}
       </div>
+
+      {/* Product Information */}
+      {product.short_description && (
+        <div className="rounded-lg p-4">
+          <div 
+            className="text-sm text-gray-600 leading-relaxed"
+            dangerouslySetInnerHTML={{ __html: product.short_description }}
+          />
+        </div>
+      )}
 
       {/* Consumption Instructions */}
       <div className="rounded-lg p-4">
@@ -446,6 +457,7 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
           </div>
         )}
       </div>
+
 
       {/* Trust Badges */}
       {/* <div className="bg-gray-50 rounded-lg p-4">

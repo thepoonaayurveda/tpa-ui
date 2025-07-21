@@ -6,6 +6,7 @@ import { CompactProductInfo } from "@/components/product/CompactProductInfo";
 import { ProductTabs } from "@/components/product/ProductTabs";
 import { RelatedProducts } from "@/components/product/RelatedProducts";
 import { WhyPoonaAyurvedaBest } from "@/components/product/WhyPoonaAyurvedaBest";
+import { ProductFAQs } from "@/components/product/ProductFAQs";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 
 // Generate static params for better performance
@@ -124,13 +125,12 @@ export default async function ProductPage({
       </div>
 
       {/* Below the Fold Content */}
-      
-      {/* Why The Poona Ayurveda */}
-      <WhyPoonaAyurvedaBest product={product}/>
 
-      {/* Product Details Tabs */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <ProductTabs product={product} />
+      {/* FAQs Section */}
+      <div className="bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+          <ProductFAQs productName={product.name} />
+        </div>
       </div>
 
       {/* Related Products */}
