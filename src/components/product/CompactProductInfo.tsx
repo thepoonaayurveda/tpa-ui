@@ -372,7 +372,7 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
           className="w-full flex items-center justify-between text-left"
         >
           <h3 className="font-semibold text-foreground flex items-center">
-            Ideal For
+            Who Should Take It
           </h3>
           {showWhoShouldTake ? (
             <ChevronUpIcon className="h-4 w-4 text-amber-600" />
