@@ -10,6 +10,7 @@ import {
   UserIcon,
 } from "@heroicons/react/24/outline";
 import { ClientOnly } from "@/components/ui/ClientOnly";
+import { Logo } from "@/components/ui/Logo";
 import { useCartStore } from "@/store/cartStore";
 
 const navigation = [
@@ -53,16 +54,11 @@ export function Header() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="h-12 w-12 bg-primary rounded-full flex items-center justify-center">
-                <span className="text-white font-bold text-lg">PA</span>
-              </div>
+              <Logo />
               <div>
-                <h1 className="text-xl font-bold text-gray-900">
+                <h1 className="text-xl uppercase tracking-wide">
                   The Poona Ayurveda
                 </h1>
-                <p className="text-xs text-gray-600">
-                  Authentic Ayurvedic Products
-                </p>
               </div>
             </Link>
           </div>

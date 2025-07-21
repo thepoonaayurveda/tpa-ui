@@ -23,6 +23,7 @@ export function ProductCard({ product }: ProductCardProps) {
               alt={image.alt || product.name}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-200"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center text-gray-400">
