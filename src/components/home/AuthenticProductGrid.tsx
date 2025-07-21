@@ -129,24 +129,31 @@ const mobileProducts = [
 
 function ProductItem({ product }: { product: typeof products[0] }) {
   return (
-    <div className="relative group overflow-hidden rounded-full aspect-square">
+    <div className="bg-gray-light p-6 group overflow-hidden aspect-square" 
+         style={{ borderRadius: '0 50% 50% 50%' }}>
       <Link href={product.link}>
         <div className="relative w-full h-full">
           <Image
             src={product.image}
             alt={product.name}
             fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            className="object-cover object-center scale-125 transition-transform duration-300 group-hover:scale-110"
             sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
           />
           
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-white/36 group-hover:bg-white/32 transition-colors duration-300 rounded-full"></div>
+          {/* Hover overlay - light gray translucent */}
+          <div className="absolute inset-0 bg-gray-light/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           
-          {/* Content */}
+          {/* Content - Always visible on sm/md, hover only on lg+ */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="text-center text-gray-900">
-              <h3 className="text-lg md:text-xl font-medium px-4">{product.name}</h3>
+            {/* Small/Medium screens - Always visible */}
+            <div className="lg:hidden text-center">
+              <h3 className="text-2xl font-bold text-slate-800">{product.name}</h3>
+            </div>
+            
+            {/* Large screens - Hover only */}
+            <div className="hidden lg:absolute lg:inset-0 lg:flex items-center justify-center text-center opacity-0 hover:opacity-100">
+              <h3 className="text-3xl font-bold text-slate-800">{product.name}</h3>
             </div>
           </div>
         </div>
@@ -158,27 +165,16 @@ function ProductItem({ product }: { product: typeof products[0] }) {
 export function AuthenticProductGrid() {
   return (
     <section className="py-16 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">Our Products</h2>
         </div>
 
-        {/* Desktop/Tablet Grid (hidden on mobile) */}
-        <div className="hidden sm:block">
-          <div className="grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 lg:gap-8">
-            {products.slice(0, 12).map((product) => (
-              <ProductItem key={product.id} product={product} />
-            ))}
-          </div>
-        </div>
-
-        {/* Mobile Grid (visible only on mobile) */}
-        <div className="block sm:hidden">
-          <div className="grid grid-cols-2 gap-4">
-            {mobileProducts.slice(0, 10).map((product) => (
-              <ProductItem key={product.id} product={product} />
-            ))}
-          </div>
+        {/* Product Grid - responsive columns */}
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
+          {products.slice(0, 9).map((product) => (
+            <ProductItem key={product.id} product={product} />
+          ))}
         </div>
       </div>
     </section>
