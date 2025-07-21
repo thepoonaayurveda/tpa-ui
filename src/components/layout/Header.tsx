@@ -50,26 +50,25 @@ export function Header() {
       </div>
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-20 items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-3">
-              <Logo />
-              <div>
-                <h1 className="text-xl uppercase tracking-wide">
-                  The Poona Ayurveda
-                </h1>
-              </div>
-            </Link>
-          </div>
+        {/* Logo and Brand Name - Centered */}
+        <div className="flex justify-center py-4 border-b border-gray-100">
+          <Link href="/" className="flex flex-col items-center space-y-2">
+            <Logo />
+            <h1 className="text-xl uppercase tracking-wide text-gray-900">
+              The Poona Ayurveda
+            </h1>
+          </Link>
+        </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+        {/* Navigation and Icons */}
+        <div className="relative flex h-14 items-center">
+          {/* Desktop Navigation - Absolutely centered */}
+          <nav className="hidden md:flex space-x-8 absolute left-1/2 transform -translate-x-1/2">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-gray-text hover:text-primary px-3 py-2 text-sm font-medium transition-colors font-nav"
+                className="text-gray-text hover:text-primary px-3 py-2 text-md font-medium transition-colors font-nav"
               >
                 {item.name}
               </Link>
@@ -77,7 +76,7 @@ export function Header() {
           </nav>
 
           {/* Right side icons */}
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 ml-auto">
             {/* Search */}
             <button className="text-gray-text hover:text-primary transition-colors">
               <MagnifyingGlassIcon className="h-6 w-6" />
