@@ -10,7 +10,7 @@ import {
   ClockIcon,
   BeakerIcon,
   CalendarDaysIcon,
-  SparklesIcon,
+  RectangleGroupIcon,
   ChevronDownIcon,
   ChevronUpIcon,
 } from "@heroicons/react/24/outline";
@@ -284,7 +284,7 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
         <div className="grid grid-cols-3 gap-4">
           <div className="text-center">
             <div className="w-8 h-8 rounded-lg mx-auto mb-2 flex items-center justify-center">
-              <SparklesIcon className="h-5 w-5" />
+              <RectangleGroupIcon className="h-5 w-5" />
             </div>
             <div className="text-xs font-medium mb-1">Dosage</div>
             <div className="text-xs text-gray-600 leading-tight">
