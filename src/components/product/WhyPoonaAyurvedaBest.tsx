@@ -61,10 +61,6 @@ export function WhyPoonaAyurvedaBest({ product }: WhyPoonaAyurvedaBestProps) {
       description: "Good Manufacturing Practices certification ensuring international quality standards"
     },
     {
-      title: "Lab Tested",
-      description: "Every batch tested for purity, potency, and safety before market release"
-    },
-    {
       title: "Licensed Manufacturing",
       description: "Manufacturing license MH/104715 from Maharashtra FDA"
     },
@@ -172,7 +168,7 @@ export function WhyPoonaAyurvedaBest({ product }: WhyPoonaAyurvedaBestProps) {
             <p className="text-gray-text">Recognized standards that ensure your safety and satisfaction</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
               <div key={index} className="bg-gray-light rounded-2xl p-6 text-center hover:shadow-md transition-shadow">
                 <div className="w-12 h-12 bg-blue-100 rounded-xl mx-auto mb-4 flex items-center justify-center">
