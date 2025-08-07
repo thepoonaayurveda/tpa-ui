@@ -22,8 +22,8 @@ export function VideoPopupSection() {
             {/* Video Thumbnail */}
             <div className="relative h-64 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl cursor-pointer group" onClick={openVideo}>
               <Image
-                src="https://thepoonaayurveda.com/wp-content/uploads/2025/01/Frame-64-1.png"
-                alt="The Poona Ayurveda Video"
+                src="https://thepoonaayurveda.com/wp-content/uploads/2025/08/Logo-Mark.png"
+                alt="The Poona Ayurveda Introduction Video"
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
                 sizes="(max-width: 768px) 100vw, (max-width: 1024px) 80vw, 70vw"
@@ -73,7 +73,7 @@ export function VideoPopupSection() {
             {/* Video container */}
             <div className="relative aspect-video bg-black rounded-lg overflow-hidden">
               <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+                src="https://www.youtube.com/embed/-xBSDzWLhR0?autoplay=1"
                 title="The Poona Ayurveda Video"
                 className="w-full h-full"
                 frameBorder="0"
