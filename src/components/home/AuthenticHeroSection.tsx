@@ -101,7 +101,7 @@ export function AuthenticHeroSection() {
         {heroSlides.map((slide, index) => (
           <div
             key={slide.id}
-            className={`absolute inset-0 transition-opacity duration-400 ${
+            className={`absolute inset-0 transition-opacity duration-700 ${
               index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
             style={{
