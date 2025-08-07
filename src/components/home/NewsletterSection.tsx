@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 
 export function NewsletterSection() {
   const [email, setEmail] = useState("");
@@ -21,135 +20,54 @@ export function NewsletterSection() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-primary to-primary-dark relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full"></div>
-        <div className="absolute top-1/3 right-20 w-24 h-24 bg-white rounded-full"></div>
-        <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-white rounded-full"></div>
-        <div className="absolute bottom-10 right-10 w-20 h-20 bg-white rounded-full"></div>
-      </div>
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Three Column Layout - Empty, Content, Empty */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 items-center">
+          {/* Left Empty Column */}
+          <div className="hidden lg:block"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left Content */}
-          <div className="text-white">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Stay Connected with
-              <span className="block">Ayurvedic Wisdom</span>
+          {/* Center Content Column */}
+          <div className="text-center border-2 p-12 border-teal-600 rounded-r-2xl rounded-b-2xl lg:col-span-2">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Subscribe to access our exclusive deals, and more
             </h2>
-            <p className="text-xl text-teal-100 mb-8 leading-relaxed">
-              Join our community of wellness enthusiasts and receive exclusive
-              insights, health tips, and special offers on our premium Ayurvedic
-              products delivered straight to your inbox.
+
+            <p className="text-lg text-gray-600 mb-8">
+              Receive email updates and hot offers.
             </p>
 
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-white rounded-full flex-shrink-0"></div>
-                <span className="text-teal-100">
-                  Weekly Ayurvedic health tips and lifestyle advice
-                </span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-white rounded-full flex-shrink-0"></div>
-                <span className="text-teal-100">
-                  Exclusive access to new product launches
-                </span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-white rounded-full flex-shrink-0"></div>
-                <span className="text-teal-100">
-                  Special discounts and seasonal offers
-                </span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-white rounded-full flex-shrink-0"></div>
-                <span className="text-teal-100">
-                  Expert consultations and personalized recommendations
-                </span>
-              </div>
-            </div>
-
-            {/* Newsletter Form */}
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Enter your email address"
-                  required
-                  className="flex-1 px-6 py-4 rounded-full text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white/50"
-                />
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="bg-white text-primary-dark px-8 py-6 rounded-full tracking-widest hover:bg-gray-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm uppercase font-roboto"
-                >
-                  {isSubmitting ? "Subscribing..." : "Subscribe Now"}
-                </button>
-              </div>
-              {message && <p className="text-teal-100 text-sm">{message}</p>}
-            </form>
-
-            <p className="text-sm text-teal-200 mt-4">
-              We respect your privacy. Unsubscribe at any time.
-            </p>
-          </div>
-
-          {/* Right Image */}
-          <div className="relative">
-            <div className="relative w-full h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="https://thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-2-scaled.png"
-                alt="Ayurvedic Newsletter"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
-
-              {/* Floating Email Icon */}
-              <div className="absolute top-6 right-6 w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-                <svg
-                  className="w-8 h-8 text-primary"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+            {/* Newsletter Form - Horizontal Layout */}
+            <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+              <div className="flex flex-col sm:flex-row gap-3">
+                <div className="flex-1">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Your Email Address"
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent text-gray-900 placeholder-gray-500"
                   />
-                </svg>
-              </div>
-            </div>
-
-            {/* Statistics */}
-            <div className="absolute -bottom-6 left-6 right-6">
-              <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6 shadow-xl">
-                <div className="grid grid-cols-2 gap-6 text-center">
-                  <div>
-                    <div className="text-2xl font-bold text-primary">
-                      10,000+
-                    </div>
-                    <div className="text-sm text-gray-600">
-                      Happy Subscribers
-                    </div>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-primary">98%</div>
-                    <div className="text-sm text-gray-600">
-                      Satisfaction Rate
-                    </div>
-                  </div>
+                </div>
+                <div>
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full sm:w-auto bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? "Subscribing..." : "Subscribe"}
+                  </button>
                 </div>
               </div>
-            </div>
+              {message && (
+                <p className="text-primary text-sm mt-3 text-center">{message}</p>
+              )}
+            </form>
           </div>
+
+          {/* Right Empty Column */}
+          <div className="hidden lg:block"></div>
         </div>
       </div>
     </section>

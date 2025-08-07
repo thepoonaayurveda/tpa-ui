@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export function MissionSection() {
   return (
@@ -10,7 +11,7 @@ export function MissionSection() {
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               Our Mission
             </h2>
-            <p className="text-xl text-gray-600 mb-6 leading-relaxed">
+            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
               At The Poona Ayurveda, we are dedicated to reviving the ancient wisdom of Ayurveda 
               and making it accessible to modern lives. Our mission is to provide authentic, 
               high-quality Ayurvedic products that promote natural healing and holistic wellness.
@@ -58,6 +59,19 @@ export function MissionSection() {
                   <p className="text-gray-600">Pure, natural ingredients with no harmful chemicals or artificial additives.</p>
                 </div>
               </div>
+            </div>
+
+            {/* Call to Action Button */}
+            <div className="mt-8">
+              <Link 
+                href="/about" 
+                className="inline-flex items-center px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl"
+              >
+                Learn More About Us
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
             </div>
           </div>
 
