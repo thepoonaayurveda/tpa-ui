@@ -116,15 +116,36 @@ export function AuthenticHeroSection() {
 
             {/* Content */}
             <div className="relative h-full flex items-end">
-              <div className="container mx-auto px-4 pb-16">
-                <div className="grid grid-cols-3 gap-8">
+              <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-8 md:pb-16">
+                {/* Mobile and Tablet Layout */}
+                <div className="lg:hidden flex justify-end">
+                  <div className="max-w-xs space-y-4 text-right">
+                    <h2 className="text-2xl sm:text-3xl font-bold text-white leading-tight">
+                      {slide.title}
+                    </h2>
+                    <p className="text-base sm:text-lg text-white/90">
+                      {slide.subtitle}
+                    </p>
+                    <div className="pt-4">
+                      <Link
+                        href={slide.buttonLink}
+                        className="inline-block bg-primary-dark text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full tracking-widest transition-colors text-sm uppercase font-roboto"
+                      >
+                        {slide.buttonText}
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Desktop Layout */}
+                <div className="hidden lg:grid grid-cols-3 gap-8">
                   <div></div>
                   <div></div>
                   <div className="flex flex-col justify-end space-y-4">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+                    <h2 className="text-3xl xl:text-4xl font-bold text-white leading-tight">
                       {slide.title}
                     </h2>
-                    <p className="text-lg md:text-xl text-white/90 mb-6">
+                    <p className="text-lg xl:text-xl text-white/90 mb-6">
                       {slide.subtitle}
                     </p>
                     <div>
