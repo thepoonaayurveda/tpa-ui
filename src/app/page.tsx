@@ -3,6 +3,7 @@ import { AuthenticProductGrid } from "@/components/home/AuthenticProductGrid";
 import { VideoPopupSection } from "@/components/home/VideoPopupSection";
 import { MissionSection } from "@/components/home/MissionSection";
 import { TestimonialSection } from "@/components/home/TestimonialSection";
+import { VideoGallerySection } from "@/components/home/VideoGallerySection";
 import { NewsletterSection } from "@/components/home/NewsletterSection";
 
 export default function HomePage() {
@@ -13,6 +14,7 @@ export default function HomePage() {
       <VideoPopupSection />
       <MissionSection />
       {/* <TestimonialSection /> */}
+      <VideoGallerySection />
       <NewsletterSection />
     </div>
   );
