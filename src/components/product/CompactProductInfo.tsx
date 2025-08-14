@@ -17,6 +17,7 @@ import { StarIcon as StarIconSolid } from "@heroicons/react/24/solid";
 import { ClientOnly } from "@/components/ui/ClientOnly";
 import { useCartStore } from "@/store/cartStore";
 import { formatPrice } from "@/lib/utils";
+import { getProductBenefits } from "@/lib/productBenefits";
 
 interface CompactProductInfoProps {
   product: any;
@@ -75,49 +76,8 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
   const inStock = product.stock_status === "instock";
   const averageRating = parseFloat(product.average_rating) || 0;
 
-  // Get product-specific benefits
-  const getBenefits = (productName: string) => {
-    const name = productName.toLowerCase();
-
-    if (name.includes("flexio")) {
-      return [
-        { name: "Joint Pain Relief", icon: ShieldCheckIcon },
-        { name: "Anti-Inflammatory", icon: BeakerIcon },
-        { name: "Muscle Relaxation", icon: HeartIcon },
-        { name: "Natural Healing", icon: CheckIcon },
-      ];
-    }
-    if (name.includes("sports edge")) {
-      return [
-        { name: "Enhanced Endurance", icon: StarIcon },
-        { name: "Muscle Recovery", icon: ShieldCheckIcon },
-        { name: "Fatigue Reduction", icon: ClockIcon },
-        { name: "Skin Nourishment", icon: HeartIcon },
-      ];
-    }
-    if (name.includes("vario")) {
-      return [
-        { name: "Vascular Health", icon: HeartIcon },
-        { name: "Circulation Boost", icon: CheckIcon },
-        { name: "Swelling Reduction", icon: ShieldCheckIcon },
-        { name: "Varicose Vein Support", icon: BeakerIcon },
-      ];
-    }
-    if (name.includes("uristo")) {
-      return [
-        { name: "Kidney Stone Relief", icon: ShieldCheckIcon },
-        { name: "Urinary Health", icon: HeartIcon },
-        { name: "Natural Diuretic", icon: BeakerIcon },
-        { name: "Anti-inflammatory", icon: CheckIcon },
-      ];
-    }
-    return [
-      { name: "Natural Wellness", icon: HeartIcon },
-      { name: "Safe & Effective", icon: ShieldCheckIcon },
-      { name: "Holistic Health", icon: CheckIcon },
-      { name: "Quality Assured", icon: StarIcon },
-    ];
-  };
+  // Get product-specific benefits using product slug
+  const benefits = getProductBenefits(product.slug);
 
   const getConsumptionInstructions = (productName: string) => {
     const name = productName.toLowerCase();
@@ -192,7 +152,6 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
   };
 
 
-  const benefits = getBenefits(product.name);
   const instructions = getConsumptionInstructions(product.name);
   const ingredients = getIngredients(product.name);
   const whoShouldTake = getWhoShouldTake(product.name);
