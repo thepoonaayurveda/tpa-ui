@@ -13,7 +13,7 @@ export default function HomePage() {
       <AuthenticProductGrid />
       <VideoPopupSection />
       <MissionSection />
-      {/* <TestimonialSection /> */}
+      <TestimonialSection />
       <VideoGallerySection />
       <NewsletterSection />
     </div>

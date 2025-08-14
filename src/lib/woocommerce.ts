@@ -55,3 +55,18 @@ export const getCategories = async () => {
   }
 };
 
+export const getProductReviews = async (params?: any) => {
+  try {
+    const response = await api.get("products/reviews", {
+      per_page: 20,
+      status: 'approved',
+      orderby: 'date',
+      order: 'desc',
+      ...params
+    });
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching product reviews:", error);
+    return [];
+  }
+};
