@@ -77,12 +77,41 @@ export default async function ProductPage({
     notFound();
   }
 
-  // Get related products from the same category
-  const relatedProducts = await getProducts({
-    category: product.categories?.[0]?.id,
-    exclude: [product.id],
-    per_page: 4,
-  });
+  // Get related products with fallback strategies
+  let relatedProducts = [];
+
+  try {
+    // First, try to get products from the same category
+    if (product.categories?.[0]?.id) {
+      relatedProducts = await getProducts({
+        category: product.categories[0].id,
+        exclude: [product.id],
+        per_page: 4,
+      });
+    }
+
+    // If no related products found from category, get other products
+    if (relatedProducts.length === 0) {
+      const allProducts = await getProducts({
+        exclude: [product.id],
+        per_page: 4,
+        orderby: 'popularity',
+      });
+      relatedProducts = allProducts;
+    }
+  } catch (error) {
+    console.error("Error fetching related products:", error);
+    // Fallback: get any other products
+    try {
+      relatedProducts = await getProducts({
+        exclude: [product.id],
+        per_page: 4,
+      });
+    } catch (fallbackError) {
+      console.error("Fallback related products fetch failed:", fallbackError);
+      relatedProducts = [];
+    }
+  }
 
   // Breadcrumb items
   const breadcrumbItems = [
