@@ -13,11 +13,3 @@ export function formatPrice(price: string | number): string {
   }).format(numPrice);
 }
 
-export function stripHtml(html: string): string {
-  return html.replace(/<[^>]*>/g, "");
-}
-
-export function truncateText(text: string, length: number): string {
-  if (text.length <= length) return text;
-  return text.substring(0, length) + "...";
-}
