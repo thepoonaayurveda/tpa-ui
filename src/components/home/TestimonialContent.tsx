@@ -13,7 +13,12 @@ export function TestimonialContent() {
     const fetchReviews = async () => {
       try {
         console.log("Fetching product reviews from API...");
-        const response = await fetch('/api/reviews');
+        const response = await fetch('/api/reviews', {
+          cache: 'no-store', // Always fetch fresh data
+          headers: {
+            'Cache-Control': 'no-cache'
+          }
+        });
         
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -28,7 +33,14 @@ export function TestimonialContent() {
           return;
         }
         
-        setReviews(fetchedReviews);
+        // Shuffle and limit to 3 most recent reviews for display
+        const displayReviews = fetchedReviews
+          .sort((a: ProductReview, b: ProductReview) =>
+            new Date(b.date_created).getTime() - new Date(a.date_created).getTime()
+          )
+          .slice(0, 3);
+
+        setReviews(displayReviews);
       } catch (error) {
         console.error("Error loading reviews:", error);
       } finally {
@@ -107,11 +119,6 @@ export function TestimonialContent() {
                 ) : (
                   <span className="text-primary-dark">{review.product_name}</span>
                 )}
-              </div>
-            )}
-            {review.verified && (
-              <div className="text-sm text-green-600 mt-1">
-                ✓ Verified Purchase
               </div>
             )}
           </div>
