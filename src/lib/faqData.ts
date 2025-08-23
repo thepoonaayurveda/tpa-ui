@@ -15,7 +15,7 @@ export const productFAQs: ProductFAQs = {
     },
     {
       question: "How should I use Flexio Oil?",
-      answer: "Gently massage with lukewarm oil at the affected area for best results."
+      answer: "Warm the oil to lukewarm temperature, then gently massage at the affected area with circular motions until absorbed. For external application only. Use when experiencing muscle or joint discomfort, after physical activity, or as part of your regular wellness routine."
     },
     {
       question: "What are the main ingredients in Flexio Oil?",
@@ -50,7 +50,7 @@ export const productFAQs: ProductFAQs = {
     },
     {
       question: "How do I use Sports Edge Oil?",
-      answer: "Use lukewarm oil for gentle body massage on the desired areas."
+      answer: "Use lukewarm oil for gentle body massage. Apply to entire body or targeted muscle groups with circular motions until well absorbed. Best used before workouts for preparation or after physical activity for recovery. Can be used during training periods and as part of your regular fitness routine."
     },
     {
       question: "What is the Ayurvedic therapeutic usage?",
@@ -81,7 +81,7 @@ export const productFAQs: ProductFAQs = {
     },
     {
       question: "How should it be applied?",
-      answer: "Use lukewarm oil for gentle body massage, ensuring gentle application suitable for younger skin."
+      answer: "Use lukewarm oil for gentle body massage with soft, gentle strokes suitable for young skin. Massage until absorbed, ensuring oil is comfortably warm, not hot. Best used after sports activities, during growth periods, when child shows signs of fatigue, or before bedtime for relaxation."
     },
     {
       question: "What benefits can juniors expect?",
@@ -100,7 +100,7 @@ export const productFAQs: ProductFAQs = {
     },
     {
       question: "What's the correct way to apply Vario Oil?",
-      answer: "Massage with lukewarm oil from down to upwards direction for optimal circulation benefits."
+      answer: "Massage with lukewarm oil from down to upwards direction, starting from feet and moving towards thighs. Use gentle, upward strokes following blood flow. Apply twice daily for best results, focusing on affected areas. Use daily for chronic varicose veins or after long periods of standing/sitting."
     },
     {
       question: "What are the main ingredients?",
@@ -123,7 +123,7 @@ export const productFAQs: ProductFAQs = {
     },
     {
       question: "How do I take AllerGenie tablets?",
-      answer: "Take 1 to 2 tablets with warm water twice a day, or as directed by your physician."
+      answer: "Take 1 to 2 tablets with warm water twice a day, or as directed by your physician. Take with meals for best results. Use twice daily during allergy seasons, when symptoms appear, or as preventive measure during high pollen periods. Take consistently for optimal benefits."
     },
     {
       question: "How many tablets come in one pack?",
@@ -154,7 +154,7 @@ export const productFAQs: ProductFAQs = {
     },
     {
       question: "How should I take Endurio 35+?",
-      answer: "Take 1 to 2 tablets with warm water twice a day, or as directed by your physician."
+      answer: "Take 1 to 2 tablets with warm water twice a day, preferably with meals in the morning and evening. Can be taken with warm milk for better absorption. Take consistently at same times daily for 2-3 months for optimal results. Can be taken long-term under supervision."
     },
     {
       question: "What are the key ingredients?",
@@ -177,7 +177,7 @@ export const productFAQs: ProductFAQs = {
     },
     {
       question: "How do I take Uristo tablets?",
-      answer: "Take 1 to 2 tablets with warm water twice a day, or as directed by your physician."
+      answer: "Take 1 to 2 tablets with warm water twice a day, before or after meals as comfortable. Drink plenty of water throughout the day. Take during acute symptoms or as preventive measure for stone formation. For best results, use with Uristo Choornam as recommended by your healthcare provider."
     },
     {
       question: "What are the main ingredients?",
@@ -204,7 +204,7 @@ export const productFAQs: ProductFAQs = {
     },
     {
       question: "When should I take Vario tablets?",
-      answer: "Take 1 to 2 tablets with warm water twice a day before meals, or as directed by your physician."
+      answer: "Take 1 to 2 tablets with warm water twice a day before meals (morning and evening) with empty stomach for better absorption. Take consistently for several months for best results. Can be used as preventive measure for high-risk individuals or those in occupations requiring prolonged standing."
     },
     {
       question: "What are the key ingredients?",
@@ -231,7 +231,7 @@ export const productFAQs: ProductFAQs = {
     },
     {
       question: "How do I prepare and take Uristo Choornam?",
-      answer: "Mix 5gm in a cup of warm water, or as directed by your physician."
+      answer: "Mix 5gm powder in a cup of warm water, stir well and drink immediately. Take twice daily (morning and evening), preferably on empty stomach. Use during acute symptoms or continue as prescribed. Drink plenty of water throughout the day. For best results, use with Uristo Tablets."
     },
     {
       question: "Can I use Uristo Choornam with Uristo tablets?",
@@ -258,7 +258,7 @@ export const productFAQs: ProductFAQs = {
     },
     {
       question: "How should I take Glycemio Choornam?",
-      answer: "Mix 3gm in a cup of warm water, or as directed by your physician."
+      answer: "Mix 3gm powder in a cup of warm water, stir well and drink immediately. Take twice daily (morning and evening), before or after meals as comfortable. Take consistently at same times daily for 2-3 months for optimal benefits. Use during periods of high stress and maintain healthy diet alongside."
     },
     {
       question: "What does one pack contain?",

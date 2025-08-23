@@ -3,7 +3,6 @@ import { Metadata } from "next";
 import { getProductBySlug, getProducts } from "@/lib/woocommerce";
 import { ProductGallery } from "@/components/product/ProductGallery";
 import { CompactProductInfo } from "@/components/product/CompactProductInfo";
-import { ProductTabs } from "@/components/product/ProductTabs";
 import { RelatedProducts } from "@/components/product/RelatedProducts";
 import { WhyPoonaAyurvedaBest } from "@/components/product/WhyPoonaAyurvedaBest";
 import { ProductFAQs } from "@/components/product/ProductFAQs";

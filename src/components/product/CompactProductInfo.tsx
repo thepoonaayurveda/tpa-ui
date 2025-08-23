@@ -18,6 +18,7 @@ import { ClientOnly } from "@/components/ui/ClientOnly";
 import { useCartStore } from "@/store/cartStore";
 import { formatPrice } from "@/lib/utils";
 import { getProductBenefits } from "@/lib/productBenefits";
+import { getProductDetails, getWhoShouldTake, getHowToUse, getIngredients } from "@/lib/productDetails";
 
 interface CompactProductInfoProps {
   product: any;
@@ -101,60 +102,12 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
     };
   };
 
-  const getIngredients = (productName: string) => {
-    const name = productName.toLowerCase();
-
-    if (name.includes("flexio")) {
-      return [
-        { name: "Mahavishagarbha Tailam", amount: "70ml" },
-        { name: "Panchaguna Tailam", amount: "30ml" },
-      ];
-    }
-    if (name.includes("uristo")) {
-      return [
-        { name: "Punarnava", amount: "125mg" },
-        { name: "Gokshura", amount: "125mg" },
-        { name: "Varuna", amount: "100mg" },
-        { name: "Kulthi", amount: "75mg" },
-      ];
-    }
-    return [
-      { name: "Natural Herbs", amount: "As per formula" },
-      { name: "Base Oil/Excipients", amount: "Q.S." },
-    ];
-  };
-
-  const getWhoShouldTake = (productName: string) => {
-    const name = productName.toLowerCase();
-
-    if (name.includes("flexio")) {
-      return [
-        "Joint pain sufferers",
-        "Athletes",
-        "Elderly people",
-        "Manual workers",
-      ];
-    }
-    if (name.includes("uristo")) {
-      return [
-        "Kidney stone patients",
-        "Urinary issues",
-        "Adults 18-65",
-        "Preventive care",
-      ];
-    }
-    return [
-      "Health-conscious adults",
-      "18-65 years",
-      "Natural wellness seekers",
-      "Preventive care",
-    ];
-  };
 
 
   const instructions = getConsumptionInstructions(product.name);
-  const ingredients = getIngredients(product.name);
-  const whoShouldTake = getWhoShouldTake(product.name);
+  const detailedIngredients = getIngredients(product.slug);
+  const detailedWhoShouldTake = getWhoShouldTake(product.slug);
+  const detailedHowToUse = getHowToUse(product.slug);
 
   return (
     <div className="space-y-6 pr-2">
@@ -341,7 +294,7 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
         </button>
         {showWhoShouldTake && (
           <div className="grid grid-cols-1 gap-2 mt-3">
-            {whoShouldTake.map((item, index) => (
+            {detailedWhoShouldTake.map((item, index) => (
               <div key={index} className="flex items-center text-sm">
                 <CheckIcon className="h-3 w-3 mr-2 text-amber-600 flex-shrink-0" />
                 <span className="text-gray-text">{item}</span>
@@ -368,14 +321,14 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
         </button>
         {showIngredients && (
           <div className="space-y-2 mt-3">
-            {ingredients.map((ingredient, index) => (
+            {detailedIngredients.map((ingredient, index) => (
               <div
                 key={index}
                 className="flex justify-between items-center py-1 border-b border-gray-100 last:border-b-0"
               >
                 <span className="text-sm text-gray-text">{ingredient.name}</span>
                 <span className="text-sm font-medium text-foreground">
-                  {ingredient.amount}
+                  {ingredient.quantity}
                 </span>
               </div>
             ))}
