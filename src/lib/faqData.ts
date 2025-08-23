@@ -281,12 +281,16 @@ export const productFAQs: ProductFAQs = {
 
 export const generalFAQs: FAQ[] = [
   {
-    question: "Are these products safe to use?",
-    answer: "All products are manufactured following Ayurvedic principles at licensed facilities. However, consult your healthcare provider before starting any new supplement regimen."
+    question: "Can pregnant or breastfeeding women use these products?",
+    answer: "Pregnant and breastfeeding women should consult their healthcare provider before using any of these products."
   },
   {
-    question: "Where are these products manufactured?",
-    answer: "All products are manufactured at Brahmanath Pharma Pvt Ltd., a licensed facility in Maharashtra, India."
+    question: "Can children use these products?",
+    answer: "For all products except Sports Edge Oil Junior, please consult with a pediatrician or qualified Ayurvedic practitioner before giving them to children under 18 years of age."
+  },
+  {
+    question: "Are these products safe to use?",
+    answer: "All products are manufactured following Ayurvedic principles at licensed facilities. However, consult your healthcare provider before starting any new supplement regimen."
   },
   {
     question: "How should I store these products?",
@@ -303,10 +307,6 @@ export const generalFAQs: FAQ[] = [
   {
     question: "Are there any side effects?",
     answer: "These are natural Ayurvedic formulations, but individual reactions may vary. Discontinue use and consult a healthcare provider if you experience any adverse reactions."
-  },
-  {
-    question: "Can pregnant or breastfeeding women use these products?",
-    answer: "Pregnant and breastfeeding women should consult their healthcare provider before using any of these products."
   },
   {
     question: "Where can I buy these products?",
