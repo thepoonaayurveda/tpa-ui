@@ -7,6 +7,7 @@ import { RelatedProducts } from "@/components/product/RelatedProducts";
 import { WhyPoonaAyurvedaBest } from "@/components/product/WhyPoonaAyurvedaBest";
 import { ProductFAQs } from "@/components/product/ProductFAQs";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
+import { getManualRelatedProducts } from "@/lib/productRelationships";
 
 // Generate static params for better performance
 export async function generateStaticParams() {
@@ -77,31 +78,55 @@ export default async function ProductPage({
     notFound();
   }
 
-  // Get related products with fallback strategies
+  // Get related products with manual relationships priority
   let relatedProducts = [];
-
+  
   try {
-    // First, try to get products from the same category
-    if (product.categories?.[0]?.id) {
-      relatedProducts = await getProducts({
-        category: product.categories[0].id,
-        exclude: [product.id],
-        per_page: 4,
-      });
+    // 1. First priority: Manual relationships
+    const manualRelatedSlugs = getManualRelatedProducts(product.slug);
+    
+    if (manualRelatedSlugs.length > 0) {
+      // Fetch products by slugs for manual relationships
+      const manualRelatedProducts = await Promise.all(
+        manualRelatedSlugs.map(async (slug) => {
+          try {
+            return await getProductBySlug(slug);
+          } catch (error) {
+            console.error(`Error fetching related product ${slug}:`, error);
+            return null;
+          }
+        })
+      );
+
+      // Filter out null results and limit to 4
+      relatedProducts = manualRelatedProducts
+        .filter(p => p !== null)
+        .slice(0, 4);
     }
 
-    // If no related products found from category, get other products
-    if (relatedProducts.length === 0) {
-      const allProducts = await getProducts({
-        exclude: [product.id],
-        per_page: 4,
+    // 2. If we need more products, supplement with category-based
+    if (relatedProducts.length < 4 && product.categories?.[0]?.id) {
+      const categoryProducts = await getProducts({
+        category: product.categories[0].id,
+        exclude: [product.id, ...relatedProducts.map(p => p.id)],
+        per_page: 4 - relatedProducts.length,
+      });
+      relatedProducts = [...relatedProducts, ...categoryProducts];
+    }
+
+    // 3. Final fallback: get popular products if still not enough
+    if (relatedProducts.length < 4) {
+      const popularProducts = await getProducts({
+        exclude: [product.id, ...relatedProducts.map(p => p.id)],
+        per_page: 4 - relatedProducts.length,
         orderby: 'popularity',
       });
-      relatedProducts = allProducts;
+      relatedProducts = [...relatedProducts, ...popularProducts];
     }
+
   } catch (error) {
     console.error("Error fetching related products:", error);
-    // Fallback: get any other products
+    // Ultimate fallback: get any other products
     try {
       relatedProducts = await getProducts({
         exclude: [product.id],
