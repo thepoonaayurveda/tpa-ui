@@ -9,7 +9,7 @@ const heroSlides = [
     title: "Uristo Tablet",
     subtitle: "Natural Urinary Health Support",
     buttonText: "Shop now",
-    buttonLink: "https://thepoonaayurveda.com/shop/",
+    buttonLink: "/products",
     backgroundImage:
       "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Uristo-Tablet-Hero-Image.png",
   },
@@ -18,7 +18,7 @@ const heroSlides = [
     title: "Vario Oil",
     subtitle: "Effective Varicose Vein Treatment",
     buttonText: "Shop now",
-    buttonLink: "https://thepoonaayurveda.com/shop/",
+    buttonLink: "/products",
     backgroundImage:
       "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Vario-Oil-Hero-Image.png",
   },
@@ -27,7 +27,7 @@ const heroSlides = [
     title: "AllerGenie Tablet",
     subtitle: "Natural Allergy Relief",
     buttonText: "Shop now",
-    buttonLink: "https://thepoonaayurveda.com/shop/",
+    buttonLink: "/products",
     backgroundImage:
       "https://thepoonaayurveda.com/wp-content/uploads/2025/05/AllerGenie-Tablet-Hero-Image.png",
   },
@@ -36,7 +36,7 @@ const heroSlides = [
     title: "Sports Edge Oil",
     subtitle: "Performance Enhancement Oil",
     buttonText: "Shop now",
-    buttonLink: "https://thepoonaayurveda.com/shop/",
+    buttonLink: "/products",
     backgroundImage:
       "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Sports-Edge-Oil-Hero-Image.png",
   },
@@ -45,7 +45,7 @@ const heroSlides = [
     title: "Sports Edge Oil Junior",
     subtitle: "Safe for Young Athletes",
     buttonText: "Shop now",
-    buttonLink: "https://thepoonaayurveda.com/shop/",
+    buttonLink: "/products",
     backgroundImage:
       "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Sports-Edge-Oil-Junior-Hero-Image.png",
   },
@@ -54,7 +54,7 @@ const heroSlides = [
     title: "Endurio 35+ Tablet",
     subtitle: "Energy & Vitality Booster",
     buttonText: "Shop now",
-    buttonLink: "https://thepoonaayurveda.com/shop/",
+    buttonLink: "/products",
     backgroundImage:
       "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Endurio-35-Tablet-Hero-Image.png",
   },
