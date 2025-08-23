@@ -54,26 +54,34 @@ export function Footer() {
               <ul className="space-y-3 text-gray-300">
                 <li>
                   <Link
-                    href="/product-category/massage-oils"
+                    href="/products"
                     className="hover:text-primary transition-colors text-md"
                   >
-                    Body Oils
+                    All Products
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/product-category/kids-health"
+                    href="/products?category=massage-oils"
                     className="hover:text-primary transition-colors text-md"
                   >
-                    Kid's Health
+                    Massage Oils
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/product-category/mens-health"
+                    href="/products?category=tablets"
                     className="hover:text-primary transition-colors text-md"
                   >
-                    Men's Health
+                    Tablets
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/products?category=choornas"
+                    className="hover:text-primary transition-colors text-md"
+                  >
+                    Choornas
                   </Link>
                 </li>
               </ul>
