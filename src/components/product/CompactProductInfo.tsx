@@ -198,44 +198,6 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
         </div>
       )}
 
-      {/* Consumption Instructions */}
-      <div className="rounded-lg p-4">
-        <h3 className="font-semibold text-foreground mb-4 flex items-center">
-          How to Use
-        </h3>
-        <div className="grid grid-cols-3 gap-4">
-          <div className="text-center">
-            <div className="w-8 h-8 rounded-lg mx-auto mb-2 flex items-center justify-center">
-              <RectangleGroupIcon className="h-5 w-5" />
-            </div>
-            <div className="text-xs font-medium mb-1">Dosage</div>
-            <div className="text-xs text-gray-600 leading-tight">
-              {instructions.dosage}
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="w-8 h-8 rounded-lg mx-auto mb-2 flex items-center justify-center">
-              <ClockIcon className="h-5 w-5" />
-            </div>
-            <div className="text-xs font-medium mb-1">Timing</div>
-            <div className="text-xs text-gray-600 leading-tight">
-              {instructions.timing}
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="w-8 h-8 rounded-lg mx-auto mb-2 flex items-center justify-center">
-              <CalendarDaysIcon className="h-5 w-5" />
-            </div>
-            <div className="text-xs font-medium mb-1">
-              Duration
-            </div>
-            <div className="text-xs text-gray-600 leading-tight">
-              {instructions.duration}
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* Quantity and Buy Buttons */}
       {inStock && (
         <div className="space-y-4">
@@ -276,6 +238,44 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
           </div>
         </div>
       )}
+
+      {/* Consumption Instructions */}
+      <div className="rounded-lg p-4">
+        <h3 className="font-semibold text-foreground mb-4 flex items-center">
+          How to Use
+        </h3>
+        <div className="grid grid-cols-3 gap-4">
+          <div className="text-center">
+            <div className="w-8 h-8 rounded-lg mx-auto mb-2 flex items-center justify-center">
+              <RectangleGroupIcon className="h-5 w-5" />
+            </div>
+            <div className="text-xs font-medium mb-1">Dosage</div>
+            <div className="text-xs text-gray-600 leading-tight">
+              {instructions.dosage}
+            </div>
+          </div>
+          <div className="text-center">
+            <div className="w-8 h-8 rounded-lg mx-auto mb-2 flex items-center justify-center">
+              <ClockIcon className="h-5 w-5" />
+            </div>
+            <div className="text-xs font-medium mb-1">Timing</div>
+            <div className="text-xs text-gray-600 leading-tight">
+              {instructions.timing}
+            </div>
+          </div>
+          <div className="text-center">
+            <div className="w-8 h-8 rounded-lg mx-auto mb-2 flex items-center justify-center">
+              <CalendarDaysIcon className="h-5 w-5" />
+            </div>
+            <div className="text-xs font-medium mb-1">
+              Duration
+            </div>
+            <div className="text-xs text-gray-600 leading-tight">
+              {instructions.duration}
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Who Should Take It */}
       <div className="bg-white border border-gray-200 rounded-lg p-4">

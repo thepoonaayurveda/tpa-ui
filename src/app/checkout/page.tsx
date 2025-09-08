@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
-import { CreateOrderData, BillingAddress, ShippingAddress, Order, ShippingCalculationResponse } from "@/lib/types";
+import { CreateOrderData, BillingAddress, ShippingAddress, ShippingCalculationResponse } from "@/lib/types";
 
 interface CheckoutForm {
   email: string;
@@ -17,7 +17,7 @@ interface CheckoutForm {
   state: string;
   pincode: string;
   phone: string;
-  paymentMethod: string;
+  paymentMethod: 'phonepe';
 }
 
 export default function CheckoutPage() {
@@ -39,7 +39,7 @@ export default function CheckoutPage() {
     state: "",
     pincode: "",
     phone: "",
-    paymentMethod: "cod",
+    paymentMethod: "phonepe",
   });
 
   // Redirect if cart is empty
@@ -168,7 +168,7 @@ export default function CheckoutPage() {
         city: form.city,
         state: form.state,
         postcode: form.pincode,
-        country: "IN", // India
+        country: "IN",
         email: form.email,
         phone: form.phone,
       };
@@ -196,8 +196,8 @@ export default function CheckoutPage() {
       // Prepare order data
       const orderData: CreateOrderData = {
         payment_method: form.paymentMethod,
-        payment_method_title: form.paymentMethod === "cod" ? "Cash on Delivery" : "Online Payment",
-        set_paid: false, // Set to true for online payments if payment is completed
+        payment_method_title: 'PhonePe',
+        set_paid: false,
         billing,
         shipping,
         line_items,
@@ -210,25 +210,56 @@ export default function CheckoutPage() {
         ] : [],
       };
 
-      // Create order via API route
-      const response = await fetch("/api/orders", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(orderData),
-      });
+      {
+        // PhonePe payment - create order and initiate payment
+        const orderResponse = await fetch("/api/orders/create-and-pay", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ orderData }),
+        });
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || "Failed to create order");
+        if (!orderResponse.ok) {
+          const errorData = await orderResponse.json();
+          throw new Error(errorData.error || "Failed to create order");
+        }
+
+        const orderResult = await orderResponse.json();
+        
+        // Create PhonePe payment
+        const merchantOrderId = `ORDER_${orderResult.order.id}_${Math.random().toString(36).substr(2, 9)}`;
+        const redirectUrl = `${window.location.origin}/payment-success?orderId=${merchantOrderId}`;
+        const callbackUrl = `${window.location.origin}/api/phonepe/callback`;
+
+        const paymentResponse = await fetch("/api/phonepe/create-payment", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            amount: getTotalPrice() + shippingCost,
+            orderId: merchantOrderId,
+            customerInfo: {
+              name: `${form.firstName} ${form.lastName}`,
+              email: form.email,
+              phone: form.phone,
+            },
+            redirectUrl,
+            callbackUrl,
+          }),
+        });
+
+        if (!paymentResponse.ok) {
+          const paymentError = await paymentResponse.json();
+          throw new Error(paymentError.error || "Failed to create payment");
+        }
+
+        const paymentResult = await paymentResponse.json();
+        
+        // Redirect to PhonePe (don't clear cart until payment is confirmed)
+        window.location.href = paymentResult.paymentUrl;
       }
-
-      const order: Order = await response.json();
-      
-      // Clear cart and redirect to success page with order ID
-      clearCart();
-      router.push(`/order-success?order=${order.id}`);
     } catch (error: any) {
       console.error("Error processing order:", error);
       setOrderError(error.message || "Failed to process order. Please try again.");
@@ -461,33 +492,22 @@ export default function CheckoutPage() {
               <div className="bg-white p-6 rounded-lg shadow">
                 <h2 className="text-lg font-medium text-gray-900 mb-4">Payment Method</h2>
                 <div className="space-y-3">
-                  <div className="flex items-center">
+                  <div className="flex items-start">
                     <input
-                      id="cod"
+                      id="phonepe"
                       name="paymentMethod"
                       type="radio"
-                      value="cod"
-                      checked={form.paymentMethod === "cod"}
+                      value="phonepe"
+                      checked={form.paymentMethod === 'phonepe'}
                       onChange={handleInputChange}
-                      className="h-4 w-4 text-primary focus:ring-primary border-gray-300"
+                      className="h-4 w-4 text-primary focus:ring-primary border-gray-300 mt-1"
                     />
-                    <label htmlFor="cod" className="ml-3 block text-sm font-medium text-gray-700">
-                      Cash on Delivery
-                    </label>
-                  </div>
-                  <div className="flex items-center">
-                    <input
-                      id="razorpay"
-                      name="paymentMethod"
-                      type="radio"
-                      value="razorpay"
-                      checked={form.paymentMethod === "razorpay"}
-                      onChange={handleInputChange}
-                      className="h-4 w-4 text-primary focus:ring-primary border-gray-300"
-                    />
-                    <label htmlFor="razorpay" className="ml-3 block text-sm font-medium text-gray-700">
-                      Pay Online (UPI/Card/Net Banking)
-                    </label>
+                    <div className="ml-3">
+                      <label htmlFor="phonepe" className="block text-sm font-medium text-gray-700">
+                        Pay Online (PhonePe)
+                      </label>
+                      <p className="text-xs text-gray-500 mt-1">Secure online payment via PhonePe</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -497,7 +517,7 @@ export default function CheckoutPage() {
                 disabled={loading}
                 className="w-full bg-primary text-white py-3 px-4 rounded-md hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary disabled:opacity-50 disabled:cursor-not-allowed font-medium"
               >
-                {loading ? "Processing..." : "Place Order"}
+                {loading ? "Processing..." : "Proceed to Payment"}
               </button>
             </form>
           </div>

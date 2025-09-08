@@ -194,6 +194,7 @@ export interface CreateOrderData {
   shipping: ShippingAddress;
   line_items: CreateOrderLineItem[];
   shipping_lines: CreateShippingLine[];
+  transaction_id?: string;
 }
 
 export interface CreateOrderLineItem {
@@ -267,4 +268,25 @@ export interface ShippingCalculationResponse {
     cost: number;
     instance_id?: number;
   }>;
+}
+
+
+export interface PaymentIntent {
+  id: string;
+  amount: number;
+  currency: string;
+  status: 'pending' | 'processing' | 'succeeded' | 'failed' | 'cancelled';
+  payment_method: string;
+  metadata?: {
+    order_id?: string;
+    customer_email?: string;
+  };
+}
+
+export interface PaymentResult {
+  success: boolean;
+  payment_id?: string;
+  transaction_id?: string;
+  status: string;
+  error?: string;
 }

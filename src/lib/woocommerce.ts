@@ -143,6 +143,10 @@ export const calculateShipping = async (request: ShippingCalculationRequest): Pr
     
     for (const zone of zones) {
       // Check if destination matches any location in this zone
+      if (!zone.locations || !Array.isArray(zone.locations)) {
+        continue;
+      }
+      
       const matchesZone = zone.locations.some(location => {
         if (location.type === 'country' && location.code === request.destination.country) {
           return true;
@@ -166,6 +170,7 @@ export const calculateShipping = async (request: ShippingCalculationRequest): Pr
     // If no specific zone found, try to find a "Rest of the World" or default zone
     if (!applicableZone) {
       applicableZone = zones.find(zone => 
+        !zone.locations || 
         zone.locations.length === 0 || 
         zone.locations.some(loc => loc.type === 'country' && loc.code === '')
       );
@@ -210,3 +215,4 @@ export const calculateShipping = async (request: ShippingCalculationRequest): Pr
     return { methods: [] };
   }
 };
+
