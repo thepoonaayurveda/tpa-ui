@@ -6,17 +6,39 @@ export function NewsletterSection() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState("");
+  const [isError, setIsError] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setMessage("");
 
-    // Simulate API call
-    setTimeout(() => {
-      setMessage("Thank you for subscribing to our newsletter!");
-      setEmail("");
+    try {
+      const response = await fetch("/api/newsletter/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setMessage(result.message || "Thank you for subscribing to our newsletter!");
+        setEmail("");
+        setIsError(false);
+      } else {
+        setMessage(result.error || "Something went wrong. Please try again.");
+        setIsError(true);
+      }
+    } catch (error) {
+      console.error("Newsletter subscription error:", error);
+      setMessage("Network error. Please check your connection and try again.");
+      setIsError(true);
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -61,7 +83,9 @@ export function NewsletterSection() {
                 </div>
               </div>
               {message && (
-                <p className="text-primary text-sm mt-3 text-center">{message}</p>
+                <p className={`text-sm mt-3 text-center ${isError ? 'text-red-600' : 'text-primary'}`}>
+                  {message}
+                </p>
               )}
             </form>
           </div>
