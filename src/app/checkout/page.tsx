@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { CreateOrderData, BillingAddress, ShippingAddress, ShippingCalculationResponse } from "@/lib/types";
+import { CouponInput } from "@/components/cart/CouponInput";
 
 interface CheckoutForm {
   email: string;
@@ -21,7 +22,14 @@ interface CheckoutForm {
 }
 
 export default function CheckoutPage() {
-  const { items, getTotalPrice, clearCart } = useCartStore();
+  const { 
+    items, 
+    getSubtotal, 
+    getDiscount, 
+    getDiscountedTotal, 
+    appliedCoupon, 
+    clearCart 
+  } = useCartStore();
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [errors, setErrors] = useState<Partial<CheckoutForm>>({});
@@ -208,6 +216,13 @@ export default function CheckoutPage() {
             total: selectedMethod.cost.toFixed(2),
           },
         ] : [],
+        coupon_lines: appliedCoupon ? [
+          {
+            code: appliedCoupon.code,
+            discount: appliedCoupon.discount.toFixed(2),
+            discount_tax: "0.00", // Assuming no tax on discount for now
+          }
+        ] : [],
       };
 
       {
@@ -238,7 +253,7 @@ export default function CheckoutPage() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            amount: getTotalPrice() + shippingCost,
+            amount: getDiscountedTotal() + shippingCost,
             orderId: merchantOrderId,
             customerInfo: {
               name: `${form.firstName} ${form.lastName}`,
@@ -268,8 +283,10 @@ export default function CheckoutPage() {
     }
   };
 
-  const subtotal = getTotalPrice();
-  const total = subtotal + shippingCost;
+  const subtotal = getSubtotal();
+  const discount = getDiscount();
+  const discountedSubtotal = getDiscountedTotal();
+  const total = discountedSubtotal + shippingCost;
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -550,11 +567,24 @@ export default function CheckoutPage() {
                 ))}
               </ul>
 
+              {/* Coupon Input */}
+              <div className="mb-6">
+                <CouponInput />
+              </div>
+              
               <div className="border-t border-gray-200 pt-4 space-y-2">
                 <div className="flex justify-between text-sm">
                   <dt className="text-gray-600">Subtotal</dt>
                   <dd className="text-gray-900">₹{subtotal.toFixed(2)}</dd>
                 </div>
+                
+                {appliedCoupon && discount > 0 && (
+                  <div className="flex justify-between text-sm">
+                    <dt className="text-green-600">Discount ({appliedCoupon.code})</dt>
+                    <dd className="text-green-600">-₹{discount.toFixed(2)}</dd>
+                  </div>
+                )}
+                
                 <div className="flex justify-between text-sm">
                   <dt className="text-gray-600">Shipping</dt>
                   <dd className="text-gray-900">{shippingCost === 0 ? "Free" : `₹${shippingCost.toFixed(2)}`}</dd>

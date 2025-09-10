@@ -194,6 +194,7 @@ export interface CreateOrderData {
   shipping: ShippingAddress;
   line_items: CreateOrderLineItem[];
   shipping_lines: CreateShippingLine[];
+  coupon_lines?: CouponLine[];
   transaction_id?: string;
 }
 
@@ -288,5 +289,65 @@ export interface PaymentResult {
   payment_id?: string;
   transaction_id?: string;
   status: string;
+  error?: string;
+}
+
+// Coupon related interfaces
+export interface Coupon {
+  id: number;
+  code: string;
+  amount: string;
+  date_created: string;
+  date_modified: string;
+  discount_type: 'percent' | 'fixed_cart' | 'fixed_product';
+  description: string;
+  date_expires: string | null;
+  usage_count: number;
+  individual_use: boolean;
+  product_ids: number[];
+  excluded_product_ids: number[];
+  usage_limit: number | null;
+  usage_limit_per_user: number | null;
+  limit_usage_to_x_items: number | null;
+  free_shipping: boolean;
+  product_categories: number[];
+  excluded_product_categories: number[];
+  exclude_sale_items: boolean;
+  minimum_amount: string;
+  maximum_amount: string;
+  email_restrictions: string[];
+  used_by: string[];
+  meta_data: MetaData[];
+}
+
+export interface CouponLine {
+  id?: number;
+  code: string;
+  discount: string;
+  discount_tax: string;
+  meta_data?: MetaData[];
+}
+
+export interface AppliedCoupon {
+  code: string;
+  discount: number;
+  discountType: 'percent' | 'fixed_cart' | 'fixed_product';
+  description?: string;
+}
+
+export interface CouponValidationRequest {
+  code: string;
+  subtotal: number;
+  items: {
+    product_id: number;
+    quantity: number;
+    price: number;
+  }[];
+}
+
+export interface CouponValidationResponse {
+  success: boolean;
+  valid: boolean;
+  coupon?: AppliedCoupon;
   error?: string;
 }

@@ -1,5 +1,5 @@
 import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api";
-import { CreateOrderData, Order, ShippingZone, ShippingCalculationRequest, ShippingCalculationResponse } from "./types";
+import { CreateOrderData, Order, ShippingZone, ShippingCalculationRequest, ShippingCalculationResponse, Coupon, CouponValidationRequest, AppliedCoupon } from "./types";
 
 const api = new WooCommerceRestApi({
   url: process.env.NEXT_PUBLIC_WC_URL!,
@@ -213,6 +213,114 @@ export const calculateShipping = async (request: ShippingCalculationRequest): Pr
   } catch (error) {
     console.error("Error calculating shipping:", error);
     return { methods: [] };
+  }
+};
+
+// Coupon functions
+export const getCoupon = async (code: string): Promise<Coupon | null> => {
+  try {
+    const response = await api.get(`coupons`, {
+      code: code,
+      per_page: 1
+    });
+    
+    const coupons = response.data;
+    if (coupons && coupons.length > 0) {
+      return coupons[0];
+    }
+    return null;
+  } catch (error) {
+    console.error("Error fetching coupon:", error);
+    return null;
+  }
+};
+
+export const validateCoupon = async (request: CouponValidationRequest): Promise<AppliedCoupon | null> => {
+  try {
+    const coupon = await getCoupon(request.code);
+    
+    if (!coupon) {
+      throw new Error("Coupon not found");
+    }
+
+    // Check if coupon is active (WooCommerce doesn't have an 'active' field, so we check other conditions)
+    const now = new Date();
+    if (coupon.date_expires && new Date(coupon.date_expires) < now) {
+      throw new Error("Coupon has expired");
+    }
+
+    // Check usage limit
+    if (coupon.usage_limit && coupon.usage_count >= coupon.usage_limit) {
+      throw new Error("Coupon usage limit exceeded");
+    }
+
+    // Check minimum amount (only if set and greater than 0)
+    const minAmount = parseFloat(coupon.minimum_amount || "0");
+    if (minAmount > 0 && request.subtotal < minAmount) {
+      throw new Error(`Minimum order amount of ₹${coupon.minimum_amount} required`);
+    }
+
+    // Check maximum amount (only if set and greater than 0)
+    const maxAmount = parseFloat(coupon.maximum_amount || "0");
+    if (maxAmount > 0 && request.subtotal > maxAmount) {
+      throw new Error(`Maximum order amount of ₹${coupon.maximum_amount} exceeded`);
+    }
+
+    // Check product restrictions (basic check - can be enhanced)
+    if (coupon.product_ids.length > 0) {
+      const hasValidProduct = request.items.some(item => 
+        coupon.product_ids.includes(item.product_id)
+      );
+      if (!hasValidProduct) {
+        throw new Error("Coupon is not applicable to items in your cart");
+      }
+    }
+
+    // Check excluded products
+    if (coupon.excluded_product_ids.length > 0) {
+      const hasExcludedProduct = request.items.some(item => 
+        coupon.excluded_product_ids.includes(item.product_id)
+      );
+      if (hasExcludedProduct) {
+        throw new Error("Coupon cannot be applied to some items in your cart");
+      }
+    }
+
+    // Calculate discount
+    let discount = 0;
+    const couponAmount = parseFloat(coupon.amount);
+
+    switch (coupon.discount_type) {
+      case 'percent':
+        discount = (request.subtotal * couponAmount) / 100;
+        break;
+      case 'fixed_cart':
+        discount = couponAmount;
+        break;
+      case 'fixed_product':
+        // For fixed product discount, apply to each applicable product
+        discount = request.items.reduce((total, item) => {
+          if (coupon.product_ids.length === 0 || coupon.product_ids.includes(item.product_id)) {
+            return total + (couponAmount * item.quantity);
+          }
+          return total;
+        }, 0);
+        break;
+    }
+
+    // Ensure discount doesn't exceed subtotal
+    discount = Math.min(discount, request.subtotal);
+
+    return {
+      code: coupon.code,
+      discount: discount,
+      discountType: coupon.discount_type,
+      description: coupon.description
+    };
+
+  } catch (error: any) {
+    console.error("Error validating coupon:", error);
+    throw new Error(error.message || "Failed to validate coupon");
   }
 };
 

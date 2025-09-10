@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { CartProvider } from "@/components/providers/CartProvider";
 import { Roboto } from 'next/font/google';
 
 const roboto = Roboto({
@@ -36,9 +37,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.variable}>
-        <Header />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
+        <CartProvider>
+          <Header />
+          <main className="min-h-screen">{children}</main>
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );
