@@ -137,7 +137,7 @@ function ProductItem({ product }: { product: typeof products[0] }) {
             src={product.image}
             alt={product.name}
             fill
-            className="object-contain object-center md:object-cover md:scale-125 transition-transform duration-300 group-hover:scale-105"
+            className="object-contain object-top md:object-center md:object-cover md:scale-125 transition-transform duration-300 group-hover:scale-105"
             sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
           />
           
