@@ -129,7 +129,7 @@ const mobileProducts = [
 
 function ProductItem({ product }: { product: typeof products[0] }) {
   return (
-    <div className="bg-gray-light p-6 group overflow-hidden aspect-square" 
+    <div className="bg-gray-light p-4 sm:p-6 group overflow-hidden aspect-square" 
          style={{ borderRadius: '0 50% 50% 50%' }}>
       <Link href={product.link}>
         <div className="relative w-full h-full">
@@ -137,7 +137,7 @@ function ProductItem({ product }: { product: typeof products[0] }) {
             src={product.image}
             alt={product.name}
             fill
-            className="object-cover object-center scale-125 transition-transform duration-300 group-hover:scale-110"
+            className="object-contain object-center md:object-cover md:scale-125 transition-transform duration-300 group-hover:scale-105"
             sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
           />
           
