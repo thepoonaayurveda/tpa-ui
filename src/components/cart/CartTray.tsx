@@ -4,11 +4,22 @@ import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
 import { useCartStore } from "@/store/cartStore";
+import { CouponInput } from "@/components/cart/CouponInput";
 import Image from "next/image";
 import Link from "next/link";
 
 export function CartTray() {
-  const { items, isOpen, toggleCart, removeItem, updateQuantity, getTotalPrice } = useCartStore();
+  const { 
+    items, 
+    isOpen, 
+    toggleCart, 
+    removeItem, 
+    updateQuantity, 
+    getTotalPrice,
+    getSubtotal,
+    getDiscount,
+    getDiscountedTotal
+  } = useCartStore();
 
   return (
     <Transition.Root show={isOpen} as={Fragment}>
@@ -134,11 +145,34 @@ export function CartTray() {
 
                     {items.length > 0 && (
                       <div className="border-t border-gray-200 py-6 px-4 sm:px-6">
-                        <div className="flex justify-between text-base font-medium text-gray-900">
-                          <p>Subtotal</p>
-                          <p>₹{getTotalPrice().toFixed(2)}</p>
+                        {/* Coupon Input Section */}
+                        <div className="mb-6">
+                          <CouponInput className="w-full" />
                         </div>
-                        <p className="mt-0.5 text-sm text-gray-500">
+                        
+                        {/* Order Summary */}
+                        <div className="space-y-2">
+                          <div className="flex justify-between text-base font-medium text-gray-900">
+                            <p>Subtotal</p>
+                            <p>₹{getSubtotal().toFixed(2)}</p>
+                          </div>
+                          
+                          {getDiscount() > 0 && (
+                            <div className="flex justify-between text-sm text-green-600">
+                              <p>Discount</p>
+                              <p>-₹{getDiscount().toFixed(2)}</p>
+                            </div>
+                          )}
+                          
+                          {getDiscount() > 0 && (
+                            <div className="flex justify-between text-base font-medium text-gray-900 border-t border-gray-200 pt-2">
+                              <p>Total</p>
+                              <p>₹{getDiscountedTotal().toFixed(2)}</p>
+                            </div>
+                          )}
+                        </div>
+                        
+                        <p className="mt-2 text-sm text-gray-500">
                           Shipping and taxes calculated at checkout.
                         </p>
                         <div className="mt-6">
