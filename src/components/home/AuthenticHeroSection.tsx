@@ -2,6 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
+
+// Generic blur placeholder for hero images
+const HERO_BLUR_PLACEHOLDER = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==";
 
 const heroSlides = [
   {
@@ -63,16 +67,36 @@ const heroSlides = [
 export function AuthenticHeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
 
+  // Auto-play effect with hover pause
   useEffect(() => {
-    if (!isAutoPlaying) return;
+    if (!isAutoPlaying || isHovered) return;
 
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % heroSlides.length);
-    }, 2000);
+    }, 4000); // Optimal auto-play: 4 seconds
 
     return () => clearInterval(timer);
-  }, [isAutoPlaying]);
+  }, [isAutoPlaying, isHovered]);
+
+  // Determine which slides should be loaded (current + next + previous for smooth transitions)
+  const getSlidesToLoad = () => {
+    const slidesToLoad = new Set<number>();
+    
+    // Always load current slide
+    slidesToLoad.add(currentSlide);
+    
+    // Load next slide for preloading
+    const nextSlide = (currentSlide + 1) % heroSlides.length;
+    slidesToLoad.add(nextSlide);
+    
+    // Load previous slide for smooth back navigation
+    const prevSlide = (currentSlide - 1 + heroSlides.length) % heroSlides.length;
+    slidesToLoad.add(prevSlide);
+    
+    return slidesToLoad;
+  };
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
@@ -94,23 +118,37 @@ export function AuthenticHeroSection() {
     setTimeout(() => setIsAutoPlaying(true), 5000);
   };
 
+  const slidesToLoad = getSlidesToLoad();
+
   return (
     <section className="relative">
       {/* Slider Container */}
-      <div className="relative h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden">
+      <div 
+        className="relative h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden group"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
         {heroSlides.map((slide, index) => (
           <div
             key={slide.id}
             className={`absolute inset-0 transition-opacity duration-700 ${
               index === currentSlide ? "opacity-100" : "opacity-0"
             }`}
-            style={{
-              backgroundImage: `url(${slide.backgroundImage})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
           >
+            {/* Next.js Image Background - Only load if in slidesToLoad set */}
+            {slidesToLoad.has(index) && (
+              <Image
+                src={slide.backgroundImage}
+                alt={`${slide.title} - ${slide.subtitle}`}
+                fill
+                className="object-cover"
+                sizes="100vw"
+                priority={index === 0} // Priority loading for first slide only
+                quality={85}
+                placeholder="blur"
+                blurDataURL={HERO_BLUR_PLACEHOLDER}
+              />
+            )}
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/30"></div>
 
@@ -166,7 +204,7 @@ export function AuthenticHeroSection() {
         {/* Navigation Arrows */}
         <button
           onClick={prevSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center text-gray-700 hover:text-primary transition-all shadow-lg opacity-0 group-hover:opacity-100"
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center text-gray-700 hover:text-primary transition-all shadow-lg opacity-0 group-hover:opacity-100 z-10"
           aria-label="Previous slide"
         >
           <svg
@@ -186,7 +224,7 @@ export function AuthenticHeroSection() {
 
         <button
           onClick={nextSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center text-gray-700 hover:text-primary transition-all shadow-lg opacity-0 group-hover:opacity-100"
+          className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white rounded-full flex items-center justify-center text-gray-700 hover:text-primary transition-all shadow-lg opacity-0 group-hover:opacity-100 z-10"
           aria-label="Next slide"
         >
           <svg
@@ -205,7 +243,7 @@ export function AuthenticHeroSection() {
         </button>
 
         {/* Slide Indicators */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2">
+        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-2 z-10">
           {heroSlides.map((_, index) => (
             <button
               key={index}

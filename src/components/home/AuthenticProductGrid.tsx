@@ -1,6 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 
+// Generic blur placeholder for product images
+const PRODUCT_BLUR_PLACEHOLDER = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q==";
+
 const products = [
   {
     id: 2427,
@@ -127,7 +130,7 @@ const mobileProducts = [
   }
 ];
 
-function ProductItem({ product }: { product: typeof products[0] }) {
+function ProductItem({ product, priority = false }: { product: typeof products[0]; priority?: boolean }) {
   return (
     <div className="bg-gray-light p-4 sm:p-6 group overflow-hidden aspect-square" 
          style={{ borderRadius: '0 50% 50% 50%' }}>
@@ -139,6 +142,10 @@ function ProductItem({ product }: { product: typeof products[0] }) {
             fill
             className="object-contain object-top md:object-center md:object-cover md:scale-125 transition-transform duration-300 group-hover:scale-105"
             sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+            priority={priority}
+            quality={85}
+            placeholder="blur"
+            blurDataURL={PRODUCT_BLUR_PLACEHOLDER}
           />
           
           {/* Hover overlay - light gray translucent */}
@@ -172,8 +179,12 @@ export function AuthenticProductGrid() {
 
         {/* Product Grid - responsive columns */}
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-          {products.slice(0, 9).map((product) => (
-            <ProductItem key={product.id} product={product} />
+          {products.slice(0, 9).map((product, index) => (
+            <ProductItem 
+              key={product.id} 
+              product={product} 
+              priority={index < 4} // First 4 products get priority loading
+            />
           ))}
         </div>
       </div>
