@@ -192,7 +192,9 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
             Our Ayurvedic experts are here to guide you towards the best products for your individual health needs.
           </p>
           <a
-            href="/consultation"
+            href="https://wa.me/919730005222?text=I%27m%20interested%20to%20get%20ayurveda%20consultation%20from%20you."
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-white text-primary-dark px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors duration-200"
           >
             Get Free Consultation

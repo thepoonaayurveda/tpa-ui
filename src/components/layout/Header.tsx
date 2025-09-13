@@ -68,7 +68,15 @@ export function Header() {
       <header className="bg-white shadow-sm">
         {/* Top announcement bar */}
         <div className="bg-primary-dark text-white py-2 px-4 text-center text-sm">
-          Get Authentic Ayurvedic Treatment Today! | Book FREE Consultation
+          Get Authentic Ayurvedic Treatment Today! |{" "}
+          <a
+            href="https://wa.me/919730005222?text=I%27m%20interested%20to%20get%20ayurveda%20consultation%20from%20you."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-gray-200 transition-colors"
+          >
+            Book FREE Consultation
+          </a>
         </div>
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
