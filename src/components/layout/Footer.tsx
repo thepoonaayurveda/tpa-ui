@@ -24,29 +24,7 @@ export function Footer() {
           </div>
 
           {/* Right Side Navigation Columns */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-16">
-            {/* Our Company */}
-            <div>
-              <h4 className="text-xl font-semibold mb-4 text-white">Our Company</h4>
-              <ul className="space-y-3 text-gray-300">
-                <li>
-                  <Link
-                    href="/about"
-                    className="hover:text-primary transition-colors text-md"
-                  >
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/contact"
-                    className="hover:text-primary transition-colors text-md"
-                  >
-                    Contact Us
-                  </Link>
-                </li>
-              </ul>
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-16">
 
             {/* Shop */}
             <div>

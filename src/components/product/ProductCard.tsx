@@ -48,11 +48,11 @@ export function ProductCard({ product }: ProductCardProps) {
 
         <div className="p-4">
           {/* Product Category */}
-          {product.categories?.length > 0 && (
+          {/* {product.categories?.length > 0 && (
             <p className="text-xs text-primary font-medium mb-1 uppercase tracking-wide">
               {product.categories[0].name}
             </p>
-          )}
+          )} */}
 
           {/* Product Name */}
           <h3 className="font-medium text-gray-900 group-hover:text-primary line-clamp-2 mb-2 transition-colors">

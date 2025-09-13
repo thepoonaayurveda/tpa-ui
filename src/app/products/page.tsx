@@ -50,11 +50,11 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
   // Breadcrumb items
   const breadcrumbItems = [
     { label: "Home", href: "/" },
-    { label: "Products", href: "/products" },
     ...(selectedCategoryInfo ? [
+      { label: "Products", href: "/products" },
       { label: selectedCategoryInfo.name, href: "", current: true }
     ] : [
-      { label: "All Products", href: "", current: true }
+      { label: "Products", href: "", current: true }
     ])
   ];
 

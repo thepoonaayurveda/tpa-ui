@@ -18,8 +18,6 @@ import { CartTray } from "@/components/cart/CartTray";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Products", href: "/products" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
 ];
 
 function CartButton() {
@@ -101,13 +99,13 @@ export function Header() {
 
             {/* Right side icons */}
             <div className="flex items-center space-x-4 ml-auto">
-              {/* Search */}
-              <button className="text-gray-text hover:text-primary transition-colors">
+              {/* Search - Hidden */}
+              <button className="hidden text-gray-text hover:text-primary transition-colors">
                 <MagnifyingGlassIcon className="h-6 w-6" />
               </button>
 
-              {/* User Account */}
-              <button className="text-gray-text hover:text-primary transition-colors">
+              {/* User Account - Hidden */}
+              <button className="hidden text-gray-text hover:text-primary transition-colors">
                 <UserIcon className="h-6 w-6" />
               </button>
 
