@@ -111,7 +111,7 @@ export function TestimonialContent() {
               <div className="text-sm mt-1">
                 Product: {review.product_slug ? (
                   <Link 
-                    href={`/product/${review.product_slug}`}
+                    href={`/products/${review.product_slug}`}
                     className="text-primary-dark hover:text-primary underline transition-colors"
                   >
                     {review.product_name}

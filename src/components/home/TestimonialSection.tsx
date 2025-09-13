@@ -25,7 +25,9 @@ export function TestimonialSection() {
             Ready to start your wellness journey?
           </p>
           <a
-            href="/consultation"
+            href="https://wa.me/919730005222?text=I%27m%20interested%20to%20get%20ayurveda%20consultation%20from%20you."
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block bg-primary-dark text-white px-8 py-6 rounded-full tracking-widest transition-colors text-sm uppercase shadow-lg font-roboto"
           >
             Book Your Free Consultation
