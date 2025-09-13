@@ -125,7 +125,36 @@ export const useCartStore = create<CartStore>((set, get) => ({
 
     getDiscount: () => {
       const appliedCoupon = get().appliedCoupon;
-      return appliedCoupon ? appliedCoupon.discount : 0;
+      if (!appliedCoupon) return 0;
+      
+      const subtotal = get().getSubtotal();
+      const items = get().items;
+      
+      // Recalculate discount based on current cart state and original coupon amount
+      let discount = 0;
+      
+      switch (appliedCoupon.discountType) {
+        case 'percent':
+          // Use originalAmount (which is the percentage) to recalculate
+          discount = (subtotal * (appliedCoupon.originalAmount || 0)) / 100;
+          break;
+        case 'fixed_cart':
+          // Fixed cart discount remains the same regardless of cart changes
+          discount = appliedCoupon.originalAmount || appliedCoupon.discount;
+          break;
+        case 'fixed_product':
+          // For fixed product discount, apply to each applicable item
+          // Note: This is a simplified version - in a real app, you'd need to know which products the coupon applies to
+          discount = items.reduce((total, item) => {
+            return total + ((appliedCoupon.originalAmount || 0) * item.quantity);
+          }, 0);
+          break;
+        default:
+          discount = appliedCoupon.discount;
+      }
+      
+      // Ensure discount doesn't exceed subtotal
+      return Math.min(discount, subtotal);
     },
 
     getDiscountedTotal: () => {

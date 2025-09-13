@@ -315,7 +315,8 @@ export const validateCoupon = async (request: CouponValidationRequest): Promise<
       code: coupon.code,
       discount: discount,
       discountType: coupon.discount_type,
-      description: coupon.description
+      description: coupon.description,
+      originalAmount: couponAmount
     };
 
   } catch (error: any) {

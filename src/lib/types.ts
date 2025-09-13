@@ -333,6 +333,7 @@ export interface AppliedCoupon {
   discount: number;
   discountType: 'percent' | 'fixed_cart' | 'fixed_product';
   description?: string;
+  originalAmount: number; // Store original coupon amount for recalculation
 }
 
 export interface CouponValidationRequest {
