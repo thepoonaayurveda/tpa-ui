@@ -85,7 +85,7 @@ export function Header() {
             <Link href="/" className="flex flex-col items-center space-y-2">
               <Logo />
               <h1 className="text-xl uppercase tracking-wide text-gray-900">
-                The Poona Ayurveda
+                The Poona Ayurveda stage
               </h1>
             </Link>
           </div>
