@@ -235,12 +235,22 @@ export default function CheckoutPage() {
           body: JSON.stringify({ orderData }),
         });
 
-        if (!orderResponse.ok) {
-          const errorData = await orderResponse.json();
-          throw new Error(errorData.error || "Failed to create order");
+        // Check if the response is HTML (404/500 error page)
+        const contentType = orderResponse.headers.get('content-type');
+        if (!contentType || !contentType.includes('application/json')) {
+          throw new Error("Service temporarily unavailable. Please try again later.");
         }
 
-        const orderResult = await orderResponse.json();
+        let orderResult;
+        try {
+          orderResult = await orderResponse.json();
+        } catch (jsonError) {
+          throw new Error("Service temporarily unavailable. Please try again later.");
+        }
+
+        if (!orderResponse.ok) {
+          throw new Error(orderResult.error || "Failed to create order");
+        }
         
         // Create PhonePe payment
         const merchantOrderId = `ORDER_${orderResult.order.id}_${Math.random().toString(36).substr(2, 9)}`;

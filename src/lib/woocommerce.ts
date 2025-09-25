@@ -1,13 +1,48 @@
 import WooCommerceRestApi from "@woocommerce/woocommerce-rest-api";
 import { CreateOrderData, Order, ShippingZone, ShippingCalculationRequest, ShippingCalculationResponse, Coupon, CouponValidationRequest, AppliedCoupon } from "./types";
 
+// Validate environment variables
+if (!process.env.NEXT_PUBLIC_WC_URL || !process.env.WC_CONSUMER_KEY || !process.env.WC_CONSUMER_SECRET) {
+  console.error("Missing WooCommerce environment variables:", {
+    url: !!process.env.NEXT_PUBLIC_WC_URL,
+    key: !!process.env.WC_CONSUMER_KEY,
+    secret: !!process.env.WC_CONSUMER_SECRET
+  });
+}
+
 const api = new WooCommerceRestApi({
   url: process.env.NEXT_PUBLIC_WC_URL!,
   consumerKey: process.env.WC_CONSUMER_KEY!,
   consumerSecret: process.env.WC_CONSUMER_SECRET!,
   version: "wc/v3",
-  queryStringAuth: true
+  queryStringAuth: true,
+  timeout: 30000, // 30 second timeout
+  axiosConfig: {
+    headers: {
+      'User-Agent': 'NextJS-WooCommerce-Client'
+    }
+  }
 });
+
+// Helper function to handle API errors
+const handleApiError = (error: any, operation: string) => {
+  console.error(`WooCommerce API Error (${operation}):`, {
+    message: error.message,
+    code: error.code,
+    response: error.response?.data,
+    status: error.response?.status,
+    url: process.env.NEXT_PUBLIC_WC_URL
+  });
+
+  // Check if response is HTML (common when API endpoint is not found)
+  const responseData = error.response?.data;
+  if (typeof responseData === 'string' && responseData.includes('<!DOCTYPE')) {
+    throw new Error(`API endpoint returned HTML instead of JSON. This usually means the WooCommerce API is not accessible at ${process.env.NEXT_PUBLIC_WC_URL}`);
+  }
+
+  // Re-throw with original error or more descriptive message
+  throw error;
+};
 
 export const getProducts = async (params?: any) => {
   try {
@@ -74,11 +109,24 @@ export const getProductReviews = async (params?: any) => {
 
 export const createOrder = async (orderData: CreateOrderData): Promise<Order> => {
   try {
+    console.log("Creating order with data:", JSON.stringify(orderData, null, 2));
+    console.log("WooCommerce URL:", process.env.NEXT_PUBLIC_WC_URL);
+    
     const response = await api.post("orders", orderData);
+    
+    console.log("Order creation response status:", response.status);
+    console.log("Order creation response data:", response.data);
+    
     return response.data;
   } catch (error: any) {
-    console.error("Error creating order:", error);
-    throw new Error(error.response?.data?.message || "Failed to create order");
+    handleApiError(error, 'createOrder');
+    
+    // Provide more specific error message
+    const errorMessage = error.response?.data?.message || 
+                        error.response?.data?.code || 
+                        error.message || 
+                        "Failed to create order";
+    throw new Error(errorMessage);
   }
 };
 
@@ -219,18 +267,22 @@ export const calculateShipping = async (request: ShippingCalculationRequest): Pr
 // Coupon functions
 export const getCoupon = async (code: string): Promise<Coupon | null> => {
   try {
+    console.log("Fetching coupon:", code, "from", process.env.NEXT_PUBLIC_WC_URL);
     const response = await api.get(`coupons`, {
       code: code,
       per_page: 1
     });
+    
+    console.log("Coupon API response status:", response.status);
+    console.log("Coupon API response data:", response.data);
     
     const coupons = response.data;
     if (coupons && coupons.length > 0) {
       return coupons[0];
     }
     return null;
-  } catch (error) {
-    console.error("Error fetching coupon:", error);
+  } catch (error: any) {
+    handleApiError(error, 'getCoupon');
     return null;
   }
 };

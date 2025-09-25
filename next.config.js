@@ -27,8 +27,8 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
 
-  // Add these configurations for Netlify deployment
-  trailingSlash: true,
+  // Netlify deployment configuration
+  trailingSlash: false,
 
   // Keep your experimental features
   experimental: {

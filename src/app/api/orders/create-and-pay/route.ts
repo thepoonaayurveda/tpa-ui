@@ -39,10 +39,23 @@ export async function POST(request: NextRequest) {
     });
   } catch (error: any) {
     console.error("Error creating order for payment:", error);
+    console.error("Error details:", {
+      message: error.message,
+      code: error.code,
+      response: error.response?.data,
+      status: error.response?.status,
+      url: process.env.NEXT_PUBLIC_WC_URL
+    });
+    
     return NextResponse.json(
       { 
         error: error.message || "Failed to create order",
         success: false,
+        debug: process.env.NODE_ENV === 'development' ? {
+          message: error.message,
+          url: process.env.NEXT_PUBLIC_WC_URL,
+          hasCredentials: !!(process.env.WC_CONSUMER_KEY && process.env.WC_CONSUMER_SECRET)
+        } : undefined
       },
       { status: 500 }
     );

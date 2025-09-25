@@ -51,7 +51,18 @@ export function CouponInput({ className = "" }: CouponInputProps) {
         body: JSON.stringify(validationRequest),
       });
 
-      const result: CouponValidationResponse = await response.json();
+      // Check if the response is HTML (404/500 error page)
+      const contentType = response.headers.get('content-type');
+      if (!contentType || !contentType.includes('application/json')) {
+        throw new Error("Service temporarily unavailable. Please try again later.");
+      }
+
+      let result: CouponValidationResponse;
+      try {
+        result = await response.json();
+      } catch (jsonError) {
+        throw new Error("Service temporarily unavailable. Please try again later.");
+      }
 
       if (!response.ok) {
         throw new Error(result.error || "Failed to validate coupon");
