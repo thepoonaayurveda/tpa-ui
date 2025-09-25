@@ -82,7 +82,7 @@ export function MissionSection() {
           <div className="relative">
             <div className="relative h-96 lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src="https://thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-8-scaled.png"
+                src="https://api.thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-8-scaled.png"
                 alt="Ayurvedic Products and Herbs"
                 fill
                 className="object-cover"

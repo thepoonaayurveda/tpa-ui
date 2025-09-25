@@ -8,61 +8,61 @@ const products = [
   {
     id: 2427,
     name: "AllerGenie",
-    image: "https://thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-7-768x578.png",
+    image: "https://api.thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-7-768x578.png",
     link: "/products/allergenie"
   },
   {
     id: 2426,
     name: "Endurio 35+",
-    image: "https://thepoonaayurveda.com/wp-content/uploads/2025/04/Render_Mockup_4000_3000_2025-05-11-768x578.png",
+    image: "https://api.thepoonaayurveda.com/wp-content/uploads/2025/04/Render_Mockup_4000_3000_2025-05-11-768x578.png",
     link: "/products/endurio-35"
   },
   {
     id: 2425,
     name: "Flexio Oil",
-    image: "https://thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_1600_1200_2025-05-11-e1747232215172-768x660.png",
+    image: "https://api.thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_1600_1200_2025-05-11-e1747232215172-768x660.png",
     link: "/products/flexio-oil"
   },
   {
     id: 2429,
     name: "Glycemio Choornam",
-    image: "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Glycemio-Product-Image-e1748371477232-768x519.png",
+    image: "https://api.thepoonaayurveda.com/wp-content/uploads/2025/05/Glycemio-Product-Image-e1748371477232-768x519.png",
     link: "/products/glycemio-choornam"
   },
   {
     id: 2424,
     name: "Sports Edge Oil",
-    image: "https://thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-4-scaled-e1747232306886-768x654.png",
+    image: "https://api.thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-4-scaled-e1747232306886-768x654.png",
     link: "/products/sports-edge-oil"
   },
   {
     id: 2413,
     name: "Sports Edge Oil Junior",
-    image: "https://thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-2-scaled-e1747232462869-768x639.png",
+    image: "https://api.thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-2-scaled-e1747232462869-768x639.png",
     link: "/products/sports-edge-oil-junior"
   },
   {
     id: 2575,
     name: "Uristo",
-    image: "https://thepoonaayurveda.com/wp-content/uploads/2025/04/Render_Mockup_4000_3000_2025-05-11-6-768x578.png",
+    image: "https://api.thepoonaayurveda.com/wp-content/uploads/2025/04/Render_Mockup_4000_3000_2025-05-11-6-768x578.png",
     link: "/products/uristo"
   },
   {
     id: 2431,
     name: "Uristo Choornam",
-    image: "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Uristo-Product-Image-768x584.png",
+    image: "https://api.thepoonaayurveda.com/wp-content/uploads/2025/05/Uristo-Product-Image-768x584.png",
     link: "/products/uristo-choornam"
   },
   {
     id: 2430,
     name: "Vario",
-    image: "https://thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-8-768x578.png",
+    image: "https://api.thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-8-768x578.png",
     link: "/products/vario"
   },
   {
     id: 2428,
     name: "Vario Oil",
-    image: "https://thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-3-scaled-e1747232368137-768x640.png",
+    image: "https://api.thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-3-scaled-e1747232368137-768x640.png",
     link: "/products/vario-oil"
   }
 ];
@@ -71,61 +71,61 @@ const mobileProducts = [
   {
     id: 2575,
     name: "Uristo",
-    image: "https://thepoonaayurveda.com/wp-content/uploads/2025/04/Render_Mockup_4000_3000_2025-05-11-6-768x578.png",
+    image: "https://api.thepoonaayurveda.com/wp-content/uploads/2025/04/Render_Mockup_4000_3000_2025-05-11-6-768x578.png",
     link: "/products/uristo"
   },
   {
     id: 2431,
     name: "Uristo Choornam", 
-    image: "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Uristo-Product-Image-768x584.png",
+    image: "https://api.thepoonaayurveda.com/wp-content/uploads/2025/05/Uristo-Product-Image-768x584.png",
     link: "/products/uristo-choornam"
   },
   {
     id: 2430,
     name: "Vario",
-    image: "https://thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-8-768x578.png",
+    image: "https://api.thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-8-768x578.png",
     link: "/products/vario"
   },
   {
     id: 2429,
     name: "Glycemio Choornam",
-    image: "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Glycemio-Product-Image-e1748371477232-768x519.png",
+    image: "https://api.thepoonaayurveda.com/wp-content/uploads/2025/05/Glycemio-Product-Image-e1748371477232-768x519.png",
     link: "/products/glycemio-choornam"
   },
   {
     id: 2428,
     name: "Vario Oil",
-    image: "https://thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-3-scaled-e1747232368137-768x640.png",
+    image: "https://api.thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-3-scaled-e1747232368137-768x640.png",
     link: "/products/vario-oil"
   },
   {
     id: 2427,
     name: "AllerGenie",
-    image: "https://thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-7-768x578.png",
+    image: "https://api.thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-7-768x578.png",
     link: "/products/allergenie"
   },
   {
     id: 2426,
     name: "Endurio 35+",
-    image: "https://thepoonaayurveda.com/wp-content/uploads/2025/04/Render_Mockup_4000_3000_2025-05-11-768x578.png",
+    image: "https://api.thepoonaayurveda.com/wp-content/uploads/2025/04/Render_Mockup_4000_3000_2025-05-11-768x578.png",
     link: "/products/endurio-35"
   },
   {
     id: 2425,
     name: "Flexio Oil",
-    image: "https://thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_1600_1200_2025-05-11-e1747232215172-768x660.png",
+    image: "https://api.thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_1600_1200_2025-05-11-e1747232215172-768x660.png",
     link: "/products/flexio-oil"
   },
   {
     id: 2424,
     name: "Sports Edge Oil",
-    image: "https://thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-4-scaled-e1747232306886-768x654.png",
+    image: "https://api.thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-4-scaled-e1747232306886-768x654.png",
     link: "/products/sports-edge-oil"
   },
   {
     id: 2413,
     name: "Sports Edge Oil Junior",
-    image: "https://thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-2-scaled-e1747232462869-768x639.png",
+    image: "https://api.thepoonaayurveda.com/wp-content/uploads/2024/12/Render_Mockup_4000_3000_2025-05-11-2-scaled-e1747232462869-768x639.png",
     link: "/products/sports-edge-oil-junior"
   }
 ];

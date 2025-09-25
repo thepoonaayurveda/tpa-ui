@@ -11,7 +11,7 @@ export function Footer() {
           <div className="flex-shrink-0 lg:max-w-xs">
             <div className="mb-4">
               <Image
-                src="https://thepoonaayurveda.com/wp-content/uploads/2025/04/Logo-White.png"
+                src="https://api.thepoonaayurveda.com/wp-content/uploads/2025/04/Logo-White.png"
                 alt="The Poona Ayurveda"
                 width={212}
                 height={92}

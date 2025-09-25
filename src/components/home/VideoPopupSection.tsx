@@ -25,7 +25,7 @@ export function VideoPopupSection() {
             {/* Video Thumbnail */}
             <div className="relative h-64 md:h-96 lg:h-[500px] rounded-2xl overflow-hidden shadow-2xl cursor-pointer group" onClick={openVideo}>
               <Image
-                src="https://thepoonaayurveda.com/wp-content/uploads/2025/08/Logo-Mark.png"
+                src="https://api.thepoonaayurveda.com/wp-content/uploads/2025/08/Logo-Mark.png"
                 alt="The Poona Ayurveda Introduction Video"
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-105"

@@ -5,18 +5,6 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "thepoonaayurveda.com",
-        port: "",
-        pathname: "/wp-content/uploads/**",
-      },
-      {
-        protocol: "https",
-        hostname: "www.thepoonaayurveda.com",
-        port: "",
-        pathname: "/wp-content/uploads/**",
-      },
-      {
-        protocol: "https",
         hostname: "api.thepoonaayurveda.com",
         port: "",
         pathname: "/wp-content/uploads/**",

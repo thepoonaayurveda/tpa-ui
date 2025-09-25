@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
     formData.append('_kb_adv_form_id', '2276-cpt-id');
 
     // Submit to WordPress
-    const wordpressResponse = await fetch('https://thepoonaayurveda.com/wp-admin/admin-ajax.php', {
+    const wordpressResponse = await fetch('https://api.thepoonaayurveda.com/wp-admin/admin-ajax.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',

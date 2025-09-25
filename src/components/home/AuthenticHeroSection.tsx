@@ -15,7 +15,7 @@ const heroSlides = [
     buttonText: "Shop now",
     buttonLink: "/products",
     backgroundImage:
-      "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Uristo-Tablet-Hero-Image.png",
+      "https://api.thepoonaayurveda.com/wp-content/uploads/2025/05/Uristo-Tablet-Hero-Image.png",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const heroSlides = [
     buttonText: "Shop now",
     buttonLink: "/products",
     backgroundImage:
-      "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Vario-Oil-Hero-Image.png",
+      "https://api.thepoonaayurveda.com/wp-content/uploads/2025/05/Vario-Oil-Hero-Image.png",
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const heroSlides = [
     buttonText: "Shop now",
     buttonLink: "/products",
     backgroundImage:
-      "https://thepoonaayurveda.com/wp-content/uploads/2025/05/AllerGenie-Tablet-Hero-Image.png",
+      "https://api.thepoonaayurveda.com/wp-content/uploads/2025/05/AllerGenie-Tablet-Hero-Image.png",
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const heroSlides = [
     buttonText: "Shop now",
     buttonLink: "/products",
     backgroundImage:
-      "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Sports-Edge-Oil-Hero-Image.png",
+      "https://api.thepoonaayurveda.com/wp-content/uploads/2025/05/Sports-Edge-Oil-Hero-Image.png",
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ const heroSlides = [
     buttonText: "Shop now",
     buttonLink: "/products",
     backgroundImage:
-      "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Sports-Edge-Oil-Junior-Hero-Image.png",
+      "https://api.thepoonaayurveda.com/wp-content/uploads/2025/05/Sports-Edge-Oil-Junior-Hero-Image.png",
   },
   {
     id: 6,
@@ -60,7 +60,7 @@ const heroSlides = [
     buttonText: "Shop now",
     buttonLink: "/products",
     backgroundImage:
-      "https://thepoonaayurveda.com/wp-content/uploads/2025/05/Endurio-35-Tablet-Hero-Image.png",
+      "https://api.thepoonaayurveda.com/wp-content/uploads/2025/05/Endurio-35-Tablet-Hero-Image.png",
   },
 ];
 

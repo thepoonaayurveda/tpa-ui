@@ -43,7 +43,7 @@ The app connects to a WooCommerce backend using the REST API. Key API functions 
 - `getCategories()` - Fetch product categories
 
 Environment variables required:
-- `NEXT_PUBLIC_WC_URL` - WooCommerce site URL
+- `NEXT_PUBLIC_WC_URL` - WooCommerce site URL (https://api.thepoonaayurveda.com)
 - `WC_CONSUMER_KEY` - WooCommerce API consumer key
 - `WC_CONSUMER_SECRET` - WooCommerce API consumer secret
 
@@ -55,7 +55,7 @@ Uses Zustand for cart state management with localStorage persistence. The cart s
 - Persistence across browser sessions
 
 ### Image Optimization
-Next.js Image component is configured to work with WooCommerce uploads from `thepoonaayurveda.com` domain. Remote patterns are defined in `next.config.ts`.
+Next.js Image component is configured to work with WooCommerce uploads from `api.thepoonaayurveda.com` domain. Remote patterns are defined in `next.config.js`.
 
 ### Type Safety
 Comprehensive TypeScript types defined in `src/lib/types.ts` for WooCommerce entities (Product, Category, CartItem, etc.).
