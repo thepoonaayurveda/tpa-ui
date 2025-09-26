@@ -65,14 +65,23 @@ export async function POST(request: NextRequest) {
     logPhonepeApi("🔍 === PHONEPE VERIFICATION API START ===");
     
     const requestBody = await request.json();
-    const { transactionId, orderId } = requestBody;
+    // Update to use merchantOrderId as per PhonePe documentation
+    const { merchantOrderId, orderId } = requestBody;
     
     logPhonepeApi("📡 Payment verification request:", {
-      transactionId,
+      merchantOrderId,
       orderId,
       fullRequestBody: requestBody,
       environment: process.env.PHONEPE_ENVIRONMENT
     });
+    
+    if (!merchantOrderId) {
+      logPaymentError("❌ Missing merchantOrderId in request");
+      return NextResponse.json(
+        { error: "merchantOrderId is required for payment verification" },
+        { status: 400 }
+      );
+    }
 
     // Validate PhonePe credentials
     const clientId = process.env.PHONEPE_CLIENT_ID;
@@ -100,22 +109,25 @@ export async function POST(request: NextRequest) {
     logPhonepeApi("🔄 Initializing PhonePe SDK:", {
       environment: environment,
       sdkEnv: env,
-      transactionId: transactionId
+      merchantOrderId: merchantOrderId
     });
     
     const client = StandardCheckoutClient.getInstance(clientId, clientSecret, 1, env);
     logPhonepeApi("✅ PhonePe client initialized");
 
     // Verify payment status with PhonePe SDK using the correct method
-    logPhonepeApi("📡 Calling PhonePe getOrderStatus for transaction:", { transactionId });
-    const phonePeResponse = await client.getOrderStatus(transactionId);
+    // Use merchantOrderId instead of transactionId as per PhonePe documentation
+    logPhonepeApi("📡 Calling PhonePe getOrderStatus for merchantOrderId:", { merchantOrderId });
+    const phonePeResponse = await client.getOrderStatus(merchantOrderId);
     
     logPhonepeApi("📦 Raw PhonePe Response:", {
       response: phonePeResponse,
       hasState: !!phonePeResponse?.state,
       state: phonePeResponse?.state,
-      orderId: phonePeResponse?.orderId,
-      amount: phonePeResponse?.amount
+      orderId: phonePeResponse?.orderId, // PhonePe's internal order ID
+      amount: phonePeResponse?.amount,
+      expireAt: phonePeResponse?.expireAt,
+      hasPaymentDetails: !!phonePeResponse?.paymentDetails
     });
 
     // The response structure has state property directly
@@ -134,12 +146,12 @@ export async function POST(request: NextRequest) {
             case 'COMPLETED':
               logOrderUpdate("🎉 PAYMENT COMPLETED - Setting order to processing");
               orderStatus = 'processing';
-              notes = `Payment verified and completed. Amount: ₹${phonePeResponse.amount/100}. Order ID: ${phonePeResponse.orderId}`;
+              notes = `Payment verified and completed. Amount: ₹${phonePeResponse.amount/100}. PhonePe Order ID: ${phonePeResponse.orderId}. Merchant Order ID: ${merchantOrderId}`;
               break;
             case 'FAILED':
               logOrderUpdate("❌ PAYMENT FAILED - Setting order to failed");
               orderStatus = 'failed';
-              notes = `Payment verification failed. Order ID: ${phonePeResponse.orderId}`;
+              notes = `Payment verification failed. PhonePe Order ID: ${phonePeResponse.orderId}. Merchant Order ID: ${merchantOrderId}`;
               break;
             case 'PENDING':
               logOrderUpdate("⏳ PAYMENT PENDING - Not updating order status", { orderId });
@@ -160,21 +172,23 @@ export async function POST(request: NextRequest) {
           });
 
           if (orderStatus) {
-            console.log("📡 CALLING ORDER UPDATE API:", {
+            // Use merchantOrderId as transactionId for WooCommerce tracking
+            const transactionIdForWooCommerce = merchantOrderId;
+            
+            logOrderUpdate("📡 CALLING ORDER UPDATE API:", {
               orderId,
               orderStatus,
-              transactionId,
+              transactionId: transactionIdForWooCommerce,
               notes: notes.substring(0, 100) + "..."
             });
             
-            await updateOrderStatus(orderId, orderStatus, transactionId, notes);
-            console.log("✅ ORDER STATUS UPDATED SUCCESSFULLY:", {
+            await updateOrderStatus(orderId, orderStatus, transactionIdForWooCommerce, notes);
+            logOrderUpdate("✅ ORDER STATUS UPDATED SUCCESSFULLY:", {
               orderId,
-              newStatus: orderStatus,
-              timestamp: new Date().toISOString()
+              newStatus: orderStatus
             });
           } else {
-            console.log("⏭️ SKIPPING ORDER UPDATE - No status change needed for:", orderId);
+            logOrderUpdate("⏭️ SKIPPING ORDER UPDATE - No status change needed", { orderId });
           }
         } catch (updateError) {
           console.error("❌ FAILED TO UPDATE ORDER:", {
@@ -192,9 +206,10 @@ export async function POST(request: NextRequest) {
       const successResponse = {
         success: true,
         status: phonePeResponse.state,
-        orderId: phonePeResponse.orderId,
+        orderId: phonePeResponse.orderId, // PhonePe's internal order ID
         amount: phonePeResponse.amount,
-        expireAt: phonePeResponse.expireAt
+        expireAt: phonePeResponse.expireAt,
+        merchantOrderId: merchantOrderId // Our merchant order ID
       };
       
       console.log("✅ VERIFICATION SUCCESS - Returning response:", {
@@ -214,10 +229,10 @@ export async function POST(request: NextRequest) {
       
       // If verification failed and orderId is provided, mark order as failed
       if (orderId) {
-        console.log("🔄 MARKING ORDER AS FAILED due to invalid response:", orderId);
+        logOrderUpdate("🔄 MARKING ORDER AS FAILED due to invalid response", { orderId });
         try {
-          await updateOrderStatus(orderId, 'failed', transactionId, `Payment verification failed - no valid response`);
-          console.log("✅ ORDER MARKED AS FAILED:", orderId);
+          await updateOrderStatus(orderId, 'failed', merchantOrderId, `Payment verification failed - no valid response from PhonePe. Merchant Order ID: ${merchantOrderId}`);
+          logOrderUpdate("✅ ORDER MARKED AS FAILED:", { orderId });
         } catch (updateError) {
           console.error("❌ FAILED TO MARK ORDER AS FAILED:", {
             orderId,
