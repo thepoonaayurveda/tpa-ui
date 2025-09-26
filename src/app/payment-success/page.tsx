@@ -6,7 +6,6 @@ import { CheckCircleIcon, XCircleIcon, ClockIcon } from "@heroicons/react/24/out
 import Link from "next/link";
 import { Suspense } from "react";
 import { useCartStore } from "@/store/cartStore";
-import { logPaymentFlow, logPaymentError } from "@/lib/logger";
 
 function PaymentSuccessContent() {
   const searchParams = useSearchParams();
@@ -21,7 +20,6 @@ function PaymentSuccessContent() {
 
   useEffect(() => {
     if (!orderId) {
-      logPaymentError("❌ No order ID in URL parameters");
       setError("Invalid payment session - no order ID found");
       setPaymentStatus('failed');
       setVerifying(false);
@@ -33,20 +31,15 @@ function PaymentSuccessContent() {
 
   const verifyPaymentWithPhonePe = async () => {
     try {
-      logPaymentFlow("🔍 === PAYMENT VERIFICATION START ===");
-      logPaymentFlow("📍 Current URL:", { url: window.location.href });
-      logPaymentFlow("📋 All URL Parameters:", Object.fromEntries(searchParams.entries()));
-      logPaymentFlow("🆔 Order ID from URL:", { orderId });
-      
       // Since user reached the success page, we assume positive intent
       // but we need to verify with PhonePe using the proper API
-      logPaymentFlow("✅ User reached success page - verifying payment status with PhonePe");
+      console.log("User reached success page - verifying payment status with PhonePe");
 
       // Extract merchant order ID for PhonePe verification
       // According to PhonePe docs, we need to use the merchantOrderId for getOrderStatus
       const merchantOrderId = orderId; // This is our merchant order ID
       
-      logPaymentFlow("📡 Calling PhonePe verification with merchant order ID:", { merchantOrderId });
+      console.log("Calling PhonePe verification with merchant order ID:", merchantOrderId);
 
       const response = await fetch("/api/phonepe/verify-payment", {
         method: "POST",
@@ -59,40 +52,27 @@ function PaymentSuccessContent() {
         }),
       });
 
-      logPaymentFlow("📨 Verification API response:", {
-        status: response.status,
-        ok: response.ok,
-        headers: Object.fromEntries(response.headers.entries())
-      });
+      console.log("Verification API response status:", response.status);
 
       // Check if the response is HTML (404/500 error page) instead of JSON
       const contentType = response.headers.get('content-type');
       if (!contentType || !contentType.includes('application/json')) {
-        logPaymentError("⚠️ API returned non-JSON response, treating as verification failure", {
-          contentType,
-          responseStatus: response.status
-        });
+        console.warn("API returned non-JSON response, treating as verification failure");
         throw new Error("Payment verification service unavailable. Please contact support if money was deducted.");
       }
 
       let result;
       try {
         result = await response.json();
-        logPaymentFlow("📦 Verification API JSON response:", result);
+        console.log("Verification API JSON response:", result);
       } catch (jsonError) {
-        logPaymentError("❌ Failed to parse verification response", {
-          error: jsonError instanceof Error ? jsonError.message : String(jsonError)
-        });
+        console.error("Failed to parse verification response");
         throw new Error("Payment verification failed. Please contact support if money was deducted.");
       }
 
       // Process the verification result based on PhonePe documentation
       if (response.ok && result.success) {
-        logPaymentFlow("✅ PhonePe verification successful:", {
-          status: result.status,
-          orderId: result.orderId,
-          amount: result.amount
-        });
+        console.log("PhonePe verification successful:", result.status);
 
         setOrderDetails({
           orderId: result.orderId,
@@ -103,50 +83,43 @@ function PaymentSuccessContent() {
         // Handle different payment states according to PhonePe docs
         switch (result.status) {
           case 'COMPLETED':
-            logPaymentFlow("🎉 Payment COMPLETED - Success!");
+            console.log("Payment COMPLETED - Success!");
             setPaymentStatus('success');
             clearCart(); // Clear cart only on confirmed success
             break;
             
           case 'FAILED':
-            logPaymentError("❌ Payment FAILED according to PhonePe");
+            console.error("Payment FAILED according to PhonePe");
             setPaymentStatus('failed');
             setError("Payment failed. Please try again or contact support if money was deducted.");
             break;
             
           case 'PENDING':
-            logPaymentFlow("⏳ Payment still PENDING - keeping verification state");
+            console.log("Payment still PENDING - keeping verification state");
             setPaymentStatus('verifying');
             setError("Payment is still being processed. Please wait or check back later.");
             break;
             
           default:
-            logPaymentError("⚠️ Unknown payment status from PhonePe:", { status: result.status });
+            console.error("Unknown payment status from PhonePe:", result.status);
             setPaymentStatus('verifying');
             setError("Payment status unclear. Please contact support if money was deducted.");
             break;
         }
       } else {
-        logPaymentError("❌ PhonePe verification failed:", {
-          responseOk: response.ok,
-          resultSuccess: result?.success,
-          error: result?.error
-        });
+        console.error("PhonePe verification failed:", result?.error);
         
         setPaymentStatus('failed');
         setError(result?.error || "Payment verification failed. Please contact support if money was deducted.");
       }
 
     } catch (error: any) {
-      logPaymentError("💥 Payment verification error:", {
-        error: error.message,
-        stack: error.stack
-      });
+      console.error("Payment verification error:", error);
       
       setPaymentStatus('failed');
       setError(error.message || "Payment verification failed. Please contact support if money was deducted.");
     } finally {
-      logPaymentFlow("🏁 Payment verification complete");
+      console.log("Payment verification complete");
       setVerifying(false);
     }
   };
