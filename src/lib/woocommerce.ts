@@ -167,10 +167,12 @@ export const createOrder = async (orderData: CreateOrderData): Promise<Order> =>
         country: String(orderData.shipping.country || 'IN')
       },
       
-      // Line items with proper structure
+      // Line items with proper structure including discount handling
       line_items: orderData.line_items.map(item => ({
         product_id: Number(item.product_id),
         quantity: Number(item.quantity),
+        subtotal: String(item.subtotal || '0'),
+        total: String(item.total || item.subtotal || '0'),
         meta_data: [
           {
             key: '_product_name',
@@ -178,6 +180,15 @@ export const createOrder = async (orderData: CreateOrderData): Promise<Order> =>
           }
         ]
       })),
+      
+      // Add coupon lines if provided
+      ...(orderData.coupon_lines && orderData.coupon_lines.length > 0 ? {
+        coupon_lines: orderData.coupon_lines.map(coupon => ({
+          code: String(coupon.code),
+          discount: String(coupon.discount),
+          discount_tax: String(coupon.discount_tax || '0')
+        }))
+      } : {}),
       
       // Customer note
       customer_note: String(orderData.customer_note || ''),

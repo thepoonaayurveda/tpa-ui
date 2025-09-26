@@ -192,14 +192,26 @@ export default function CheckoutPage() {
         country: "IN",
       };
 
-      // Prepare line items from cart with all required fields
-      const line_items = items.map(item => ({
-        product_id: item.id,
-        name: item.name,         // Explicitly provide name
-        quantity: item.quantity,
-        subtotal: (item.price * item.quantity).toFixed(2),
-        total: (item.price * item.quantity).toFixed(2),
-      }));
+      // Prepare line items from cart with proper discount calculation
+      const line_items = items.map(item => {
+        const itemSubtotal = item.price * item.quantity;
+        let itemTotal = itemSubtotal;
+        
+        // Apply coupon discount proportionally to each item if coupon exists
+        if (appliedCoupon && discount > 0) {
+          const discountRatio = discount / subtotal; // Calculate discount percentage of total cart
+          const itemDiscount = itemSubtotal * discountRatio; // Apply proportional discount to this item
+          itemTotal = Math.max(0, itemSubtotal - itemDiscount); // Ensure total doesn't go below 0
+        }
+        
+        return {
+          product_id: item.id,
+          name: item.name,
+          quantity: item.quantity,
+          subtotal: itemSubtotal.toFixed(2), // Original price before discount
+          total: itemTotal.toFixed(2),       // Price after discount applied
+        };
+      });
 
       // Get selected shipping method details
       const selectedMethod = shippingOptions.methods.find(m => m.method_id === selectedShippingMethod);
