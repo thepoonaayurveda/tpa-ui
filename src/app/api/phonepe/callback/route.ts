@@ -3,7 +3,7 @@ import { StandardCheckoutClient, Env } from "pg-sdk-node";
 
 async function updateOrderStatus(orderId: string, status: 'processing' | 'failed', transactionId: string, notes?: string) {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_SITE_URL}/api/orders/${orderId}/update-status`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_WC_URL}/api/orders/${orderId}/update-status`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

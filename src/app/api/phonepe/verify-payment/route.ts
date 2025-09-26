@@ -4,7 +4,7 @@ import { logPhonepeApi, logPaymentError, logOrderUpdate } from "@/lib/logger";
 
 async function updateOrderStatus(orderId: string, status: 'processing' | 'failed', transactionId: string, notes?: string) {
   try {
-    const updateUrl = `${process.env.NEXT_PUBLIC_SITE_URL}/api/orders/${orderId}/update-status`;
+    const updateUrl = `${process.env.NEXT_PUBLIC_WC_URL}/api/orders/${orderId}/update-status`;
     const updateData = {
       status: status,
       transaction_id: transactionId,
