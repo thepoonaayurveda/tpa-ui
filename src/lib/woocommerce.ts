@@ -164,8 +164,7 @@ export const createOrder = async (orderData: CreateOrderData): Promise<Order> =>
         city: String(orderData.shipping.city || ''),
         state: String(orderData.shipping.state || ''),
         postcode: String(orderData.shipping.postcode || ''),
-        country: String(orderData.shipping.country || 'IN'),
-        phone: String(orderData.shipping.phone || '')
+        country: String(orderData.shipping.country || 'IN')
       },
       
       // Line items with proper structure
