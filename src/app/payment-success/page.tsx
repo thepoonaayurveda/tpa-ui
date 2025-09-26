@@ -190,12 +190,6 @@ function PaymentSuccessContent() {
               )}
               <div className="space-y-3">
                 <Link
-                  href="/orders"
-                  className="block w-full bg-primary text-white py-2 px-4 rounded-md hover:bg-primary-dark transition-colors"
-                >
-                  View My Orders
-                </Link>
-                <Link
                   href="/products"
                   className="block w-full border border-gray-300 text-gray-700 py-2 px-4 rounded-md hover:bg-gray-50 transition-colors"
                 >
