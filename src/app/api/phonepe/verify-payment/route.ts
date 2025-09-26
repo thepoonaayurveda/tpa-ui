@@ -30,6 +30,8 @@ async function updateOrderStatus(orderId: string, status: 'processing' | 'failed
 export async function POST(request: NextRequest) {
   try {
     const { transactionId, orderId } = await request.json();
+    
+    console.log("Payment verification request:", { transactionId, orderId });
 
     // Validate PhonePe credentials
     const clientId = process.env.PHONEPE_CLIENT_ID;

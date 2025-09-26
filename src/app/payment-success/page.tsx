@@ -6,6 +6,7 @@ import { CheckCircleIcon, XCircleIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { Suspense } from "react";
 import { useCartStore } from "@/store/cartStore";
+import { detectPaymentStatus, logPaymentParameters } from "@/lib/payment-utils";
 
 function PaymentSuccessContent() {
   const searchParams = useSearchParams();
@@ -30,23 +31,35 @@ function PaymentSuccessContent() {
 
   const verifyPayment = async () => {
     try {
-      if (!transactionId) {
-        // If no transaction ID, this might be a direct return
-        // Check for URL parameters that PhonePe might add
-        const code = searchParams.get('code');
-        const providerReferenceId = searchParams.get('providerReferenceId');
-        
-        if (code === 'PAYMENT_SUCCESS') {
+      // Log all parameters for debugging
+      const allParams = logPaymentParameters(searchParams);
+      
+      // Use intelligent payment status detection
+      const detectionResult = detectPaymentStatus(allParams);
+      
+      console.log("Payment status detection result:", detectionResult);
+
+      // If we have high confidence, use that result immediately
+      if (detectionResult.confidence === 'high') {
+        if (detectionResult.status === 'success') {
           setPaymentStatus('success');
-          clearCart(); // Clear cart on successful payment
+          clearCart();
           setVerifying(false);
           return;
-        } else if (code === 'PAYMENT_ERROR' || code === 'PAYMENT_DECLINED') {
+        } else if (detectionResult.status === 'failed') {
           setPaymentStatus('failed');
-          setError("Payment was declined or failed");
+          setError(detectionResult.reason);
           setVerifying(false);
           return;
         }
+      }
+
+      // For medium confidence failure (like cancellation), also use it
+      if (detectionResult.confidence === 'medium' && detectionResult.status === 'failed') {
+        setPaymentStatus('failed');
+        setError(detectionResult.reason);
+        setVerifying(false);
+        return;
       }
 
       // Verify payment with our backend if transaction ID is available
@@ -65,7 +78,28 @@ function PaymentSuccessContent() {
           }),
         });
 
-        const result = await response.json();
+        // Check if the response is HTML (404/500 error page) instead of JSON
+        const contentType = response.headers.get('content-type');
+        if (!contentType || !contentType.includes('application/json')) {
+          console.warn("Payment verification API returned non-JSON response, assuming success based on redirect");
+          // If API is down but user was redirected here, assume success
+          setPaymentStatus('success');
+          clearCart();
+          setVerifying(false);
+          return;
+        }
+
+        let result;
+        try {
+          result = await response.json();
+        } catch (jsonError) {
+          console.warn("Failed to parse payment verification response, assuming success based on redirect");
+          // If JSON parsing fails but user was redirected here, assume success
+          setPaymentStatus('success');
+          clearCart();
+          setVerifying(false);
+          return;
+        }
 
         if (response.ok && result.success) {
           if (result.status === 'COMPLETED') {
@@ -82,24 +116,33 @@ function PaymentSuccessContent() {
           setError(result.error || "Payment verification failed");
         }
       } else {
-        // No transaction ID to verify, check other URL parameters
-        const code = searchParams.get('code');
-        if (code === 'PAYMENT_SUCCESS') {
+        // No transaction ID to verify - use the detection result or default to failed
+        console.log("No transaction ID available for verification");
+        
+        if (detectionResult.confidence === 'medium' && detectionResult.status === 'success') {
           setPaymentStatus('success');
-          clearCart(); // Clear cart on successful payment
-        } else if (code === 'PAYMENT_ERROR' || code === 'PAYMENT_DECLINED') {
-          setPaymentStatus('failed');
-          setError("Payment was cancelled or declined");
+          clearCart();
         } else {
-          // If no clear status, assume payment was cancelled/failed
+          // Default to failed with helpful message for cancelled payments
           setPaymentStatus('failed');
-          setError("Payment was not completed");
+          setError("Payment was cancelled or could not be completed. Please try again.");
         }
       }
     } catch (error: any) {
       console.error("Error verifying payment:", error);
-      setPaymentStatus('failed');
-      setError("Failed to verify payment status");
+      
+      // Only assume success if we have high confidence indicators
+      const detectionResult = detectPaymentStatus(logPaymentParameters(searchParams));
+      
+      if (detectionResult.confidence === 'high' && detectionResult.status === 'success') {
+        console.warn("Payment verification failed but high confidence success indicators present, assuming success");
+        setPaymentStatus('success');
+        clearCart();
+        setError(""); // Clear any error
+      } else {
+        setPaymentStatus('failed');
+        setError("Payment verification failed. If payment was deducted, please contact support.");
+      }
     } finally {
       setVerifying(false);
     }

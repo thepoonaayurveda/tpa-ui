@@ -192,19 +192,23 @@ export default function CheckoutPage() {
         country: "IN",
       };
 
-      // Prepare line items from cart
+      // Prepare line items from cart with all required fields
       const line_items = items.map(item => ({
         product_id: item.id,
+        name: item.name,         // Explicitly provide name
         quantity: item.quantity,
+        subtotal: (item.price * item.quantity).toFixed(2),
+        total: (item.price * item.quantity).toFixed(2),
       }));
 
       // Get selected shipping method details
       const selectedMethod = shippingOptions.methods.find(m => m.method_id === selectedShippingMethod);
       
-      // Prepare order data
+      // Prepare order data with all required WooCommerce fields
       const orderData: CreateOrderData = {
         payment_method: form.paymentMethod,
         payment_method_title: 'PhonePe',
+        status: 'pending',
         set_paid: false,
         billing,
         shipping,
@@ -223,7 +227,38 @@ export default function CheckoutPage() {
             discount_tax: "0.00", // Assuming no tax on discount for now
           }
         ] : [],
+        customer_note: `Order created via website checkout\n\nCustomer Details:\n- Name: ${form.firstName} ${form.lastName}\n- Email: ${form.email}\n- Phone: ${form.phone}\n- Address: ${form.address}, ${form.city}, ${form.state} ${form.pincode}\n\nPayment Method: ${form.paymentMethod.toUpperCase()}\nOrder Date: ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}`,
       };
+
+      // Add metadata to ensure all customer info is preserved
+      (orderData as any).meta_data = [
+        {
+          key: '_customer_name',
+          value: `${form.firstName} ${form.lastName}`
+        },
+        {
+          key: '_customer_email',
+          value: form.email
+        },
+        {
+          key: '_customer_phone',
+          value: form.phone
+        },
+        {
+          key: '_order_source',
+          value: 'website_checkout'
+        }
+      ];
+
+      // Debug log to verify all data is present
+      console.log("Order data being sent to WooCommerce:", {
+        billing: orderData.billing,
+        shipping: orderData.shipping,
+        line_items: orderData.line_items,
+        customer_note: orderData.customer_note,
+        total_items: orderData.line_items.length,
+        total_amount: orderData.line_items.reduce((sum, item) => sum + parseFloat(item.total), 0).toFixed(2)
+      });
 
       {
         // PhonePe payment - create order and initiate payment

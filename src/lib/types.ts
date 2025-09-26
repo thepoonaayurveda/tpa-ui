@@ -190,17 +190,23 @@ export interface CreateOrderData {
   payment_method: string;
   payment_method_title: string;
   set_paid: boolean;
+  status?: string;
   billing: BillingAddress;
   shipping: ShippingAddress;
   line_items: CreateOrderLineItem[];
   shipping_lines: CreateShippingLine[];
   coupon_lines?: CouponLine[];
   transaction_id?: string;
+  customer_note?: string;
+  meta_data?: MetaData[];
 }
 
 export interface CreateOrderLineItem {
   product_id: number;
+  name: string;
   quantity: number;
+  subtotal: string;
+  total: string;
 }
 
 export interface CreateShippingLine {

@@ -10,6 +10,7 @@ if (!process.env.NEXT_PUBLIC_WC_URL || !process.env.WC_CONSUMER_KEY || !process.
   });
 }
 
+
 const api = new WooCommerceRestApi({
   url: process.env.NEXT_PUBLIC_WC_URL!,
   consumerKey: process.env.WC_CONSUMER_KEY!,
@@ -19,7 +20,8 @@ const api = new WooCommerceRestApi({
   timeout: 30000, // 30 second timeout
   axiosConfig: {
     headers: {
-      'User-Agent': 'NextJS-WooCommerce-Client'
+      'User-Agent': 'NextJS-WooCommerce-Client',
+      'Content-Type': 'application/json'
     }
   }
 });
@@ -109,14 +111,84 @@ export const getProductReviews = async (params?: any) => {
 
 export const createOrder = async (orderData: CreateOrderData): Promise<Order> => {
   try {
-    console.log("Creating order with data:", JSON.stringify(orderData, null, 2));
-    console.log("WooCommerce URL:", process.env.NEXT_PUBLIC_WC_URL);
+    // Validate required billing fields
+    const requiredBillingFields = ['first_name', 'last_name', 'email', 'address_1', 'city', 'state', 'postcode', 'country'];
+    const missingBillingFields = requiredBillingFields.filter(field => !orderData.billing?.[field as keyof typeof orderData.billing]);
     
-    const response = await api.post("orders", orderData);
+    if (missingBillingFields.length > 0) {
+      throw new Error(`Missing required billing fields: ${missingBillingFields.join(', ')}`);
+    }
     
-    console.log("Order creation response status:", response.status);
-    console.log("Order creation response data:", response.data);
+    if (!orderData.line_items || orderData.line_items.length === 0) {
+      throw new Error('Order must contain at least one line item');
+    }
     
+    // Validate that all line items have required fields
+    const invalidLineItems = orderData.line_items?.filter(item => 
+      !item.product_id || !item.name || !item.quantity || item.quantity <= 0
+    );
+    
+    if (invalidLineItems && invalidLineItems.length > 0) {
+      throw new Error(`Invalid line items found: ${JSON.stringify(invalidLineItems)}`);
+    }
+
+    // Create the actual order with explicit field mapping
+    const wcOrderData = {
+      payment_method: orderData.payment_method,
+      payment_method_title: orderData.payment_method_title,
+      status: orderData.status || 'pending',
+      set_paid: orderData.set_paid || false,
+      
+      // Billing address with explicit mapping
+      billing: {
+        first_name: String(orderData.billing.first_name || ''),
+        last_name: String(orderData.billing.last_name || ''),
+        company: String(orderData.billing.company || ''),
+        address_1: String(orderData.billing.address_1 || ''),
+        address_2: String(orderData.billing.address_2 || ''),
+        city: String(orderData.billing.city || ''),
+        state: String(orderData.billing.state || ''),
+        postcode: String(orderData.billing.postcode || ''),
+        country: String(orderData.billing.country || 'IN'),
+        email: String(orderData.billing.email || ''),
+        phone: String(orderData.billing.phone || '')
+      },
+      
+      // Shipping address with explicit mapping
+      shipping: {
+        first_name: String(orderData.shipping.first_name || ''),
+        last_name: String(orderData.shipping.last_name || ''),
+        company: String(orderData.shipping.company || ''),
+        address_1: String(orderData.shipping.address_1 || ''),
+        address_2: String(orderData.shipping.address_2 || ''),
+        city: String(orderData.shipping.city || ''),
+        state: String(orderData.shipping.state || ''),
+        postcode: String(orderData.shipping.postcode || ''),
+        country: String(orderData.shipping.country || 'IN'),
+        phone: String(orderData.shipping.phone || '')
+      },
+      
+      // Line items with proper structure
+      line_items: orderData.line_items.map(item => ({
+        product_id: Number(item.product_id),
+        quantity: Number(item.quantity),
+        meta_data: [
+          {
+            key: '_product_name',
+            value: String(item.name || '')
+          }
+        ]
+      })),
+      
+      // Customer note
+      customer_note: String(orderData.customer_note || ''),
+      
+      // Meta data
+      meta_data: orderData.meta_data || []
+    };
+
+    
+    const response = await api.post("orders", wcOrderData);
     return response.data;
   } catch (error: any) {
     handleApiError(error, 'createOrder');
@@ -144,9 +216,15 @@ export const updateOrder = async (orderId: number, data: Partial<CreateOrderData
   try {
     const response = await api.put(`orders/${orderId}`, data);
     return response.data;
-  } catch (error) {
-    console.error("Error updating order:", error);
-    return null;
+  } catch (error: any) {
+    handleApiError(error, 'updateOrder');
+    
+    // Provide more specific error message
+    const errorMessage = error.response?.data?.message || 
+                        error.response?.data?.code || 
+                        error.message || 
+                        "Failed to update order";
+    throw new Error(errorMessage);
   }
 };
 
@@ -267,14 +345,10 @@ export const calculateShipping = async (request: ShippingCalculationRequest): Pr
 // Coupon functions
 export const getCoupon = async (code: string): Promise<Coupon | null> => {
   try {
-    console.log("Fetching coupon:", code, "from", process.env.NEXT_PUBLIC_WC_URL);
     const response = await api.get(`coupons`, {
       code: code,
       per_page: 1
     });
-    
-    console.log("Coupon API response status:", response.status);
-    console.log("Coupon API response data:", response.data);
     
     const coupons = response.data;
     if (coupons && coupons.length > 0) {

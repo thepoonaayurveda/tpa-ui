@@ -50,6 +50,29 @@ export async function PUT(
       updateData.customer_note = notes;
     }
 
+    // Add metadata for tracking
+    updateData.meta_data = [
+      {
+        key: '_payment_method_title',
+        value: payment_method === 'phonepe' ? 'PhonePe' : (payment_method || 'Unknown')
+      }
+    ];
+
+    if (transaction_id) {
+      updateData.meta_data.push({
+        key: '_transaction_id',
+        value: transaction_id
+      });
+    }
+
+    console.log(`Updating order ${orderId} status to ${status}`, {
+      orderId,
+      status,
+      transaction_id,
+      payment_method,
+      notes
+    });
+
     // Update order in WooCommerce
     const updatedOrder = await updateOrder(parseInt(orderId), updateData);
 

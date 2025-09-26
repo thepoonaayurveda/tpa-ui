@@ -18,10 +18,10 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Create order with pending status for online payments
+    // Create order with provided status (default to pending for online payments)
     const pendingOrderData = {
       ...orderData,
-      status: 'pending',
+      status: orderData.status || 'pending',
       set_paid: false, // Will be updated after successful payment
     };
 
