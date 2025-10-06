@@ -86,6 +86,106 @@ export default function RefundReturnsPage() {
             </section>
 
             <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Our Fair Exchange Process</h2>
+              <p className="mb-4">
+                Here's the honest truth about exchanges:
+              </p>
+              
+              <p className="mb-4">
+                If you accidentally ordered the wrong item (we've all been there!), we're happy to help with an exchange. We do need to charge ₹200 to cover the pickup and redelivery costs – this just covers what our logistics partners charge us, nothing more.
+              </p>
+
+              <p className="mb-3">
+                <strong>Ways to reach our caring team:</strong>
+              </p>
+              <ul className="list-disc pl-6 space-y-1 mb-6">
+                <li>Instagram DM (we love chatting there!)</li>
+                <li>WhatsApp us</li>
+                <li>Send us an email</li>
+                <li>Give us a call</li>
+              </ul>
+
+              <p className="mb-4">
+                We accept Return, Exchange products in 4 to 5 Business days.
+              </p>
+
+              <p className="mb-4">
+                Once you contact us, our friendly customer care team will reach out with simple, clear instructions to make everything smooth.
+              </p>
+
+              <p className="mb-6">
+                Your exchange product will be delivered in 3 to 4 business days.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Cancellations Made Simple</h2>
+              <p className="mb-4">
+                Changed your mind? Here's what you need to know:
+              </p>
+
+              <p className="mb-4">
+                Life happens, and we get it! To cancel your order:
+              </p>
+
+              <ul className="list-disc pl-6 space-y-2 mb-6">
+                <li>Reach out within 24 hours of ordering, or before we create your shipping label</li>
+                <li>Once our delivery partner picks up your package, we can't stop the journey (they're quite efficient!)</li>
+                <li>Heads up: Prepaid orders zip through our system super quickly – they're often processed instantly</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">Our Refund Philosophy</h2>
+              <p className="mb-4">
+                We believe in fair solutions for everyone:
+              </p>
+
+              <div className="space-y-4 mb-6">
+                <p>
+                  <strong>If delivery goes wrong on our end:</strong> We'll prioritize getting a replacement to you ASAP. If you'd rather not wait, we'll provide a coupon code for the full amount – think of it as a rain check for your wellness journey!
+                </p>
+
+                <p>
+                  <strong>If you change your mind after shipping:</strong> We understand plans change. If your order is already on its way and you no longer want it, we'll process your refund minus ₹200 for shipping costs. We hope you understand – once the wheels are in motion, there are real costs involved.
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">The Refund Process – Simple & Transparent</h2>
+              
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">For card and online payments:</h3>
+              
+              <ul className="list-disc pl-6 space-y-2 mb-4">
+                <li>We start processing refunds within 5-7 business days</li>
+                <li>Your bank will credit the money back to your original payment method</li>
+                <li>Give it another 5-10 business days to show up in your account (banks can be slow!)</li>
+                <li>We'll share tracking numbers so you can follow up if needed</li>
+              </ul>
+
+              <p className="mb-6">
+                Once your refund is approved your amount will be credited within 5 to 7 business day to the original payment method.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">A Note on Our Right to Cancel</h2>
+              <p className="mb-6">
+                Sometimes, very rarely, we might need to cancel an order due to circumstances beyond our control. If this happens, we'll let you know promptly and ensure any refunds are processed quickly. We never take this decision lightly and always communicate openly about it.
+              </p>
+
+              <p className="mb-4">
+                Remember: We're here because we care about your wellness journey. Every policy, every process is designed with your satisfaction in mind. If you ever have questions or concerns, please don't hesitate to reach out – we're always happy to help!
+              </p>
+
+              <p className="mb-6 text-right">
+                <em>With gratitude,</em><br/>
+                <strong>The Poona Ayurveda Family 🙏</strong>
+              </p>
+            </section>
+
+            <section>
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">Contact Our Customer Care Team</h2>
               <p className="mb-4">
                 Our dedicated customer care team is here to help you with any questions or concerns. You can reach us through multiple channels:
