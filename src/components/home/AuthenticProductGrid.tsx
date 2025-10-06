@@ -154,7 +154,7 @@ function ProductItem({ product, priority = false }: { product: typeof products[0
           {/* Content - Always visible on sm/md, hover only on lg+ */}
           <div className="absolute inset-0 flex items-center justify-center">
             {/* Small/Medium screens - Always visible */}
-            <div className="lg:hidden text-center">
+            <div className="lg:hidden text-center flex items-center justify-center h-full">
               <h3 className="text-2xl font-bold text-slate-800">{product.name}</h3>
             </div>
             
