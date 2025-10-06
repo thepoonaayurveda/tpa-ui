@@ -17,6 +17,7 @@ import { CartTray } from "@/components/cart/CartTray";
 
 const navigation = [
   { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
   { name: "Products", href: "/products" },
 ];
 
