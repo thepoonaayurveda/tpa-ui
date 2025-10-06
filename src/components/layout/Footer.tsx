@@ -38,6 +38,14 @@ export function Footer() {
                     About Us
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href="/contact"
+                    className="hover:text-primary transition-colors text-md"
+                  >
+                    Contact Us
+                  </Link>
+                </li>
               </ul>
             </div>
 
