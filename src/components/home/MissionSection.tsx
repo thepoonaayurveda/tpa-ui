@@ -64,18 +64,15 @@ export function MissionSection() {
               </div>
             </div>
 
-            {/* Call to Action Button - Hidden */}
-            {/* <div className="mt-8">
+            {/* Call to Action Button */}
+            <div className="mt-8">
               <Link 
                 href="/about" 
-                className="inline-flex items-center px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary/90 transition-colors duration-300 shadow-lg hover:shadow-xl"
+                className="inline-block bg-primary-dark text-white px-8 py-6 rounded-full tracking-widest transition-colors text-sm uppercase shadow-lg font-roboto"
               >
                 Learn More About Us
-                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
               </Link>
-            </div> */}
+            </div>
           </div>
 
           {/* Right Image */}
