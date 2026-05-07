@@ -11,21 +11,34 @@ const roboto = Roboto({
   variable: '--font-roboto',
 });
 
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL && !process.env.NEXT_PUBLIC_SITE_URL.includes("localhost")
+    ? process.env.NEXT_PUBLIC_SITE_URL
+    : "https://thepoonaayurveda.com";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "The Poona Ayurveda - Authentic Ayurvedic Products",
   description:
     "Making wellness accessible, convenient, and sustainable for everyone through authentic Ayurvedic products.",
   keywords:
     "ayurveda, ayurvedic products, wellness, natural remedies, herbs, oils, tablets",
   authors: [{ name: "The Poona Ayurveda" }],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "The Poona Ayurveda - Authentic Ayurvedic Products",
     description:
       "Making wellness accessible, convenient, and sustainable for everyone.",
-    url: "https://thepoonaayurveda.com",
+    url: SITE_URL,
     siteName: "The Poona Ayurveda",
     locale: "en_IN",
     type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
