@@ -16,7 +16,7 @@
     "clsx": "^2.0.0",
     "date-fns": "^3.0.6",
     "next": "14.2.18",
-    "pg-sdk-node": "https://phonepe.mycloudrepo.io/public/repositories/phonepe-pg-sdk-node/releases/v2/phonepe-pg-sdk-node.tgz",
+    "pg-sdk-node": "https://phonepe.mycloudrepo.io/public/repositories/phonepe-pg-sdk-node/releases/v2/phonepe-pg-sdk-node-2.0.2.tgz",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.47.0",
