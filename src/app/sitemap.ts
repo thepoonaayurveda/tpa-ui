@@ -1,10 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getProducts } from "@/lib/woocommerce";
-
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL && !process.env.NEXT_PUBLIC_SITE_URL.includes("localhost")
-    ? process.env.NEXT_PUBLIC_SITE_URL
-    : "https://thepoonaayurveda.com";
+import { SITE_URL } from "@/lib/siteUrl";
 
 export const revalidate = 3600;
 

@@ -4,17 +4,13 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CartProvider } from "@/components/providers/CartProvider";
 import { Roboto } from 'next/font/google';
+import { SITE_URL } from "@/lib/siteUrl";
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
   subsets: ['latin'],
   variable: '--font-roboto',
 });
-
-const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL && !process.env.NEXT_PUBLIC_SITE_URL.includes("localhost")
-    ? process.env.NEXT_PUBLIC_SITE_URL
-    : "https://thepoonaayurveda.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
