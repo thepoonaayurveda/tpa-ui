@@ -8,6 +8,7 @@ import Link from "next/link";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { CreateOrderData, BillingAddress, ShippingAddress, ShippingCalculationResponse } from "@/lib/types";
 import { CouponInput } from "@/components/cart/CouponInput";
+import { SITE_URL } from "@/lib/siteUrl";
 
 interface CheckoutForm {
   email: string;
@@ -301,8 +302,8 @@ export default function CheckoutPage() {
         
         // Create PhonePe payment
         const merchantOrderId = `ORDER_${orderResult.order.id}_${Math.random().toString(36).substr(2, 9)}`;
-        const redirectUrl = `${window.location.origin}/payment-success?orderId=${merchantOrderId}`;
-        const callbackUrl = `${window.location.origin}/api/phonepe/callback`;
+        const redirectUrl = `${SITE_URL}/payment-success?orderId=${merchantOrderId}`;
+        const callbackUrl = `${SITE_URL}/api/phonepe/callback`;
 
         const paymentResponse = await fetch("/api/phonepe/create-payment", {
           method: "POST",
