@@ -179,7 +179,7 @@ export function AuthenticProductGrid() {
 
         {/* Product Grid - responsive columns */}
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
-          {products.slice(0, 9).map((product, index) => (
+          {products.map((product, index) => (
             <ProductItem 
               key={product.id} 
               product={product} 
