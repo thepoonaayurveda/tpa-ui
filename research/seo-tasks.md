@@ -47,8 +47,9 @@ Legend: 🟢 quick win · 🟡 medium · 🔴 larger effort · `[ ]` todo · `[x
 
 ## Research tasks (Ahrefs — credit-conscious, ONE seed at a time)
 
-Do these **in order**. After each export, I parse it and apply the decision rule
-(GO DEEPER if KD≤20 + India vol≥100 + product fit; else SKIP). Don't bulk-research.
+Do these **in order**. After each export, I read the cluster holistically (intent,
+winnability, product fit, demand shape, compliance — see strategy doc §7, no rigid
+thresholds) and recommend go-deeper / defer / skip with reasoning. Don't bulk-research.
 
 - [ ] 1. Export India "Matching terms" + "Questions" for **`urine infection ayurvedic medicine`** (Uristo). → send CSV, await go/no-go.
 - [ ] 2. Then **`varicose veins treatment`** (Vario) — only after #1 is judged.

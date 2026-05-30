@@ -301,17 +301,26 @@ order**, look at the result, then decide whether to go deeper or skip. One good 
 Ahrefs Keyword Explorer (with "Matching terms" + "Questions") returns the whole cluster —
 that's usually enough to judge a product line without burning credits on every variation.
 
-### Decision rule (apply after each export)
+### How we judge each export (look at the data first — no rigid thresholds)
 
-After I parse a seed's cluster, we GO DEEPER vs. SKIP based on:
+After I parse a seed's cluster, I read it holistically and recommend GO DEEPER vs. DEFER.
+**No hard numeric gates** — we don't yet know what the data looks like, and a strict filter
+could make us miss a low-volume-but-high-intent term or a cluster that's winnable for reasons
+the raw numbers don't capture. Instead I weigh the full picture:
 
-- **GO DEEPER** if: there's a commercial-intent term with **KD ≤ 20** and **India volume
-  ≥ 100/mo** that matches a product we actually sell. → research 1–2 adjacent seeds to map
-  the full cluster.
-- **SKIP / DEPRIORITISE** if: the cluster is mostly **informational only**, **KD is high
-  (>35) across the board**, or volume is negligible (<50/mo total). → note it, move on.
-- This mirrors what we already learned: joint-oil = GO DEEPER (KD 0, commercial, 11K vol);
-  allergy = lower priority (informational, higher KD).
+- **Commercial intent** — are people looking to *buy a remedy*, or just reading? (intent
+  codes C/T vs. I, and the actual phrasing)
+- **Winnability** — how soft is the SERP / how low is KD on the terms that matter? (even a
+  handful of low-KD commercial terms can be worth it)
+- **Product fit** — does this match something we genuinely sell and can recommend honestly?
+- **Demand shape** — is volume concentrated in a few strong terms, or spread thin? A small
+  total can still be worth it if intent + fit are strong.
+- **Compliance risk** — anything where searchers want a "cure" needs careful, honest framing.
+
+Then I give a clear recommendation per cluster (go deeper / defer / skip) **with the reasoning**,
+so you can overrule it. For reference, the data we already have reads as: joint-oil = clearly
+worth it (KD 0, commercial, ~11K vol, exact product match); allergy = lower priority
+(mostly informational, higher KD) — but those are judgments from the data, not from a formula.
 
 ### Priority order of seeds to research (one at a time)
 
