@@ -23,20 +23,35 @@ Legend: 🟢 quick win · 🟡 medium · 🔴 larger effort · `[ ]` todo · `[x
 - [ ] 🟡 Add a templated meta-description fallback per product (current fallback is blank when WooCommerce `short_description` is empty).
 - [ ] 🟢 Ensure product page H1 contains the primary keyword (not just brand name); verify one H1 per page.
 - [ ] 🔴 Build `/blog` route + content setup (MDX or WooCommerce posts) — blocker for all content tasks.
-- [ ] 🔴 Write blog post: **"Best Ayurvedic Oil for Joint Pain in India"** (targets `ayurvedic oil for joint pain` 400/mo KD0, `best ayurvedic oil for joint pain` 150/mo). Link to Flexio.
-- [ ] 🔴 Write blog post: **"Nirgundi Oil Benefits for Joint Pain"** (exact-match `nirgundi oil for joint pain` 200/mo KD0; ingredient authority). Link to Flexio.
-- [ ] 🟢 Add `Article`/`BlogPosting` + `BreadcrumbList` JSON-LD to blog posts.
+- [ ] 🟢 Add `Article`/`BlogPosting` + `BreadcrumbList` JSON-LD to blog posts (build once, reuse).
+
+### Content — joint-pain cluster → Flexio Oil (KD≈0, commercial; write in this order)
+_Full briefs (titles + supporting keywords + volumes) in strategy doc §3b._
+
+- [ ] 🔴 **C1** — "Best Ayurvedic Oil for Joint Pain in India" (`best ayurvedic oil for joint pain` 150 + `best joint pain relief oil in india` 200). Commercial converter. → Flexio.
+- [ ] 🔴 **C2** — "Best Ayurvedic Oil for Knee Joint Pain" (`best ayurvedic oil for knee joint pain` 300). Highest-volume commercial term. → Flexio.
+- [ ] 🔴 **C3** — "Nirgundi Oil: Benefits for Joint Pain" (`nirgundi oil for joint pain` 200; exact-match to Flexio's hero ingredient). → Flexio.
+- [ ] 🟡 **C4** — "How to Use Massage Oil for Joint Pain" (`joint pain massage oil` 40 + how-to long tail ~580/mo combined). → Flexio.
+- [ ] 🟡 **C5** — "Ayurvedic Oil for Joint & Muscle Pain" (`ayurvedic oil for joint and muscle pain` 80 + ~290/mo cluster). → Flexio.
+- [ ] 🟡 **C6** — "Natural Oils for Joint Pain: What Works" (comparison; `castor oil for joint pain` 100 + mustard/sesame/eucalyptus ~560/mo). Positions Flexio as the formulated option. → Flexio.
+- [ ] 🟢 **C7** — "How to Make Joint Pain Oil at Home" (`homemade massage oil for joint pain` 30; honest DIY → soft sell). → Flexio.
 - [ ] 🟡 Wire real reviews into `AggregateRating` schema on product pages (reviews API exists — **never fake ratings**).
 
 ## P2 — Depth + allergy + sitewide polish
 
-- [ ] 🟡 Write body-part blog pages: "Oil for Knee Joint Pain" (`oil for knee joint pain` 70/mo), "Joint Pain Massage Oil — How to Use".
+_(Joint-oil long-tail articles C4–C7 above can also slip here if P1 fills up.)_
 - [ ] 🟡 Improve image `alt` text to be descriptive (e.g. "Ayurvedic joint pain oil 100ml bottle"), not just `product.name`.
 - [ ] 🟡 Add `CollectionPage` + `BreadcrumbList` JSON-LD to `/products`.
 - [ ] 🟢 Add `LocalBusiness`/`Organization` JSON-LD to `/contact` (Daund-Pune address, `tel:+919730005222`, email, hours).
 - [ ] 🟢 Add `AboutPage` JSON-LD to `/about`.
 - [ ] 🟡 Surface trust signals on-page: FSSAI/AYUSH license numbers, India shipping/COD, Made-in-India.
-- [ ] 🟡 Allergy pillar post: **"Ayurvedic Approach to Allergies"** + home-remedy posts. ⚠️ Frame as *support/relief*, NEVER *cure* (compliance).
+### Content — allergy cluster → AllerGenie (informational, higher KD, ⚠️ compliance-sensitive)
+_Frame all as *manage/relieve/support*, NEVER *cure*. Briefs in strategy doc §3b._
+
+- [ ] 🟡 **C8** — "Ayurvedic Approach to Dust Allergy" (`how to cure dust allergy` 200 + permanently 700; KD 37).
+- [ ] 🟡 **C9** — "Ayurvedic & Natural Remedies for Skin Allergy" (`how to cure skin allergy naturally` 250; KD 23).
+- [ ] 🟡 **C10** — "Managing Seasonal Sneezing & Cold Allergy" (`how to cure sneezing allergy` 30 + cold 150; KD 12–30).
+- [ ] 🟢 **C11** — "Can Allergies Be Cured? An Honest Ayurvedic View" (`can homeopathy cure allergy permanently` 90; KD 0; trust piece).
 - [ ] 🟢 Build internal-linking graph: blog → product, product → product (use `productRelationships.ts`), descriptive anchors.
 
 ## P3 — Expand to other products (gated on research below)

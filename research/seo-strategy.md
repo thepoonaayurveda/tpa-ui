@@ -152,6 +152,50 @@ Every blog post links to `/products/flexio-oil` with descriptive anchor text.
 
 ---
 
+## 3b. Content calendar — articles the data tells us to write
+
+We don't have to guess. The two researched clusters break cleanly into **sub-topics, each a
+rankable article** with a known target keyword + India volume. Below is the full calendar,
+ordered by priority. (Volumes are India/mo; KD shown where Ahrefs has it — most joint-oil
+terms are KD 0.) Every joint-oil article links to **Flexio Oil**; every allergy article soft-
+links to **AllerGenie** as *support* (never "cure").
+
+### Joint-pain cluster → Flexio Oil (write these first — KD≈0, commercial)
+
+| # | Article (working title) | Primary keyword | Vol | Supporting keywords |
+|---|------------------------|-----------------|----:|---------------------|
+| C1 | **Best Ayurvedic Oil for Joint Pain in India** | best ayurvedic oil for joint pain | 150 | best joint pain relief oil in india (200), best oil for joint pain (150), best joint pain relief oil (100), best joint pain oil (40) |
+| C2 | **Best Ayurvedic Oil for Knee Joint Pain** | best ayurvedic oil for knee joint pain | 300 | oil for knee joint pain (70), best oil for knee joint pain (50), ayurvedic oil for knee joint pain (50), oil for joint pain in knee (40) |
+| C3 | **Nirgundi Oil: Benefits for Joint Pain** (ingredient authority) | nirgundi oil for joint pain | 200 | (exact-match to Flexio's hero ingredient) |
+| C4 | **How to Use Massage Oil for Joint Pain** (how-to) | joint pain massage oil | 40 | massage oil for joint pain (40), how to use mustard oil for joint pain (40), kerala ayurvedic massage oil for joint pain (30), oil massage for joint pain (30) |
+| C5 | **Ayurvedic Oil for Joint & Muscle Pain** | ayurvedic oil for joint and muscle pain | 80 | muscle and joint pain oil (60), best ayurvedic oil for joint and muscle pain (40), oil for joint and muscle pain (20) |
+| C6 | **Natural Oils for Joint Pain: What Works** (comparison) | castor oil for joint pain | 100 | eucalyptus (60), mustard (40), sesame (30), apricot oil benefits for joint pain (40) — comparison table, positions Flexio as the formulated option |
+| C7 | **How to Make Joint Pain Oil at Home** (DIY → soft sell) | homemade massage oil for joint pain | 30 | homemade oil for joint pain (20), how to make joint pain oil at home (10) — honest DIY, then "or use a ready Ayurvedic formulation" |
+
+> **Note:** C1 and C2 are the commercial converters — do them first. The product page
+> `/products/flexio-oil` itself targets the head term `joint pain oil` (800) /
+> `ayurvedic oil for joint pain` (400); the articles capture the long tail and feed it links.
+
+### Allergy cluster → AllerGenie (Phase 2 — informational, higher KD, compliance-sensitive)
+
+| # | Article (working title) | Primary keyword | Vol | KD |
+|---|------------------------|-----------------|----:|---:|
+| C8 | **Ayurvedic Approach to Dust Allergy** | how to cure dust allergy (naturally) | 200+700 | 37 |
+| C9 | **Ayurvedic & Natural Remedies for Skin Allergy** | how to cure skin allergy naturally | 250 | 23 |
+| C10 | **Managing Seasonal Sneezing & Cold Allergy the Ayurvedic Way** | how to cure sneezing allergy | 30+150 | 12–30 |
+| C11 | **Can Allergies Be Cured? An Honest Ayurvedic View** (trust piece) | can homeopathy cure allergy permanently | 90 | 0 |
+
+> ⚠️ **Compliance is non-negotiable on C8–C11.** Title/body frame = *manage, relieve,
+> support* — never *cure permanently*, even though searchers use that phrasing. C11 turns the
+> "permanent cure" question into a trust-building honest answer (and ranks at KD 0).
+
+### Sequencing
+Ship **C1 → C2 → C3** first (highest commercial value, KD 0, exact product fit). Then C4–C7
+to own the joint-oil long tail. Allergy (C8–C11) is Phase 2. New clusters from upcoming
+research get their own calendar rows as they're validated.
+
+---
+
 ## 4. Technical & on-page SEO audit (current state of the live codebase)
 
 We're on **Next.js 14 App Router + WooCommerce** — a strong SEO base. I audited the actual
