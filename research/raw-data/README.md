@@ -44,11 +44,7 @@ into `keywords/` following the same `<theme>_<product-or-ignore>.csv` naming.
 1. **The original CSV is messy.** Columns shift between sections; KD lives in col 5, volume
    in col 6 (not where the headers suggest). The parser in git history handles this. If you
    re-export from Ahrefs, re-run the extraction rather than trusting raw column positions.
-2. **The Ahrefs *screenshots* shared alongside this (speech therapy, accent reduction,
-   boldvoice, english ai, improve spoken english) belong to a DIFFERENT project** (NiftySite /
-   language learning) and were correctly ignored. Only the `joint oil` screenshot + this CSV
-   are relevant to The Poona Ayurveda.
-3. **Coverage is partial.** This research only covers 2 of our ~10 product lines
+2. **Coverage is partial.** This research only covers 2 of our ~10 product lines
    (joint pain, allergy). Uristo (UTI), Vario (varicose), Endurio (men's health),
    Glycemio (diabetes/metabolic), and Sports Edge have **no keyword data yet** — see the
    "Research backlog" section of the strategy doc.

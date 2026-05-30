@@ -152,26 +152,116 @@ Every blog post links to `/products/flexio-oil` with descriptive anchor text.
 
 ---
 
-## 4. On-page & technical SEO (the foundation under all of it)
+## 4. Technical & on-page SEO audit (current state of the live codebase)
 
-We're on **Next.js 14 App Router + WooCommerce** — already a strong SEO base. Make sure:
+We're on **Next.js 14 App Router + WooCommerce** — a strong SEO base. I audited the actual
+code. Here's what's already good, and the concrete gaps (the fix list lives in
+`seo-tasks.md`).
 
-1. **Structured data (schema.org) — highest priority.**
-   - `Product` + `Offer` schema on every product page (price, availability, brand).
-   - `AggregateRating` once we have real reviews (never fake them — trust is sacred).
-   - `FAQPage` schema on product pages using the Tier-2 questions.
-   - `BreadcrumbList` (Breadcrumb component already exists).
-   - This is what gets us into **rich results AND LLM citations** — do it everywhere.
-2. **Metadata via App Router `generateMetadata`** — unique title + description per product,
-   each leading with the primary keyword (e.g. "Ayurvedic Joint Pain Oil").
-3. **Core Web Vitals** — hero LCP work is already underway (good). Keep product images
-   optimized via `next/image` (already configured for the WooCommerce domain).
-4. **India-targeting signals** — `hreflang="en-IN"`, INR pricing in schema, India-based
-   trust signals (FSSAI/AYUSH license numbers, India shipping/COD messaging). The
-   "best joint pain oil **in india**" keyword shows users want local.
-5. **Internal linking** — blog → product, related products → each other
-   (`productRelationships.ts` already exists; use it to build a link graph).
-6. **XML sitemap + robots** — generate from the product list; submit to Search Console.
+### ✅ Already in place (don't redo)
+- `src/app/sitemap.ts` — dynamic sitemap pulling all published products from WooCommerce. Good.
+- `src/app/robots.ts` — sane allow/disallow (blocks `/api`, `/cart`, `/checkout`, `/test`),
+  references sitemap + host. Good.
+- `generateMetadata` on product pages (`products/[slug]`), plus `/products`, `/about`,
+  `/contact`. OpenGraph + Twitter cards present on product pages.
+- `generateStaticParams` for product pages (fast, pre-rendered).
+- `metadataBase` set; `og:locale = en_IN` on root.
+- `next/image` with `alt` fallbacks on ProductCard & ProductGallery.
+
+### 🔴 Critical gaps (these cap our ranking ceiling)
+
+1. **NO structured data anywhere in the codebase.** Zero JSON-LD. This is the single
+   biggest miss. We need:
+   - `Product` + `Offer` schema on every product page (name, image, description, brand,
+     price in **INR**, availability) → unlocks rich snippets (price, stock).
+   - `FAQPage` schema on product pages — we already render `ProductFAQs`, but without
+     schema Google can't use them for rich results.
+   - `Organization` + `WebSite` schema on the homepage (logo, name, social) → brand panel + sitelinks search box.
+   - `BreadcrumbList` schema — the `Breadcrumb` component renders visually but emits no schema.
+   - Schema is also what makes us **citation-ready for LLMs** (ChatGPT/Gemini).
+
+2. **Product titles are not keyword-led.** `generateMetadata` outputs
+   `"{product.name} | The Poona Ayurveda"` → e.g. *"Flexio Oil | The Poona Ayurveda"*.
+   Nobody searches "Flexio Oil." We must inject the **search-intent term**, e.g.
+   *"Flexio Oil – Ayurvedic Joint Pain Oil with Nirgundi | The Poona Ayurveda"*.
+   Same for meta descriptions (currently raw WooCommerce `short_description`, often empty/thin).
+
+3. **Homepage (`src/app/page.tsx`) has no `metadata` export** — it inherits the generic
+   root title/description. The homepage should target our brand + primary category
+   ("Ayurvedic joint pain oil, allergy & wellness products in India").
+
+### 🟡 Important gaps
+
+4. **`<html lang="en">` should be `lang="en-IN"`**, and we have **no `hreflang`** — we're
+   India-only and "best joint pain oil **in india**" is a target keyword. Signal locale clearly.
+5. **No canonical URLs on product pages** — root has `canonical: "/"` but product pages don't
+   set `alternates.canonical`. WooCommerce param variations (`?category=…`) risk duplicate URLs.
+6. **Meta description fallback is weak** — when `short_description` is empty, description is
+   blank. Need a sensible templated fallback per product.
+7. **Heading hierarchy** — 17 `<h1>` references across components; verify **exactly one H1
+   per page** and that the product H1 contains the primary keyword (not just the brand name).
+8. **No blog/content infrastructure** — the strategy needs `/blog`; it doesn't exist yet.
+   Need a route + MDX (or WooCommerce posts) setup before P1 content can ship.
+9. **Image alt text is generic** (`product.name` or `"{name} {index}"`). For ranking in
+   Google Images and accessibility, alt should be descriptive (e.g. "Ayurvedic joint pain
+   oil bottle 100ml").
+
+### 🟢 Nice-to-have / monitor
+10. **Core Web Vitals** — hero LCP split is done (good). Re-check LCP/CLS on product pages
+    after schema work; keep WooCommerce images sized via `next/image`.
+11. **Internal linking graph** — `productRelationships.ts` exists; once `/blog` ships, wire
+    blog → product and product → product links with descriptive anchors.
+12. **Trust signals on-page** — surface FSSAI/AYUSH license numbers, India shipping/COD,
+    and real reviews (→ `AggregateRating` schema, never faked). Directly supports our
+    "trust at first glance" promise.
+
+> The prioritized, checkbox version of all the above is in **`seo-tasks.md`** — work from that.
+
+### 4a. Schema map — what goes on which page
+
+Every page type gets specific JSON-LD. (None of this exists yet — all to-build.)
+
+| Page | Route | Schema to add |
+|------|-------|---------------|
+| **Homepage** | `/` | `Organization` (logo, name, contact, sameAs socials) + `WebSite` (with `SearchAction` for sitelinks search box) |
+| **Product** | `/products/[slug]` | `Product` + `Offer` (INR price, availability, brand) + `AggregateRating`/`Review` (only with real reviews) + `BreadcrumbList` + `FAQPage` |
+| **Products listing** | `/products` | `CollectionPage` + `BreadcrumbList` (optionally `ItemList` of products) |
+| **Contact** | `/contact` | `Organization`/`LocalBusiness` (we have Daund-Pune address, `tel:+919730005222`, email — emit `PostalAddress`, `telephone`, `openingHours`) |
+| **About** | `/about` | `AboutPage` + reuse `Organization` |
+| **Blog post** (P1) | `/blog/[slug]` | `Article`/`BlogPosting` (author, datePublished, image) + `BreadcrumbList`; `FAQPage` if the post has a Q&A block |
+| **Blog index** (P1) | `/blog` | `Blog` + `BreadcrumbList` |
+| **Policy pages** | privacy / terms / refund | none needed (keep `noindex`? — they can stay indexed but low priority) |
+
+Implementation note: build **one reusable `<JsonLd>` component** that takes a schema object
+and renders `<script type="application/ld+json">`. Drop it into each page's server component.
+Validate every type with Google's **Rich Results Test** before shipping.
+
+---
+
+## 4b. Google Search appearance — how we win the SERP visually
+
+Schema + metadata aren't just ranking signals; they change **how our listing looks** in
+Google, which drives click-through. Targets, in priority order:
+
+1. **Product rich results** (★ rating, ₹ price, In stock) — from `Product` + `Offer` +
+   `AggregateRating`. This is the highest-CTR win for our commercial pages. Needs real
+   reviews flowing into `AggregateRating` (we have a reviews API — wire it up, never fake).
+2. **FAQ rich results** (expandable Q&A under our listing) — from `FAQPage` schema on
+   product + blog pages. We already render FAQs; just add the schema. Big SERP real-estate grab.
+3. **Sitelinks** (sub-links under the homepage result) — earned, not coded, but helped by
+   clean site structure, a clear nav, and `WebSite` schema. Strong internal linking + good
+   page titles accelerate this.
+4. **Sitelinks search box** — from `WebSite` + `SearchAction` JSON-LD on the homepage; lets
+   users search our store directly from Google.
+5. **Brand knowledge panel** — from `Organization` schema (logo, `sameAs` to our social
+   profiles) + consistent NAP (name/address/phone) across the web.
+6. **Breadcrumb trail in results** (instead of raw URL) — from `BreadcrumbList` schema.
+7. **Rich OG previews** when shared on WhatsApp/Instagram/FB (huge in India) — product OG
+   tags exist; **add OG to the homepage** (currently generic) and ensure every product has a
+   real OG image.
+8. **Compelling titles & descriptions** — keyword-led, benefit-driven, under ~60/155 chars,
+   with India trust cues ("100% Ayurvedic", "Made in India"). Google may rewrite, but good
+   inputs win more often. This is the cheapest CTR lever — do it on every indexable page.
 
 ---
 
@@ -191,6 +281,9 @@ Indian buyers increasingly ask ChatGPT/Gemini "best ayurvedic oil for knee pain.
 
 ## 6. Roadmap
 
+> High-level phase arc below. The **granular, checkbox task list lives in `seo-tasks.md`** —
+> execute from there.
+
 | Phase | Focus | Deliverables |
 |-------|-------|--------------|
 | **P1 (now)** | Joint oil commercial capture | Optimize `/products/flexio-oil` + Product/FAQ schema; ship 2 Tier-1 blog posts (best ayurvedic oil for joint pain, nirgundi oil benefits) |
@@ -200,23 +293,45 @@ Indian buyers increasingly ask ChatGPT/Gemini "best ayurvedic oil for knee pain.
 
 ---
 
-## 7. Research backlog — what I need from you, Poonam
+## 7. Research backlog — credit-conscious, sequential plan
 
-We only have keyword data for **2 of ~10 products**. To plan P3 properly, please pull
-**India-market** Ahrefs Keyword Explorer data (Terms match + Questions + Matching terms,
-exported to CSV) for these seed terms:
+We only have keyword data for **2 of ~10 products**, and **Ahrefs credits are limited**.
+So we do **not** bulk-research everything. We research **one seed at a time, in priority
+order**, look at the result, then decide whether to go deeper or skip. One good seed term in
+Ahrefs Keyword Explorer (with "Matching terms" + "Questions") returns the whole cluster —
+that's usually enough to judge a product line without burning credits on every variation.
 
-| Product | Seed keywords to research in Ahrefs (India) |
-|---------|---------------------------------------------|
-| **Uristo / Uristo Choornam** | `uti home remedy`, `burning urination treatment`, `urine infection ayurvedic medicine`, `mutrashmari`, `kidney stone ayurvedic` |
-| **Vario Oil / Vario** | `varicose veins treatment`, `varicose veins ayurvedic`, `spider veins`, `varicose veins oil`, `leg vein pain` |
-| **Endurio 35+** | `shilajit benefits`, `ayurvedic medicine for stamina`, `men's health ayurvedic`, `vajikaran`, `energy booster ayurvedic` |
-| **Glycemio Choornam** | `diabetes ayurvedic medicine`, `sugar control churna`, `ayurvedic medicine for diabetes`, `prameha treatment`, `blood sugar control naturally` |
-| **Sports Edge Oil** | `sports massage oil`, `muscle recovery oil`, `body massage oil for athletes`, `ayurvedic massage oil` |
+### Decision rule (apply after each export)
 
-Export each as its own CSV (or one file per product) and drop it in `research/raw-data/`.
-I'll parse, cluster, and fold it into a v2 of this strategy.
+After I parse a seed's cluster, we GO DEEPER vs. SKIP based on:
 
-**Also useful (optional):** a Site Audit export of `thepoonaayurveda.com` so I can prioritize
-technical fixes against real crawl data, and the current Search Console performance export
-if GSC is set up.
+- **GO DEEPER** if: there's a commercial-intent term with **KD ≤ 20** and **India volume
+  ≥ 100/mo** that matches a product we actually sell. → research 1–2 adjacent seeds to map
+  the full cluster.
+- **SKIP / DEPRIORITISE** if: the cluster is mostly **informational only**, **KD is high
+  (>35) across the board**, or volume is negligible (<50/mo total). → note it, move on.
+- This mirrors what we already learned: joint-oil = GO DEEPER (KD 0, commercial, 11K vol);
+  allergy = lower priority (informational, higher KD).
+
+### Priority order of seeds to research (one at a time)
+
+Ordered by expected commercial payoff × product fit. **Research #1 first, send me the CSV,
+then I'll tell you whether #2 is worth it or what to adjust.**
+
+| # | Product | First seed to research (India) | Why this order |
+|---|---------|-------------------------------|----------------|
+| 1 | **Uristo** (UTI) | `urine infection ayurvedic medicine` | UTI is high-intent, recurring, underserved by D2C Ayurveda — likely a Flexio-style winnable cluster |
+| 2 | **Vario** (varicose) | `varicose veins treatment` | Specific condition, buyers actively seek remedies; we have a dedicated oil + tablet |
+| 3 | **Glycemio** (diabetes) | `ayurvedic medicine for diabetes` | Huge demand in India, BUT high competition + compliance-sensitive — research to size it, expect KD to be high |
+| 4 | **Endurio** (men's health) | `shilajit benefits` | Big volume but crowded (Patanjali/Dabur etc.); check if a long-tail entry exists |
+| 5 | **Sports Edge** | `ayurvedic massage oil` | Overlaps joint-oil cluster; may be coverable by Flexio content — research last to avoid duplication |
+
+> **Workflow:** export **one** seed's "Matching terms" + "Questions" as CSV → drop in
+> `research/raw-data/` → I parse, cluster, apply the decision rule, and update this doc + tasks.
+> We only move to the next seed once the current one is judged. This keeps credit spend tight.
+
+### Also useful when convenient (not credit-gated)
+- **Site Audit export** of `thepoonaayurveda.com` → lets me prioritise technical fixes
+  against real crawl data (broken links, missing tags, CWV).
+- **Search Console** performance export (if GSC is connected) → shows what we *already*
+  rank for, which beats guessing.
