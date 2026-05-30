@@ -1,0 +1,5802 @@
+[
+  {
+    "keyword": "ayurved hair oil",
+    "intent": "I C T",
+    "kd": 2,
+    "volume_in": 50,
+    "volume_global": 60,
+    "cpc": "$0.08",
+    "parent_topic": "ayurvedic hair oil",
+    "theme": "ayurved-hair-oil"
+  },
+  {
+    "keyword": "patanjali ayurved hair oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-hair-oil"
+  },
+  {
+    "keyword": "balaji ayurved sansthan sanda oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "baidyanath asli ayurved maha bhringraj hair oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-hair-oil"
+  },
+  {
+    "keyword": "ayurved amrit hair oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-hair-oil"
+  },
+  {
+    "keyword": "patanjali ayurved divya dhara roll oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "adivasi ayurved soothwell oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "anandam ayurved amla oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "ling mota lamba ayurved oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "ayurved ocean silk hair oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-hair-oil"
+  },
+  {
+    "keyword": "ayurved max ocean silk hair oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-hair-oil"
+  },
+  {
+    "keyword": "kerala ayurved ltd hair oil review",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-hair-oil"
+  },
+  {
+    "keyword": "patanjali ayurved oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "adivasi ayurved pain relief oil 100ml(pack of 2)",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "baidyanath asli ayurved mahabhringraj hair oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-hair-oil"
+  },
+  {
+    "keyword": "ayurved hair growth oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-hair-oil"
+  },
+  {
+    "keyword": "parampara ayurved body oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "ayurved herbal hair oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-hair-oil"
+  },
+  {
+    "keyword": "adivasi ayurved pain relief oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "kottakal ayurved detan oil review",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "ayurved oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 40,
+    "volume_global": 50,
+    "cpc": "$0.08",
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "balaji ayurved sansthan sandha oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "parampara ayurved hair oil",
+    "intent": "I C T Branded",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-hair-oil"
+  },
+  {
+    "keyword": "aadivasi ayurved pain relief oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "any ayurved oil for penis enlarge",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "parampara ayurved body oil price",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "ayurved department rajasthan",
+    "intent": "I Local",
+    "kd": 2,
+    "volume_in": 450,
+    "volume_global": 450,
+    "cpc": "$6.00",
+    "parent_topic": "राजस्थान नर्सिंग आयुर्वेद वैकेंसी",
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "gulabkunverba ayurved hospital jamnagar",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.60",
+    "parent_topic": null,
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "seth govindji raoji ayurved mahavidyalaya course admissions",
+    "intent": "",
+    "kd": null,
+    "volume_in": 60,
+    "volume_global": 60,
+    "cpc": "$0.60",
+    "parent_topic": null,
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "patanjali ayurved locations",
+    "intent": "I Branded",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.50",
+    "parent_topic": null,
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "star ayurved login",
+    "intent": "N Branded",
+    "kd": 0,
+    "volume_in": 30,
+    "volume_global": 30,
+    "cpc": "$0.45",
+    "parent_topic": "star ayurveda",
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "urja ayurved center nashik",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.45",
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "ayurved mahavidyalaya and hospital old hubli karnataka",
+    "intent": "I Branded Local",
+    "kd": 0,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": "$0.40",
+    "parent_topic": "ayurveda mahavidyalaya hubli",
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "ghatkopar ayurved bhandar",
+    "intent": "I Branded Local",
+    "kd": 0,
+    "volume_in": 50,
+    "volume_global": 50,
+    "cpc": "$0.40",
+    "parent_topic": "ghatkopar ayurved bhandar",
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "sushrut ayurved industries",
+    "intent": "I C Branded",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": "$0.35",
+    "parent_topic": null,
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "ayushakti ayurved he",
+    "intent": "I C Branded",
+    "kd": 1,
+    "volume_in": 100,
+    "volume_global": 100,
+    "cpc": "$0.30",
+    "parent_topic": "ayushakti",
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "chaudhary brahm prakash ayurved charak sansthan reviews",
+    "intent": "I Branded",
+    "kd": 0,
+    "volume_in": 150,
+    "volume_global": 150,
+    "cpc": "$0.30",
+    "parent_topic": "chaudhary brahm prakash ayurved charak sansthan reviews",
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "ayurved rajasthan",
+    "intent": "I Local",
+    "kd": 7,
+    "volume_in": 150,
+    "volume_global": 150,
+    "cpc": "$0.25",
+    "parent_topic": "ayurved department rajasthan",
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "chaudhary brahm prakash ayurved charak sansthan photos",
+    "intent": "I Branded",
+    "kd": 0,
+    "volume_in": 350,
+    "volume_global": 350,
+    "cpc": "$0.25",
+    "parent_topic": "chaudhary brahm prakash ayurved charak sansthan",
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "ashtang ayurved mahavidyalaya",
+    "intent": "I Branded",
+    "kd": 0,
+    "volume_in": 1,
+    "volume_global": 1,
+    "cpc": "$0.25",
+    "parent_topic": "ashtang ayurved mahavidyalaya",
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "chaudhary brahm prakash ayurved charak sansthan opd appointment online",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.25",
+    "parent_topic": null,
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "chaudhary brahm prakash ayurved charak sansthan opd appointment",
+    "intent": "I N T Branded",
+    "kd": 0,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.25",
+    "parent_topic": "khera dabar hospital opd timings",
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "jogi ayurved hospital",
+    "intent": "I Branded",
+    "kd": 0,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.25",
+    "parent_topic": "jogi ayurved",
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "dr. sarvepalli radhakrishnan rajasthan ayurved university course admissions",
+    "intent": "I Branded",
+    "kd": 0,
+    "volume_in": 250,
+    "volume_global": 250,
+    "cpc": "$0.25",
+    "parent_topic": "dsrrau",
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "ayurved gurupeeth trimbakeshwar",
+    "intent": "I Branded Local",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.25",
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "agnivesh ayurved hospital surat",
+    "intent": "I Branded Local",
+    "kd": 0,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.20",
+    "parent_topic": "agnivesh ayurveda",
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "rghs ayurved hospital list",
+    "intent": "I Branded",
+    "kd": 0,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.20",
+    "parent_topic": "rghs hospital list",
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "patanjali ayurved near me",
+    "intent": "I N C T Branded Local",
+    "kd": 0,
+    "volume_in": 100,
+    "volume_global": 100,
+    "cpc": "$0.20",
+    "parent_topic": "patanjali store jhansi",
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "bhagwati ayurved",
+    "intent": "I Branded",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.20",
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "patanjali ayurved treatment",
+    "intent": "I C Branded",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.20",
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "tilak ayurved mahavidyalaya course admissions",
+    "intent": "I Branded",
+    "kd": 0,
+    "volume_in": 150,
+    "volume_global": 150,
+    "cpc": "$0.20",
+    "parent_topic": "tilak ayurved mahavidyalaya",
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "jogi ayurved hospital reviews",
+    "intent": "I Branded",
+    "kd": 0,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.20",
+    "parent_topic": "jogi ayurved",
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "vidyapith ayurved sugar churna special kolkata",
+    "intent": "I C T Branded Local",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.20",
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "jogi ayurved products",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.20",
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "aayu care ayurved panchakarma and piles clinic",
+    "intent": "",
+    "kd": null,
+    "volume_in": 70,
+    "volume_global": 70,
+    "cpc": "$0.20",
+    "parent_topic": null,
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "dental lotion maa ayurved bhawan price",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.20",
+    "parent_topic": null,
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "rangoli ayurved hair fall product",
+    "intent": "I C T Branded",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.15",
+    "parent_topic": null,
+    "theme": "ayurved-hair-oil"
+  },
+  {
+    "keyword": "karma ayurved",
+    "intent": "I Branded",
+    "kd": 12,
+    "volume_in": 30,
+    "volume_global": 30,
+    "cpc": "$0.15",
+    "parent_topic": "karma ayurveda",
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "ayurved nursing",
+    "intent": "I",
+    "kd": 0,
+    "volume_in": 60,
+    "volume_global": 60,
+    "cpc": "$0.15",
+    "parent_topic": "dsrrau",
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "ayurved clinic near me",
+    "intent": "I Local",
+    "kd": 0,
+    "volume_in": 90,
+    "volume_global": 150,
+    "cpc": "$0.15",
+    "parent_topic": "best ayurveda",
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "ayurved near me",
+    "intent": "I Local",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 30,
+    "cpc": "$0.15",
+    "parent_topic": null,
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "maa ayurved bhavan",
+    "intent": "I C Branded",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.15",
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "patanjali ayurved haridwar",
+    "intent": "I Branded Local",
+    "kd": 34,
+    "volume_in": 200,
+    "volume_global": 200,
+    "cpc": "$0.15",
+    "parent_topic": "patanjali haridwar",
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "ayurved doc",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.15",
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "apm's ayurved mahavidyalaya sion",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.15",
+    "parent_topic": null,
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "ling mota lamba ayurved",
+    "intent": "I C T Branded",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.15",
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "shri chyawan ayurved",
+    "intent": "I C Branded",
+    "kd": 0,
+    "volume_in": 60,
+    "volume_global": 60,
+    "cpc": "$0.15",
+    "parent_topic": "shri chyawan ayurveda",
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "patanjali ayurved ltd",
+    "intent": "I Branded",
+    "kd": 40,
+    "volume_in": 80,
+    "volume_global": 100,
+    "cpc": "$0.15",
+    "parent_topic": "patanjali",
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "omkar ayurved pune",
+    "intent": "I Branded Local",
+    "kd": 0,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.15",
+    "parent_topic": "dr satyan gujar",
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "patanjali ayurved ltd.",
+    "intent": "I Branded",
+    "kd": 38,
+    "volume_in": 60,
+    "volume_global": 70,
+    "cpc": "$0.15",
+    "parent_topic": "patanjali",
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "ayurved shala karkardooma",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.15",
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "shree baidyanath ayurved bhawan pvt ltd jhansi",
+    "intent": "I Branded Local",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.15",
+    "parent_topic": null,
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "patanjali ayurved doctor near me",
+    "intent": "I Local",
+    "kd": 0,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": "$0.15",
+    "parent_topic": "ramdev ashram in rishikesh",
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "shatayu ayurved near me",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.15",
+    "parent_topic": null,
+    "theme": "ayurved-institution"
+  },
+  {
+    "keyword": "ayurved sanjivani",
+    "intent": "I C",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.15",
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "shree kriyas ayurved",
+    "intent": "",
+    "kd": null,
+    "volume_in": 600,
+    "volume_global": 600,
+    "cpc": "$0.15",
+    "parent_topic": null,
+    "theme": "ayurved-generic-branded"
+  },
+  {
+    "keyword": "herbal oil for joint pain",
+    "intent": "I C",
+    "kd": 0,
+    "volume_in": 20,
+    "volume_global": 30,
+    "cpc": "$0.10",
+    "parent_topic": "joint oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "adivasi herbal oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "herbal oil for knee joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.09",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "chinese herbal oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "herbal oil massage for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dhurandhar joint pain oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 1,
+    "volume_global": 1,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint pain oil",
+    "intent": "I C T",
+    "kd": 0,
+    "volume_in": 800,
+    "volume_global": 1,
+    "cpc": "$0.03",
+    "parent_topic": "oil for joint pain",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "ayurvedic oil for joint pain",
+    "intent": "I C",
+    "kd": 0,
+    "volume_in": 400,
+    "volume_global": 450,
+    "cpc": "$0.04",
+    "parent_topic": "best pain relief oil in ayurveda",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dhurandhar joint pain oil review",
+    "intent": "",
+    "kd": null,
+    "volume_in": 400,
+    "volume_global": 400,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "best ayurvedic oil for knee joint pain",
+    "intent": "I C",
+    "kd": 0,
+    "volume_in": 300,
+    "volume_global": 450,
+    "cpc": "$0.06",
+    "parent_topic": "ayurvedic oil for knee pain",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dhurandhar joint pain oil price",
+    "intent": "",
+    "kd": null,
+    "volume_in": 300,
+    "volume_global": 300,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dhurandar joint pain oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 300,
+    "volume_global": 350,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "khazani joint oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 250,
+    "volume_global": 250,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "nirgundi oil for joint pain",
+    "intent": "I C T Branded",
+    "kd": 0,
+    "volume_in": 200,
+    "volume_global": 250,
+    "cpc": "$0.06",
+    "parent_topic": "nirgundi oil for joint pain",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "oil for joint pain",
+    "intent": "I",
+    "kd": 0,
+    "volume_in": 200,
+    "volume_global": 350,
+    "cpc": "$0.03",
+    "parent_topic": "oil for joint pain",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dhurandhar oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 200,
+    "volume_global": 200,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "best joint pain relief oil in india",
+    "intent": "I C T Local",
+    "kd": 0,
+    "volume_in": 200,
+    "volume_global": 200,
+    "cpc": "$0.03",
+    "parent_topic": "ayurvedic pain relief oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "gaultheria oil for joint pain",
+    "intent": "I C T Branded",
+    "kd": 0,
+    "volume_in": 150,
+    "volume_global": 150,
+    "cpc": "$0.06",
+    "parent_topic": "gaultheria oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint pain oil ayurvedic",
+    "intent": "I C",
+    "kd": 0,
+    "volume_in": 150,
+    "volume_global": 150,
+    "cpc": "$0.15",
+    "parent_topic": "ayurvedic pain relief oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "nirujam joint care oil",
+    "intent": "I C Branded",
+    "kd": 0,
+    "volume_in": 150,
+    "volume_global": 200,
+    "cpc": "$0.45",
+    "parent_topic": "nirujam joint care oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "best oil for joint pain",
+    "intent": "I C",
+    "kd": 0,
+    "volume_in": 150,
+    "volume_global": 200,
+    "cpc": "$0.03",
+    "parent_topic": "joint oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint oil",
+    "intent": "I C T",
+    "kd": 0,
+    "volume_in": 150,
+    "volume_global": 700,
+    "cpc": "$0.15",
+    "parent_topic": "joint oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "best ayurvedic oil for joint pain",
+    "intent": "I C",
+    "kd": 0,
+    "volume_in": 150,
+    "volume_global": 200,
+    "cpc": "$0.03",
+    "parent_topic": "best pain relief oil in ayurveda",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "my joint oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 100,
+    "volume_global": 100,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dhurandhar joint pain oil 100ml price",
+    "intent": "",
+    "kd": null,
+    "volume_in": 100,
+    "volume_global": 100,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "wholeleaf joint pain oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 100,
+    "volume_global": 100,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dhurandhar joint pain oil side effects",
+    "intent": "",
+    "kd": null,
+    "volume_in": 100,
+    "volume_global": 100,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "ayurvedic joint pain oil",
+    "intent": "I C",
+    "kd": 0,
+    "volume_in": 100,
+    "volume_global": 100,
+    "cpc": "$0.07",
+    "parent_topic": "ayurvedic pain relief oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "castor oil for joint pain",
+    "intent": "I",
+    "kd": null,
+    "volume_in": 100,
+    "volume_global": 700,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "best joint pain relief oil",
+    "intent": "I C T",
+    "kd": 0,
+    "volume_in": 100,
+    "volume_global": 100,
+    "cpc": "$0.06",
+    "parent_topic": "oil for joint pain",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "patanjali joint pain oil",
+    "intent": "I C T Branded",
+    "kd": 0,
+    "volume_in": 90,
+    "volume_global": 90,
+    "cpc": "$0.01",
+    "parent_topic": "peedantak oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint pain relief oil",
+    "intent": "I C T",
+    "kd": 0,
+    "volume_in": 90,
+    "volume_global": 300,
+    "cpc": "$0.02",
+    "parent_topic": "oil for joint pain",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint curator oil in hindi",
+    "intent": "I C Branded",
+    "kd": 0,
+    "volume_in": 80,
+    "volume_global": 80,
+    "cpc": "$0.00",
+    "parent_topic": "joint curator oil in hindi",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "macgesia oil for joint pain",
+    "intent": "I C T Branded",
+    "kd": 0,
+    "volume_in": 80,
+    "volume_global": 80,
+    "cpc": "$0.06",
+    "parent_topic": "macgesia oil use",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "ayurvedic oil for joint and muscle pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 80,
+    "volume_global": 100,
+    "cpc": "$0.09",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint fit oil",
+    "intent": "I C T Branded",
+    "kd": 0,
+    "volume_in": 70,
+    "volume_global": 70,
+    "cpc": "$0.10",
+    "parent_topic": "joint fit oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "biotrin oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 70,
+    "volume_global": 70,
+    "cpc": "$0.09",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dhurandhar joint pain oil rate",
+    "intent": "",
+    "kd": null,
+    "volume_in": 70,
+    "volume_global": 70,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dhurandhar joint pain oil contact number",
+    "intent": "",
+    "kd": null,
+    "volume_in": 70,
+    "volume_global": 70,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "fish oil for joint pain",
+    "intent": "I C",
+    "kd": 10,
+    "volume_in": 70,
+    "volume_global": 400,
+    "cpc": "$0.01",
+    "parent_topic": "fish oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "kerala ayurvedic oil for joint pain",
+    "intent": "I C Local",
+    "kd": 0,
+    "volume_in": 70,
+    "volume_global": 80,
+    "cpc": "$0.07",
+    "parent_topic": "myaxyl oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dhurandhar joint pain oil uses",
+    "intent": "",
+    "kd": null,
+    "volume_in": 70,
+    "volume_global": 70,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "oil for knee joint pain",
+    "intent": "I C",
+    "kd": 0,
+    "volume_in": 70,
+    "volume_global": 100,
+    "cpc": "$0.01",
+    "parent_topic": "knee pain oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "best oil for joint pain relief",
+    "intent": "I C",
+    "kd": 0,
+    "volume_in": 70,
+    "volume_global": 90,
+    "cpc": "$0.07",
+    "parent_topic": "oil for joint pain",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "durandar joint pain oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 60,
+    "volume_global": 60,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "muscle and joint pain oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 60,
+    "volume_global": 60,
+    "cpc": "$0.06",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint care oil",
+    "intent": "I C T",
+    "kd": 0,
+    "volume_in": 60,
+    "volume_global": 70,
+    "cpc": "$0.10",
+    "parent_topic": "joint oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "stretch oil for joint pain uses",
+    "intent": "",
+    "kd": null,
+    "volume_in": 60,
+    "volume_global": 60,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "how to use eucalyptus oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 60,
+    "volume_global": 200,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "stretch oil for joint pain",
+    "intent": "I C T",
+    "kd": null,
+    "volume_in": 50,
+    "volume_global": 50,
+    "cpc": "$0.07",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "bamboo oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 50,
+    "volume_global": 50,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "def oil for joint pain",
+    "intent": "I C",
+    "kd": 0,
+    "volume_in": 50,
+    "volume_global": 50,
+    "cpc": "$0.06",
+    "parent_topic": "def oil for joint pain",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "narayani oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 50,
+    "volume_global": 60,
+    "cpc": "$0.06",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "best oil for knee joint pain",
+    "intent": "I C",
+    "kd": 0,
+    "volume_in": 50,
+    "volume_global": 100,
+    "cpc": "$0.06",
+    "parent_topic": "which oil is best for knee pain relief",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "kottakkal oil for joint pain",
+    "intent": "I C Branded",
+    "kd": 0,
+    "volume_in": 50,
+    "volume_global": 50,
+    "cpc": "$0.06",
+    "parent_topic": "best ayurvedic medicine for muscle pain",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint pain oil best",
+    "intent": "",
+    "kd": null,
+    "volume_in": null,
+    "volume_global": null,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "ayurvedic oil for knee joint pain",
+    "intent": "I",
+    "kd": 2,
+    "volume_in": 50,
+    "volume_global": 60,
+    "cpc": "$0.06",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dhurandhar joint pain oil tamil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 50,
+    "volume_global": 50,
+    "cpc": "$0.04",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "patanjali massage oil for joint pain",
+    "intent": "I C T Branded",
+    "kd": 0,
+    "volume_in": 50,
+    "volume_global": 60,
+    "cpc": null,
+    "parent_topic": "peedantak oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "ayurvedic joint pain relief oil",
+    "intent": "I C",
+    "kd": 0,
+    "volume_in": 50,
+    "volume_global": 60,
+    "cpc": "$0.06",
+    "parent_topic": "oil for joint pain",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "pachmarhi ayurveda joint pain oil",
+    "intent": "I C T Branded",
+    "kd": 0,
+    "volume_in": 50,
+    "volume_global": 50,
+    "cpc": "$0.10",
+    "parent_topic": "pachmarhi ayurveda joint pain oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "orthodexil joint pain oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 40,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "pachmarhi joint pain oil",
+    "intent": "I C T Branded",
+    "kd": 0,
+    "volume_in": 40,
+    "volume_global": 40,
+    "cpc": "$0.06",
+    "parent_topic": "pachmarhi ayurveda joint pain oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dhuandhar joint pain oil",
+    "intent": "I C T Branded",
+    "kd": 0,
+    "volume_in": 40,
+    "volume_global": 40,
+    "cpc": "$0.01",
+    "parent_topic": "dhurandhar oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "himalaya joint pain oil",
+    "intent": "I C T Branded",
+    "kd": null,
+    "volume_in": 40,
+    "volume_global": 40,
+    "cpc": "$0.02",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "how to use mustard oil for joint pain",
+    "intent": "I",
+    "kd": 0,
+    "volume_in": 40,
+    "volume_global": 80,
+    "cpc": "$0.06",
+    "parent_topic": "how to use mustard oil for pain",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "best ayurvedic oil for joint and muscle pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 40,
+    "volume_global": 40,
+    "cpc": "$0.08",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "jump o joint oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 40,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "patanjali oil for joint pain",
+    "intent": "I C Branded",
+    "kd": 0,
+    "volume_in": 40,
+    "volume_global": 40,
+    "cpc": "$0.01",
+    "parent_topic": "peedantak oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "best joint pain oil",
+    "intent": "I C T",
+    "kd": 0,
+    "volume_in": 40,
+    "volume_global": 50,
+    "cpc": "$0.08",
+    "parent_topic": "oil for joint pain",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint pain relief oil ayurvedic online",
+    "intent": "",
+    "kd": null,
+    "volume_in": 40,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "apricot oil benefits for joint pain",
+    "intent": "I",
+    "kd": 0,
+    "volume_in": 40,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": "apricot oil benefits for joint pain",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint pain massage oil",
+    "intent": "I C T",
+    "kd": 0,
+    "volume_in": 40,
+    "volume_global": 70,
+    "cpc": "$0.06",
+    "parent_topic": "oil for joint pain",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "oil for joint pain relief",
+    "intent": "I C",
+    "kd": null,
+    "volume_in": 40,
+    "volume_global": 50,
+    "cpc": "$0.08",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "orthodexil joint pain oil composition",
+    "intent": "",
+    "kd": null,
+    "volume_in": 40,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint relief oil",
+    "intent": "I C",
+    "kd": 0,
+    "volume_in": 40,
+    "volume_global": 60,
+    "cpc": "$0.08",
+    "parent_topic": "joint oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dhuandhar oil for joint pain",
+    "intent": "I C T Branded",
+    "kd": null,
+    "volume_in": 40,
+    "volume_global": 40,
+    "cpc": "$0.01",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "nilgiri oil for joint pain",
+    "intent": "I C T Branded",
+    "kd": 0,
+    "volume_in": 40,
+    "volume_global": 50,
+    "cpc": null,
+    "parent_topic": "nilgiri oil for joint pain",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "ooty oil for joint pain",
+    "intent": "I C T Branded",
+    "kd": 0,
+    "volume_in": 40,
+    "volume_global": 50,
+    "cpc": "$0.09",
+    "parent_topic": "gaultheria oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "massage oil for joint pain",
+    "intent": "I C T",
+    "kd": 0,
+    "volume_in": 40,
+    "volume_global": 80,
+    "cpc": "$0.06",
+    "parent_topic": "oil for joint pain",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dhurandhar joint pain oil is good or bad",
+    "intent": "",
+    "kd": null,
+    "volume_in": 40,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "thanmayee joint care oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 40,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "best fish oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 40,
+    "volume_global": 350,
+    "cpc": "$0.02",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "oil for joint pain in knee",
+    "intent": "I C",
+    "kd": 0,
+    "volume_in": 40,
+    "volume_global": 60,
+    "cpc": "$0.06",
+    "parent_topic": "which oil is best for knee pain relief",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "orthodexil joint pain oil review",
+    "intent": "",
+    "kd": null,
+    "volume_in": 40,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "rudo joint pain relief oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 40,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint veda oil uses in hindi",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 30,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "khazani joint oil review",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 30,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "kerala ayurvedic massage oil for joint pain",
+    "intent": "I C Local",
+    "kd": 0,
+    "volume_in": 30,
+    "volume_global": 30,
+    "cpc": "$0.06",
+    "parent_topic": "myaxyl oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint pain oil price",
+    "intent": "I C",
+    "kd": 0,
+    "volume_in": 30,
+    "volume_global": 40,
+    "cpc": "$0.05",
+    "parent_topic": "oil for joint pain",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "transformer oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 50,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "sesame oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "homemade massage oil for joint pain",
+    "intent": "I",
+    "kd": 0,
+    "volume_in": 30,
+    "volume_global": 150,
+    "cpc": "$0.04",
+    "parent_topic": "how to make ayurvedic pain relief oil at home",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "how to use sesame oil for joint pain",
+    "intent": "I",
+    "kd": 0,
+    "volume_in": 30,
+    "volume_global": 60,
+    "cpc": null,
+    "parent_topic": "how to use sesame oil for joint pain",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "muscle pain joint pain oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "mustard oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 60,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "ved sanjeevani nabhi oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 30,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "arthraid joint pain oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 30,
+    "cpc": "$0.07",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "magnesium oil for joint pain",
+    "intent": "I C",
+    "kd": 1,
+    "volume_in": 30,
+    "volume_global": 100,
+    "cpc": "$0.02",
+    "parent_topic": "magnesium oil for joint pain",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "pup joint oil and gas",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 200,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "red oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 30,
+    "cpc": "$0.08",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "best oil for joint pain massage",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 40,
+    "cpc": "$0.07",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dhurandhar joint pain oil with chappal",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 30,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint pain ayurvedic oil",
+    "intent": "I C T",
+    "kd": 0,
+    "volume_in": 30,
+    "volume_global": 40,
+    "cpc": "$0.08",
+    "parent_topic": "myaxyl oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "how to use black seed oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 500,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "surender joint pain oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": null,
+    "volume_global": null,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "emu oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 100,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "knee joint pain oil",
+    "intent": "I C",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 40,
+    "cpc": "$0.06",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "oil massage for joint pain",
+    "intent": "I C",
+    "kd": 0,
+    "volume_in": 30,
+    "volume_global": 40,
+    "cpc": "$0.06",
+    "parent_topic": "oil for joint pain",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "nabhi oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 30,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "durand joint pain oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 30,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "ortho joint oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 30,
+    "cpc": "$0.15",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint curator oil",
+    "intent": "I C T Branded",
+    "kd": 0,
+    "volume_in": 30,
+    "volume_global": 40,
+    "cpc": "$0.01",
+    "parent_topic": "awpl jc oil price",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "cannabis oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 50,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint massage oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 50,
+    "cpc": "$0.06",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "best knee joint pain relief oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 40,
+    "cpc": "$0.09",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "best joint pain oil in india",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 40,
+    "cpc": "$0.03",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "castor oil for joint pain how to use",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 300,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "which oil is best for joint pain",
+    "intent": "I C",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 40,
+    "cpc": "$0.05",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint plus oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "ayurvedic oil for joint pain relief",
+    "intent": "I C",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 30,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "ortho oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "tanmayi joint care magnetic oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 30,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint king oil",
+    "intent": "I C T Branded",
+    "kd": 0,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": "$0.10",
+    "parent_topic": "joint king oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "sal joint oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": "$0.09",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "asclepius joint curator oil uses in hindi",
+    "intent": "I Branded",
+    "kd": 0,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": "joint curator oil in hindi",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "rotary joint for hot oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 30,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "datura oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "is castor oil good for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 200,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "oil india limited is a joint sector industry",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint x oil",
+    "intent": "I C T Branded",
+    "kd": 0,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": "$0.06",
+    "parent_topic": "joint x oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint curator oil uses in hindi",
+    "intent": "I Branded",
+    "kd": 0,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": "joint curator oil in hindi",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "my joint oil uses in hindi",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "best massage oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 30,
+    "cpc": "$0.03",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "homemade oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "mi joint oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "best oil for joint and muscle pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": "$0.06",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "mustard oil for joint pain relief",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "hash oil joint",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 30,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint pain oil ayurvedic patanjali",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "ortho joint pain oil",
+    "intent": "I C T Branded",
+    "kd": 0,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": "$0.06",
+    "parent_topic": "ortho oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "oil for joint and muscle pain",
+    "intent": "I C",
+    "kd": 0,
+    "volume_in": 20,
+    "volume_global": 30,
+    "cpc": "$0.04",
+    "parent_topic": "ortho oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "wholeleaf orthodexil joint pain oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": "$0.03",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "neem oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 30,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint shakti oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint pain relief ayurvedic oil",
+    "intent": "I C",
+    "kd": 0,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": "$0.10",
+    "parent_topic": "myaxyl oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint pain oil patanjali",
+    "intent": "I C Branded",
+    "kd": 0,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": "$0.01",
+    "parent_topic": "peedantak oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint oil for knee",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 70,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "nourish muscle and joint pain oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": "$0.06",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "jro joint rehabilitate oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "haoma joint pain oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "veda joint oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dhurandhar joint oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "jyotishmati oil for joint pain relief",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "my joint com oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "natural oil for joint pain relief",
+    "intent": "",
+    "kd": null,
+    "volume_in": null,
+    "volume_global": null,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "neuro joint care oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "black seed oil for joint pain relief",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "herbal joint pain oil",
+    "intent": "I C",
+    "kd": 0,
+    "volume_in": 20,
+    "volume_global": 30,
+    "cpc": "$0.09",
+    "parent_topic": "oil for joint pain",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "baidyanath oil for joint pain",
+    "intent": "I C T Branded",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": "$0.03",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint pain best oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": "$0.05",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint pain fish oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint 7 oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint pain oil massage",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "unani oil for joint pain",
+    "intent": "I C",
+    "kd": 0,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": "$0.04",
+    "parent_topic": "unani tel",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "knee joint oil",
+    "intent": "I C T",
+    "kd": 0,
+    "volume_in": 20,
+    "volume_global": 40,
+    "cpc": "$0.09",
+    "parent_topic": "knee pain oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "stretch oil joint pain relief oil",
+    "intent": "I C T Branded",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": "$0.06",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "japanese oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint veda oil",
+    "intent": "I C T Branded",
+    "kd": 0,
+    "volume_in": 20,
+    "volume_global": 30,
+    "cpc": "$0.09",
+    "parent_topic": "chamak pain tablet name",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint pain oil homemade",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "til oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "kudos oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "eucalyptus oil for joint pain",
+    "intent": "I",
+    "kd": 8,
+    "volume_in": 20,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": "eucalyptus oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "how to make garlic oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "all joint oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "asclepius joint curator oil",
+    "intent": "I C T Branded",
+    "kd": 0,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": "awpl jc oil price",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "himalaya oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "whole leaf joint pain oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "rudo joint oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint pain oil name",
+    "intent": "I C",
+    "kd": 0,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": "$0.03",
+    "parent_topic": "oil for joint pain",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "ayurvedic massage oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 30,
+    "cpc": "$0.15",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "knee joint pain relief oil",
+    "intent": "I C",
+    "kd": 0,
+    "volume_in": 20,
+    "volume_global": 30,
+    "cpc": "$0.06",
+    "parent_topic": "knee pain oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "mahanarayan oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "best pain relief oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "liwo joint pain oil",
+    "intent": "I C T Branded",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.04",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "mustard oil for knee joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "zee herbal joint shakti oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "best oil for leg joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.06",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "coconut oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 50,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "how to make joint pain oil at home",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "best oil for muscle and joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dabur joint pain oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.05",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "pig fat oil for joint pain",
+    "intent": "I",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "how to use castor oil for knee joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint pro oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.06",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "how to roll hash oil joint",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "himalaya joint pain relief oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "key joint massage oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "homeopathic oil for joint pain",
+    "intent": "I C T",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.06",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "herbal joint pain relief oil",
+    "intent": "I C T",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.08",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "ayurveda joint pain oil",
+    "intent": "I C",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dr joint pain relief oil",
+    "intent": "I C T Branded",
+    "kd": 0,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.06",
+    "parent_topic": "dr joints pain relief oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "active joint pain oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint pain killer oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.07",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "leg joint pain oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": null,
+    "volume_global": null,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "fish oil for joint health",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 50,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "knee joint pain massage oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "fixit oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "pyridolo oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "olive oil massage for joint pain",
+    "intent": "I",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "sesame oil benefits for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "herbex joint pain relief oil",
+    "intent": "I C Branded",
+    "kd": 0,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.02",
+    "parent_topic": "herbex relief oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "neet joint plus oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "awpl joint curator oil price",
+    "intent": "I C T Branded",
+    "kd": 0,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.00",
+    "parent_topic": "awpl jc oil price",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dhurandhar joint pain oil in hindi",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "is mustard oil good for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "japani oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "damdar oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "lavender oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "muscle joint pain oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dhuandhar oil for joint pain price",
+    "intent": "I C Branded",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.02",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dhurandhar joint pain oil benefits",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "damdar joint pain oil price",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.03",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint veda oil price",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "prabhanjanam joint care oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "is sesame oil good for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "fish oil joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 60,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "oil joint",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "khazani joint & muscle pain relief oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint oil for knees",
+    "intent": "I C",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.09",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "ayurvedic oil joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dhurandhar oil joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "which oil is good for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": "$0.05",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint care relief oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "khazani massage oil for joint & muscle pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "essential oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 200,
+    "cpc": "$0.01",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint pain oil home made",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 30,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "turpentine oil for joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "how to make oil for joint pain at home",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "zandu ortho vedic knee & joint pain oil reviews",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "oil in knee joint",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "best oil for knee joint",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint on oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 1,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "orthodexil joint pain oil side effects",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint flex oil",
+    "intent": "I C T Branded",
+    "kd": 0,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": "$0.02",
+    "parent_topic": "joint flex oil",
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "how to use dhurandhar joint pain oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dhuandhar oil for joint pain review",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "joint pain oil poster",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "whole leaf orthodexil joint pain oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "hamdard joint pain oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.01",
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "best massage oil for knee joint pain",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "bone joint oil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "which oil is best for joint pain relief",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "can you smoke thc oil in a joint",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 150,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "joint-pain-oil"
+  },
+  {
+    "keyword": "dust mite allergy permanent cure",
+    "intent": "I",
+    "kd": 18,
+    "volume_in": 20,
+    "volume_global": 150,
+    "cpc": "$0.05",
+    "parent_topic": "dust allergy treatment",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "can homeopathy cure allergy permanently",
+    "intent": "I",
+    "kd": 0,
+    "volume_in": 90,
+    "volume_global": 100,
+    "cpc": "$0.04",
+    "parent_topic": "anti allergic homeopathic medicine",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy sneezing",
+    "intent": "I",
+    "kd": 12,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": "$0.01",
+    "parent_topic": "why am i sneezing so much and have a runny nose",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure sneezing allergy",
+    "intent": "I",
+    "kd": 12,
+    "volume_in": 30,
+    "volume_global": 40,
+    "cpc": "$0.01",
+    "parent_topic": "how to stop sneezing",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "allergy cure path lab",
+    "intent": "I Branded",
+    "kd": 0,
+    "volume_in": 40,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": "allergy cure path lab",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure sun allergy",
+    "intent": "I",
+    "kd": 5,
+    "volume_in": 10,
+    "volume_global": 50,
+    "cpc": null,
+    "parent_topic": "why a.m. i suddenly allergic to the sun",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "alcohol allergy cure",
+    "intent": "I",
+    "kd": 8,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure cold allergy permanently",
+    "intent": "I",
+    "kd": 30,
+    "volume_in": 150,
+    "volume_global": 250,
+    "cpc": "$0.10",
+    "parent_topic": "how to cure cold allergy permanently",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy cough",
+    "intent": "I",
+    "kd": 24,
+    "volume_in": 50,
+    "volume_global": 90,
+    "cpc": "$0.04",
+    "parent_topic": "allergic cough",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy naturally",
+    "intent": "I",
+    "kd": 26,
+    "volume_in": 60,
+    "volume_global": 90,
+    "cpc": "$0.03",
+    "parent_topic": "allergy treatment at home",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure skin allergy",
+    "intent": "I",
+    "kd": 23,
+    "volume_in": 250,
+    "volume_global": 600,
+    "cpc": "$0.01",
+    "parent_topic": "skin allergy",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure skin allergy at home",
+    "intent": "I",
+    "kd": 28,
+    "volume_in": 100,
+    "volume_global": 150,
+    "cpc": "$0.01",
+    "parent_topic": "దురద నివారణ మందులు",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure eye allergy",
+    "intent": "I",
+    "kd": 26,
+    "volume_in": 30,
+    "volume_global": 50,
+    "cpc": null,
+    "parent_topic": "eye allergy",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure chicken allergy",
+    "intent": "I",
+    "kd": 35,
+    "volume_in": 100,
+    "volume_global": 700,
+    "cpc": null,
+    "parent_topic": "chicken allergy symptoms",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy in skin",
+    "intent": "I",
+    "kd": 33,
+    "volume_in": 30,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": "स्किन एलर्जी का देसी इलाज",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy in blood",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.15",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "pollen allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 80,
+    "cpc": "$0.09",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure dog skin allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.09",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy cold",
+    "intent": "I",
+    "kd": 39,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": "$0.08",
+    "parent_topic": "how to cure cold allergy permanently",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure for dust allergy",
+    "intent": "I",
+    "kd": 37,
+    "volume_in": 30,
+    "volume_global": 50,
+    "cpc": "$0.07",
+    "parent_topic": "dust allergy treatment",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure dust allergy naturally",
+    "intent": "I",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 30,
+    "cpc": "$0.07",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "dust allergy cure",
+    "intent": "I",
+    "kd": 37,
+    "volume_in": 40,
+    "volume_global": 200,
+    "cpc": "$0.07",
+    "parent_topic": "dust allergy treatment at home",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy asthma",
+    "intent": "I",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.04",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "food allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 200,
+    "cpc": "$0.04",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "allergy cure food",
+    "intent": "I",
+    "kd": 36,
+    "volume_in": 20,
+    "volume_global": 80,
+    "cpc": "$0.04",
+    "parent_topic": "food allergies",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "dust allergy permanent cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.04",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "allergy cure",
+    "intent": "I",
+    "kd": 62,
+    "volume_in": 90,
+    "volume_global": 600,
+    "cpc": "$0.04",
+    "parent_topic": "allergy",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "can ayurveda cure allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.04",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy permanently",
+    "intent": "I",
+    "kd": 47,
+    "volume_in": 50,
+    "volume_global": 50,
+    "cpc": "$0.03",
+    "parent_topic": "allergy",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure for allergy",
+    "intent": "I",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 200,
+    "cpc": "$0.03",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "skin allergy cure",
+    "intent": "I",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 60,
+    "cpc": "$0.03",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure nose allergy",
+    "intent": "I",
+    "kd": 54,
+    "volume_in": 50,
+    "volume_global": 90,
+    "cpc": "$0.02",
+    "parent_topic": "allergic rhinitis",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "what is the best medicine to cure skin allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 150,
+    "cpc": "$0.02",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure nasal allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": "$0.02",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "allergy cure in ayurveda",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": "$0.02",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "allergy cure ayurveda",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.02",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure for rhinitis allergy",
+    "intent": "I",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 30,
+    "cpc": "$0.02",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "rhinitis allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.02",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "natural cure for allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": "$0.02",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "allergy rhinitis cure",
+    "intent": "I",
+    "kd": 51,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": "$0.02",
+    "parent_topic": "allergic rhinitis",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure cold allergy naturally",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.02",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure food allergy naturally",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": "$0.02",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "allergy cure at home",
+    "intent": "",
+    "kd": null,
+    "volume_in": 40,
+    "volume_global": 90,
+    "cpc": "$0.02",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "natural allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 250,
+    "cpc": "$0.02",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure dust allergy",
+    "intent": "I",
+    "kd": 37,
+    "volume_in": 200,
+    "volume_global": 250,
+    "cpc": "$0.01",
+    "parent_topic": "dust allergy",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy rhinitis",
+    "intent": "I",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": "$0.01",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure dust allergy permanently",
+    "intent": "I",
+    "kd": 37,
+    "volume_in": 700,
+    "volume_global": 1,
+    "cpc": "$0.01",
+    "parent_topic": "dust allergy treatment",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "dust mite allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 150,
+    "cpc": "$0.01",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure skin allergy naturally",
+    "intent": "I",
+    "kd": null,
+    "volume_in": 90,
+    "volume_global": 100,
+    "cpc": "$0.01",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy on skin",
+    "intent": "I",
+    "kd": 47,
+    "volume_in": 80,
+    "volume_global": 150,
+    "cpc": "$0.01",
+    "parent_topic": "स्किन एलर्जी का देसी इलाज",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "home remedies to cure skin allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": "$0.01",
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure face allergy",
+    "intent": "I",
+    "kd": 47,
+    "volume_in": 100,
+    "volume_global": 150,
+    "cpc": "$0.01",
+    "parent_topic": "allergy on face",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy",
+    "intent": "I",
+    "kd": 52,
+    "volume_in": 150,
+    "volume_global": 300,
+    "cpc": "$0.00",
+    "parent_topic": "allergy",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure alpha gal allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure dust allergy permanently naturally",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 90,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure seafood allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy of sneezing",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure nut allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure cat allergy naturally",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure dust mite allergy naturally",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "dust allergy cure natural",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "fish allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure cold flu allergy at home",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure wheat allergy naturally",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure soap allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "can allergy cure itself",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy around genital area",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy itching",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure medicine allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "mold allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how cure allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "what is the cure of skin allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure sperm allergy at home",
+    "intent": "I",
+    "kd": null,
+    "volume_in": 100,
+    "volume_global": 900,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure running nose allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure curd allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "shellfish allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 50,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "pescatore allergy and asthma cure download",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "turmeric allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "black pepper allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy to cats",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure skin allergy on face naturally",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "home remedies to cure allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure for skin allergy",
+    "intent": "I",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 250,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "tick red meat allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure for dairy allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "olive pollen allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "johnson grass pollen allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "maple leaf pollen allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure sun allergy permanently",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "lip allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure allergy clinic reviews",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 30,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure chocolate allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure for alcohol allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "skin allergy cure at home",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "australian pine pollen allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy to seafood",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure secere arctic area allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure blood allergy naturally",
+    "intent": "",
+    "kd": null,
+    "volume_in": 40,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure dust allergy in tamil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure face allergy naturally",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "nut allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 80,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "hand allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure for eye allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "food allergy cure 2023",
+    "intent": "",
+    "kd": null,
+    "volume_in": null,
+    "volume_global": null,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure a cat allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 30,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "mosquito bite allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure for allergy cough",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 100,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure dust allergy cold",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "neck allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure pollen allergy at home",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure flea allergy dermatitis in cats",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "peanut butter allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy in throat",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "water allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure ragweed allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "is there any permanent cure for allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure for sneezing allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "allergy cure in homeopathy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure lip allergy at home",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "what is the best cure for allergy?",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "is there a cure for red meat allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "is there a cure for food allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "allergy rash cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy rashes",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 100,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "hives allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "allergy cure syrup",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure for oral allergy syndrome",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "eye allergy cure round rock",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "surgery is a possible cure for a food allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "dog allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 100,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure for wheat allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "honey allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "peanut allergy cure 2023",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "wheat allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure turmeric allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 20,
+    "volume_global": 100,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "medicine to cure allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure of skin allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure cough due to dust allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how cure skin allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "food allergy cure 2022",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "nickel allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how can i cure my dust allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "does antihistamine cure allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "food allergy cure research",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 50,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure egg allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy instantly",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "what is the fastest way to cure an allergy cough?",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure sweat allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy due to humidity",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure an allergy cough",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 350,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure skin allergy home remedy",
+    "intent": "",
+    "kd": null,
+    "volume_in": null,
+    "volume_global": null,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "does allergy shots cure allergies",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "throat allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "is there a cure for gluten allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure kiwi allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy rhinitis naturally",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "peanut allergy cure 2019",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "seafood allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure pollen allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "mudra to cure nasal allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure dairy allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "grass allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy in dogs",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure milk allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 50,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure dust allergy",
+    "intent": "I",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "dairy allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "blood allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure dust allergy permanently ayurveda",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure sneeze allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure mushroom allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure for hives allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "rough pigweed pollen allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "can you cure nut allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "citrus allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure nose allergy naturally",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy on body",
+    "intent": "I",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure for tree nut allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure throat allergy at home",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure seasonal allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "face allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy on lips",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure nut allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "pollen allergy cure natural",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure tattoo allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure fish allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure cold and dust allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure a peanut allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure tree pollen allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure cold due to dust allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "shrimp allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "nettle pollen allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "best allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 100,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "eye allergy cure naturally",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure cold allergy at home",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy in eyes",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy on skin naturally",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy home remedies",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "allergy to cats cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure eye allergy permanently",
+    "intent": "",
+    "kd": null,
+    "volume_in": 40,
+    "volume_global": 150,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "white ash pollen allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": null,
+    "volume_global": null,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure for food allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure dust allergy instantly",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure sneezing and runny nose allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 30,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "ragweed allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure dust allergy sneezing",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "weed allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "what is the cure of allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "can you cure peanut allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 30,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure eye allergy naturally",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how many days to cure skin allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 30,
+    "volume_global": 40,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure for peanut allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 90,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure egg allergy naturally",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure a food allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cat allergy cure natural",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure from skin allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure skin allergy naturally in tamil",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "medicine to cure dust allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "natural way to cure allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "is it possible to cure an allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "allergy cure 2021",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure parthenium allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure swollen face due to allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "yeast allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure dust allergy at home",
+    "intent": "I",
+    "kd": 43,
+    "volume_in": 60,
+    "volume_global": 70,
+    "cpc": null,
+    "parent_topic": "dust allergy",
+    "theme": "allergy"
+  },
+  {
+    "keyword": "is there a cure for nut allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "which food cure allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure skin allergy itching",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "the food allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "birch pollen allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure tannin allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure face redness allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure a skin allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "lemon allergy cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "pollen food allergy syndrome cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy from shrimp",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "can homeopathy cure dust allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure a dog allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "can i cure my cat allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "what is the cure for skin allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy in face",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure prawn allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "is there a cure for shellfish allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 30,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "cure skin allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure the allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy induced asthma",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "what is the fastest way to cure skin allergy",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure sinus allergy naturally",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 20,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "how to cure allergy on face at home",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  },
+  {
+    "keyword": "allergy 'cure",
+    "intent": "",
+    "kd": null,
+    "volume_in": 10,
+    "volume_global": 10,
+    "cpc": null,
+    "parent_topic": null,
+    "theme": "allergy"
+  }
+]
