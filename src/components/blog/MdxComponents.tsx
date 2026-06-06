@@ -131,7 +131,7 @@ export function ProductCTA({
         <p className="text-sm font-medium uppercase tracking-wide text-primary">
           Recommended product
         </p>
-        <h4 className="mt-1 text-lg font-bold text-gray-900">{name}</h4>
+        <p className="mt-1 text-lg font-bold text-gray-900">{name}</p>
         <p className="mt-1 text-sm text-gray-600">{blurb}</p>
       </div>
       <Link
