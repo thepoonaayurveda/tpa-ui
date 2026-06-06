@@ -1,27 +1,48 @@
+import { Children, isValidElement, type ReactNode } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import type { MDXComponents } from "mdx/types";
+import { Slugger, stripMarkdown } from "@/lib/slugify";
+
+/** Flatten React children of a heading down to its plain text. */
+function textOf(node: ReactNode): string {
+  if (node == null || typeof node === "boolean") return "";
+  if (typeof node === "string" || typeof node === "number") return String(node);
+  if (Array.isArray(node)) return node.map(textOf).join("");
+  if (isValidElement(node)) return textOf((node.props as { children?: ReactNode }).children);
+  return "";
+}
 
 /**
  * Styled elements for MDX blog content. Tailwind's typography plugin isn't
  * installed, so we style the common markdown elements by hand — keeps the
  * dependency surface small and the look consistent with the rest of the site.
  *
- * Custom components (ProductCTA, FAQs) are also exposed so posts can drop
- * them inline, e.g. <ProductCTA slug="flexio-oil" />.
+ * This is a factory: it takes a per-render `Slugger` so each <h2>/<h3> gets
+ * an `id` matching the table of contents (built with the same slugger). One
+ * slugger instance per article keeps duplicate-heading ids in sync with the
+ * TOC. Custom components (ProductCTA) are exposed so posts can drop them
+ * inline, e.g. <ProductCTA slug="flexio-oil" />.
  */
-export const mdxComponents: MDXComponents = {
-  h2: (props) => (
+export function makeMdxComponents(slugger: Slugger): MDXComponents {
+  return {
+  h2: ({ children, ...props }) => (
     <h2
+      id={slugger.slug(stripMarkdown(textOf(children)))}
       className="mt-12 mb-4 text-2xl md:text-3xl font-bold text-gray-900 scroll-mt-24"
       {...props}
-    />
+    >
+      {children}
+    </h2>
   ),
-  h3: (props) => (
+  h3: ({ children, ...props }) => (
     <h3
+      id={slugger.slug(stripMarkdown(textOf(children)))}
       className="mt-8 mb-3 text-xl md:text-2xl font-semibold text-gray-900 scroll-mt-24"
       {...props}
-    />
+    >
+      {children}
+    </h3>
   ),
   p: (props) => (
     <p className="mb-5 text-base md:text-lg leading-relaxed text-gray-700" {...props} />
@@ -81,7 +102,8 @@ export const mdxComponents: MDXComponents = {
   ),
   // Custom components available inside MDX:
   ProductCTA,
-};
+  };
+}
 
 /**
  * In-content call-to-action card driving to a product page.

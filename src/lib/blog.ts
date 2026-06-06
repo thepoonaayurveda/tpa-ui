@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
+import { Slugger, stripMarkdown } from "@/lib/slugify";
 
 /**
  * File-based blog: posts live as MDX in `src/content/blog/*.mdx`.
@@ -20,6 +21,36 @@ const MDX_EXT = ".mdx";
 
 /** A single FAQ entry a post can declare in frontmatter (drives FAQPage schema). */
 export type BlogFaq = { question: string; answer: string };
+
+/** A heading in the article body, for the table of contents. */
+export type TocItem = { id: string; text: string; level: 2 | 3 };
+
+/**
+ * Pull the H2/H3 headings out of raw MDX for the table of contents.
+ * Skips fenced code blocks. IDs are generated with the same `Slugger`
+ * the rendered headings use, so the anchors always line up.
+ */
+export function extractToc(content: string): TocItem[] {
+  const slugger = new Slugger();
+  const items: TocItem[] = [];
+  let inFence = false;
+
+  for (const line of content.split("\n")) {
+    if (/^```/.test(line.trim())) {
+      inFence = !inFence;
+      continue;
+    }
+    if (inFence) continue;
+
+    const match = line.match(/^(#{2,3})\s+(.+)$/);
+    if (!match) continue;
+
+    const level = match[1].length as 2 | 3;
+    const text = stripMarkdown(match[2]);
+    items.push({ id: slugger.slug(text), text, level });
+  }
+  return items;
+}
 
 /** Frontmatter shape for a blog post. */
 export type BlogPostMeta = {

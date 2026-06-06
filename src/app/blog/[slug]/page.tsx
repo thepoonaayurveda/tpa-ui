@@ -4,9 +4,13 @@ import { format } from "date-fns";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { JsonLd } from "@/components/seo/JsonLd";
-import { mdxComponents } from "@/components/blog/MdxComponents";
+import { makeMdxComponents } from "@/components/blog/MdxComponents";
 import { BlogFaqs } from "@/components/blog/BlogFaqs";
-import { getAllPostSlugs, getPostBySlug } from "@/lib/blog";
+import { ReadingProgressBar } from "@/components/blog/ReadingProgressBar";
+import { PostLayout } from "@/components/blog/PostLayout";
+import { BuyCard } from "@/components/blog/BuyCard";
+import { extractToc, getAllPostSlugs, getPostBySlug } from "@/lib/blog";
+import { Slugger } from "@/lib/slugify";
 import {
   buildBlogPostingSchema,
   buildBreadcrumbSchema,
@@ -71,14 +75,20 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
     schemas.push(buildFaqSchema(post.faqs));
   }
 
+  const tocItems = extractToc(post.content);
+  // One slugger per render: heading ids match the TOC anchors exactly.
+  const mdxComponents = makeMdxComponents(new Slugger());
+  const buyCard = <BuyCard />;
+
   return (
     <div className="min-h-screen bg-white">
       <JsonLd data={schemas} />
+      <ReadingProgressBar />
 
-      <article className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
         <Breadcrumb items={breadcrumbItems} />
 
-        <header className="mb-8">
+        <header className="mb-10 max-w-3xl">
           <h1 className="text-3xl font-bold leading-tight text-gray-900 md:text-4xl">
             {post.title}
           </h1>
@@ -98,7 +108,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         </header>
 
         {post.image && (
-          <div className="mb-8 overflow-hidden rounded-xl bg-gray-100">
+          <div className="mb-10 max-w-3xl overflow-hidden rounded-xl bg-gray-100">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={post.image}
@@ -109,12 +119,15 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
         )}
 
-        <div className="blog-content">
-          <MDXRemote source={post.content} components={mdxComponents} />
-        </div>
-
-        {post.faqs?.length ? <BlogFaqs faqs={post.faqs} /> : null}
-      </article>
+        <PostLayout tocItems={tocItems} buyCard={buyCard}>
+          <article>
+            <div className="blog-content">
+              <MDXRemote source={post.content} components={mdxComponents} />
+            </div>
+            {post.faqs?.length ? <BlogFaqs faqs={post.faqs} /> : null}
+          </article>
+        </PostLayout>
+      </div>
     </div>
   );
 }
