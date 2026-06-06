@@ -10,7 +10,13 @@ import { BlogFaqs } from "@/components/blog/BlogFaqs";
 import { ReadingProgressBar } from "@/components/blog/ReadingProgressBar";
 import { PostLayout } from "@/components/blog/PostLayout";
 import { BuyCard } from "@/components/blog/BuyCard";
-import { extractToc, getAllPostSlugs, getPostBySlug } from "@/lib/blog";
+import { RelatedPosts } from "@/components/blog/RelatedPosts";
+import {
+  extractToc,
+  getAllPostSlugs,
+  getPostBySlug,
+  getRelatedPosts,
+} from "@/lib/blog";
 import { Slugger } from "@/lib/slugify";
 import {
   buildBlogPostingSchema,
@@ -77,6 +83,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   }
 
   const tocItems = extractToc(post.content);
+  const relatedPosts = getRelatedPosts(post.slug);
   // One slugger per render: heading ids match the TOC anchors exactly.
   const mdxComponents = makeMdxComponents(new Slugger());
   const buyCard = <BuyCard />;
@@ -130,6 +137,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
               />
             </div>
             {post.faqs?.length ? <BlogFaqs faqs={post.faqs} /> : null}
+            <RelatedPosts posts={relatedPosts} />
           </article>
         </PostLayout>
       </div>

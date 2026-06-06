@@ -150,3 +150,48 @@ export function getAllPostSlugs(): string[] {
 export function getPostBySlug(slug: string): BlogPost | null {
   return getAllPosts().find((post) => post.slug === slug) ?? null;
 }
+
+/** Lowercased word set from a string, for cheap keyword overlap scoring. */
+function wordSet(text: string | undefined): Set<string> {
+  return new Set(
+    (text ?? "")
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter((w) => w.length > 2)
+  );
+}
+
+/**
+ * Other posts most related to `slug`, best first, capped at `limit`.
+ *
+ * Scoring is deliberately simple (no CMS, no embeddings): a shared target
+ * `product` is the strongest signal — these are the same-cluster converters —
+ * then keyword/title word overlap, with newer posts breaking ties. Returns []
+ * when there is nothing else to show, so the UI can hide the block entirely.
+ */
+export function getRelatedPosts(slug: string, limit = 3): BlogPost[] {
+  const all = getAllPosts();
+  const current = all.find((p) => p.slug === slug);
+  if (!current) return [];
+
+  const currentWords = wordSet(`${current.keyword} ${current.title}`);
+
+  return all
+    .filter((p) => p.slug !== slug)
+    .map((p) => {
+      let score = 0;
+      if (p.product && current.product && p.product === current.product) {
+        score += 10;
+      }
+      const words = wordSet(`${p.keyword} ${p.title}`);
+      for (const w of words) {
+        if (currentWords.has(w)) score += 1;
+      }
+      return { post: p, score };
+    })
+    .sort((a, b) =>
+      b.score !== a.score ? b.score - a.score : a.post.date < b.post.date ? 1 : -1
+    )
+    .slice(0, limit)
+    .map((entry) => entry.post);
+}
