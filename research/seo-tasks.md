@@ -16,12 +16,12 @@ Legend: 🟢 quick win · 🟡 medium · 🔴 larger effort · `[ ]` todo · `[x
 
 ## P1 — Joint-oil commercial win (Flexio Oil — highest ROI)
 
-- [ ] 🔴 Add `Product` + `Offer` JSON-LD to `/products/[slug]` (name, image, brand, **INR** price, availability).
-- [ ] 🟡 Add `FAQPage` JSON-LD to product pages (we already render `ProductFAQs` — just emit schema).
-- [ ] 🟡 Add `BreadcrumbList` JSON-LD (the `Breadcrumb` component renders visually but emits no schema).
-- [ ] 🟡 Make product titles keyword-led in `generateMetadata`: inject search intent, e.g. `"Flexio Oil – Ayurvedic Joint Pain Oil with Nirgundi | The Poona Ayurveda"` (not raw product name).
-- [ ] 🟡 Add a templated meta-description fallback per product (current fallback is blank when WooCommerce `short_description` is empty).
-- [ ] 🟢 Ensure product page H1 contains the primary keyword (not just brand name); verify one H1 per page.
+- [x] 🔴 Add `Product` + `Offer` JSON-LD to `/products/[slug]` (name, image, brand, **INR** price, availability). → `buildProductSchema` in `structuredData.ts`. Verified live: ₹390, InStock, real AggregateRating (only when `rating_count > 0` — never faked).
+- [x] 🟡 Add `FAQPage` JSON-LD to product pages (we already render `ProductFAQs` — just emit schema). → `buildFaqSchema`, fed by `getFAQsForProduct`. Verified: 9 Q&As on Flexio.
+- [x] 🟡 Add `BreadcrumbList` JSON-LD (the `Breadcrumb` component renders visually but emits no schema). → `buildBreadcrumbSchema`. Verified: Home › Products › Massage Oils › Flexio Oil.
+- [x] 🟡 Make product titles keyword-led in `generateMetadata`. → per-product override map `src/lib/productSeo.ts`. Flexio title verified: "Flexio Oil – Ayurvedic Joint Pain Oil with Nirgundi | The Poona Ayurveda". Add more products to the map as keywords are validated.
+- [x] 🟡 Add a templated meta-description fallback per product (current fallback is blank when WooCommerce `short_description` is empty). → `getProductSeo`: override → Woo copy → generic template.
+- [x] 🟢 Ensure product page H1 contains the primary keyword (not just brand name); verify one H1 per page. → kept H1 clean/branded (trust-at-first-glance); added a keyword-rich subheading instead (`getProductTagline`). One H1 confirmed.
 - [ ] 🔴 Build `/blog` route + content setup (MDX or WooCommerce posts) — blocker for all content tasks.
 - [ ] 🟢 Add `Article`/`BlogPosting` + `BreadcrumbList` JSON-LD to blog posts (build once, reuse).
 
@@ -37,7 +37,7 @@ _Full briefs (titles + supporting keywords + volumes) in strategy doc §3b._
 - [ ] 🟡 **C5** — "Ayurvedic Oil for Joint & Muscle Pain" (`ayurvedic oil for joint and muscle pain` 80 + ~290/mo cluster). → Flexio.
 - [ ] 🟡 **C6** — "Natural Oils for Joint Pain: What Works" (comparison; `castor oil for joint pain` 100 + mustard/sesame/eucalyptus ~560/mo). Positions Flexio as the formulated option. → Flexio.
 - [ ] 🟢 **C7** — "How to Make Joint Pain Oil at Home" (`homemade massage oil for joint pain` 30; honest DIY → soft sell). → Flexio.
-- [ ] 🟡 Wire real reviews into `AggregateRating` schema on product pages (reviews API exists — **never fake ratings**).
+- [x] 🟡 Wire real reviews into `AggregateRating` schema on product pages (reviews API exists — **never fake ratings**). → emitted only when `rating_count > 0 && average_rating > 0`. Verified on Flexio (1 review, 5.0).
 
 ## P2 — Depth + allergy + sitewide polish
 

@@ -9,6 +9,14 @@ import { ProductFAQs } from "@/components/product/ProductFAQs";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { getManualRelatedProducts } from "@/lib/productRelationships";
 import { SITE_URL } from "@/lib/siteUrl";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { getFAQsForProduct } from "@/lib/faqData";
+import { getProductSeo } from "@/lib/productSeo";
+import {
+  buildProductSchema,
+  buildFaqSchema,
+  buildBreadcrumbSchema,
+} from "@/lib/structuredData";
 
 // Generate static params for better performance
 export async function generateStaticParams() {
@@ -38,14 +46,15 @@ export async function generateMetadata({
     };
   }
 
-  const cleanDescription =
-    product.short_description?.replace(/<[^>]*>/g, "") || "";
   const productCategories =
     product.categories?.map((c: any) => c.name).join(", ") || "";
 
+  // Keyword-led title + non-empty description (override map → Woo copy → template).
+  const { title, description } = getProductSeo(product);
+
   return {
-    title: `${product.name} | The Poona Ayurveda`,
-    description: cleanDescription,
+    title,
+    description,
     keywords: `${product.name}, ayurveda, ayurvedic products, ${productCategories}`,
     alternates: {
       // Canonical to the clean slug URL so ?category= / tracking params
@@ -53,8 +62,8 @@ export async function generateMetadata({
       canonical: `/products/${params.slug}`,
     },
     openGraph: {
-      title: product.name,
-      description: cleanDescription,
+      title,
+      description,
       images:
         product.images?.map((img: any) => ({
           url: img.src,
@@ -66,8 +75,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: product.name,
-      description: cleanDescription,
+      title,
+      description,
       images: product.images?.[0]?.src ? [product.images[0].src] : [],
     },
   };
@@ -159,8 +168,23 @@ export default async function ProductPage({
     { label: product.name, href: "", current: true },
   ];
 
+  // Structured data (JSON-LD). Breadcrumb schema carries the product's own
+  // URL for the last hop (the visual trail leaves it hrefless).
+  const breadcrumbSchemaItems = breadcrumbItems.map((item) =>
+    item.current
+      ? { label: item.label, href: `/products/${product.slug}` }
+      : { label: item.label, href: item.href }
+  );
+  const productFaqs = getFAQsForProduct(product.slug);
+  const structuredData = [
+    buildProductSchema(product),
+    buildBreadcrumbSchema(breadcrumbSchemaItems),
+    ...(productFaqs.length > 0 ? [buildFaqSchema(productFaqs)] : []),
+  ];
+
   return (
     <div className="min-h-screen bg-white">
+      <JsonLd data={structuredData} />
       {/* Above the Fold Section - Exact Layout from product_page.png */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Breadcrumb */}

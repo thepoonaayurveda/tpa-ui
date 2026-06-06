@@ -19,6 +19,7 @@ import { useCartStore } from "@/store/cartStore";
 import { formatPrice } from "@/lib/utils";
 import { getProductBenefits } from "@/lib/productBenefits";
 import { getProductDetails, getWhoShouldTake, getHowToUse, getIngredients } from "@/lib/productDetails";
+import { getProductTagline } from "@/lib/productSeo";
 
 interface CompactProductInfoProps {
   product: any;
@@ -117,10 +118,19 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
           {product.name}
         </h1>
 
-        {product.categories?.length > 0 && (
+        {/* Keyword-rich subheading: puts the primary search term in visible
+            on-page copy without cluttering the branded H1. Falls back to the
+            product category when no SEO tagline is defined. */}
+        {getProductTagline(product.slug) ? (
           <p className="text-secondary font-medium mb-2">
-            {product.categories.map((cat: any) => cat.name).join(", ")}
+            {getProductTagline(product.slug)}
           </p>
+        ) : (
+          product.categories?.length > 0 && (
+            <p className="text-secondary font-medium mb-2">
+              {product.categories.map((cat: any) => cat.name).join(", ")}
+            </p>
+          )
         )}
 
         {/* Rating */}
