@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import type { MDXComponents } from "mdx/types";
 import { Slugger, stripMarkdown } from "@/lib/slugify";
+import { withBlogUtm } from "@/lib/utm";
 
 /** Flatten React children of a heading down to its plain text. */
 function textOf(node: ReactNode): string {
@@ -59,7 +60,7 @@ export function makeMdxComponents(slugger: Slugger): MDXComponents {
     if (isInternal) {
       return (
         <Link
-          href={href}
+          href={withBlogUtm(href)}
           className="text-primary font-medium underline underline-offset-2 hover:text-primary-dark"
           {...props}
         />
@@ -134,7 +135,7 @@ export function ProductCTA({
         <p className="mt-1 text-sm text-gray-600">{blurb}</p>
       </div>
       <Link
-        href={`/products/${slug}`}
+        href={withBlogUtm(`/products/${slug}`)}
         className="inline-flex flex-shrink-0 items-center justify-center rounded-lg bg-primary px-5 py-2.5 font-semibold text-white transition-colors hover:bg-primary-dark"
       >
         View {name}

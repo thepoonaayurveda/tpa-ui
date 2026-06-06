@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { withBlogUtm } from "@/lib/utm";
 
 /**
  * Persistent product buy card shown in the blog sidebar (sticky on desktop)
@@ -26,7 +27,7 @@ export function BuyCard({
   return (
     <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
       <Link
-        href={`/products/${slug}`}
+        href={withBlogUtm(`/products/${slug}`)}
         className="block bg-gradient-to-b from-primary/5 to-white"
         aria-label={`View ${name}`}
       >
@@ -43,7 +44,7 @@ export function BuyCard({
 
       <div className="p-4">
         <Link
-          href={`/products/${slug}`}
+          href={withBlogUtm(`/products/${slug}`)}
           className="block text-[15px] font-bold leading-tight text-gray-900 no-underline hover:text-primary"
         >
           {name}
@@ -56,7 +57,7 @@ export function BuyCard({
         </div>
 
         <Link
-          href={`/products/${slug}`}
+          href={withBlogUtm(`/products/${slug}`)}
           className="mt-3 flex w-full items-center justify-center rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-white no-underline transition-colors hover:bg-primary-dark"
         >
           Buy Now
