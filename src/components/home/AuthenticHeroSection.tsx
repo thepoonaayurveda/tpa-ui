@@ -32,9 +32,12 @@ export function AuthenticHeroSection() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-8 md:pb-16">
             <div className="lg:hidden flex justify-end">
               <div className="max-w-xs space-y-4 text-right">
-                <h2 className="text-2xl sm:text-3xl font-bold text-white leading-tight">
+                {/* Mobile heading. Styled like a heading but kept as <p>:
+                    the desktop variant below carries the page's single <h1>
+                    so the DOM never has two H1s across breakpoints. */}
+                <p className="text-2xl sm:text-3xl font-bold text-white leading-tight">
                   {firstSlide.title}
-                </h2>
+                </p>
                 <p className="text-base sm:text-lg text-white/90">{firstSlide.subtitle}</p>
                 <div className="pt-4">
                   <Link
@@ -50,9 +53,11 @@ export function AuthenticHeroSection() {
               <div />
               <div />
               <div className="flex flex-col justify-end space-y-4">
-                <h2 className="text-3xl xl:text-4xl font-bold text-white leading-tight">
+                {/* Page H1 (primary). Mobile shows the same text via a styled
+                    <p> above so there's exactly one <h1> in the DOM. */}
+                <h1 className="text-3xl xl:text-4xl font-bold text-white leading-tight">
                   {firstSlide.title}
-                </h2>
+                </h1>
                 <p className="text-lg xl:text-xl text-white/90 mb-6">{firstSlide.subtitle}</p>
                 <div>
                   <Link

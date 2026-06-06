@@ -86,9 +86,11 @@ export function Header() {
           <div className="flex justify-center py-4 border-b border-gray-100">
             <Link href="/" className="flex flex-col items-center space-y-2">
               <Logo />
-              <h1 className="text-xl uppercase tracking-wide text-gray-900">
+              {/* Site-wide brand mark — a logo, not the page heading.
+                  Kept as a <span> so each page owns its single semantic <h1>. */}
+              <span className="text-xl uppercase tracking-wide text-gray-900">
                 The Poona Ayurveda
-              </h1>
+              </span>
             </Link>
           </div>
 
