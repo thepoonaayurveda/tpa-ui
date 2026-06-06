@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { format } from "date-fns";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { makeMdxComponents } from "@/components/blog/MdxComponents";
@@ -122,7 +123,11 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         <PostLayout tocItems={tocItems} buyCard={buyCard}>
           <article>
             <div className="blog-content">
-              <MDXRemote source={post.content} components={mdxComponents} />
+              <MDXRemote
+                source={post.content}
+                components={mdxComponents}
+                options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+              />
             </div>
             {post.faqs?.length ? <BlogFaqs faqs={post.faqs} /> : null}
           </article>
