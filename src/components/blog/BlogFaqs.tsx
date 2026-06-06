@@ -32,9 +32,9 @@ export function BlogFaqs({ faqs }: { faqs: BlogFaq[] }) {
                 className="flex w-full items-center justify-between py-2 text-left"
                 aria-expanded={expanded === index}
               >
-                <span className="pr-4 text-base font-medium text-gray-900">
+                <h3 className="pr-4 text-base font-medium text-gray-900">
                   {faq.question}
-                </span>
+                </h3>
                 {expanded === index ? (
                   <ChevronUpIcon className="h-5 w-5 flex-shrink-0 text-gray-500" />
                 ) : (
