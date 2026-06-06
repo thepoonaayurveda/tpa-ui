@@ -41,3 +41,7 @@ yarn-error.log*
 next-env.d.ts
 
 product_page.png
+
+# local Claude config + content-generation skills (not committed)
+# note: this ignores the .claude/ directory only, NOT the committed CLAUDE.md at repo root
+.claude/
