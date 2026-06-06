@@ -114,7 +114,7 @@ export function makeMdxComponents(slugger: Slugger): MDXComponents {
 export function ProductCTA({
   slug = "flexio-oil",
   name = "Flexio Oil",
-  blurb = "Ayurvedic joint & knee pain oil with Nirgundi — formulated, ready to use.",
+  blurb = "Ayurvedic joint & knee pain oil with Nirgundi. Formulated, ready to use.",
   image = "https://api.thepoonaayurveda.com/wp-content/uploads/2025/01/Frame-64-1.png",
 }: {
   slug?: string;

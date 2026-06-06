@@ -11,9 +11,9 @@ import {
 import { SITE_URL } from "@/lib/siteUrl";
 
 export const metadata: Metadata = {
-  title: "Ayurveda Blog — Joint Pain, Wellness & Herbal Guides | The Poona Ayurveda",
+  title: "Ayurveda Blog: Joint Pain, Wellness & Herbal Guides | The Poona Ayurveda",
   description:
-    "Honest, ingredient-led Ayurvedic guides on joint & knee pain relief, herbal oils, and everyday wellness — from The Poona Ayurveda.",
+    "Honest, ingredient-led Ayurvedic guides on joint & knee pain relief, herbal oils, and everyday wellness from The Poona Ayurveda.",
   alternates: { canonical: "/blog" },
   openGraph: {
     title: "Ayurveda Blog | The Poona Ayurveda",
@@ -58,7 +58,7 @@ export default function BlogIndexPage() {
             The Poona Ayurveda Blog
           </h1>
           <p className="mt-3 max-w-2xl text-base text-gray-600 md:text-lg">
-            Honest, ingredient-led Ayurvedic guides — joint &amp; knee pain
+            Honest, ingredient-led Ayurvedic guides on joint &amp; knee pain
             relief, herbal oils, and everyday wellness. No hype, no cure-all
             claims, just what the tradition actually supports.
           </p>

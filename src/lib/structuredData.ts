@@ -25,7 +25,7 @@ export const organizationSchema = {
   url: SITE_URL,
   logo: LOGO_URL,
   description:
-    "Authentic Ayurvedic wellness products — herbal oils, tablets, and choornam crafted on traditional formulations.",
+    "Authentic Ayurvedic wellness products: herbal oils, tablets, and choornam crafted on traditional formulations.",
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+91-9730005222",

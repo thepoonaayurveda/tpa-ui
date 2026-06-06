@@ -10,16 +10,16 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { organizationSchema, websiteSchema } from "@/lib/structuredData";
 
 export const metadata: Metadata = {
-  title: "The Poona Ayurveda – Authentic Ayurvedic Oils, Tablets & Wellness",
+  title: "The Poona Ayurveda: Authentic Ayurvedic Oils, Tablets & Wellness",
   description:
-    "Shop authentic Ayurvedic products from The Poona Ayurveda — herbal joint-pain oils, tablets, and choornam crafted on traditional formulations. Made in India, COD available.",
+    "Shop authentic Ayurvedic products from The Poona Ayurveda: herbal joint-pain oils, tablets, and choornam crafted on traditional formulations. Made in India, COD available.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "The Poona Ayurveda – Authentic Ayurvedic Oils, Tablets & Wellness",
+    title: "The Poona Ayurveda: Authentic Ayurvedic Oils, Tablets & Wellness",
     description:
-      "Authentic Ayurvedic products crafted on traditional formulations — herbal oils, tablets, and choornam. Made in India.",
+      "Authentic Ayurvedic products crafted on traditional formulations: herbal oils, tablets, and choornam. Made in India.",
     url: "/",
     siteName: "The Poona Ayurveda",
     locale: "en_IN",

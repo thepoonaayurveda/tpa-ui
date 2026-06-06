@@ -26,7 +26,7 @@ type ProductSeoOverride = {
 
 const overrides: Record<string, ProductSeoOverride> = {
   "flexio-oil": {
-    title: "Flexio Oil – Ayurvedic Joint Pain Oil with Nirgundi",
+    title: "Flexio Oil: Ayurvedic Joint Pain Oil with Nirgundi",
     description:
       "Flexio Oil is an Ayurvedic massage oil for joint pain, stiffness & muscle spasms. Made with Mahavishagarbha & Panchaguna Tailam. 100ml, for external use. Made in India.",
     tagline: "Ayurvedic Massage Oil for Joint Pain & Stiffness",
@@ -55,12 +55,12 @@ export function getProductSeo(product: {
 
   const title = override?.title
     ? `${override.title} | ${BRAND}`
-    : `${product.name} – Authentic Ayurvedic Product | ${BRAND}`;
+    : `${product.name}: Authentic Ayurvedic Product | ${BRAND}`;
 
   const description =
     override?.description ||
     wooDescription ||
-    `Buy ${product.name} from ${BRAND} — authentic Ayurvedic formulation, crafted on traditional methods. Made in India, COD available.`;
+    `Buy ${product.name} from ${BRAND}: authentic Ayurvedic formulation, crafted on traditional methods. Made in India, COD available.`;
 
   return { title, description };
 }

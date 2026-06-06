@@ -9,7 +9,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "The Poona Ayurveda",
     short_name: "Poona Ayurveda",
     description:
-      "Authentic Ayurvedic wellness products — herbal oils, tablets, and choornam.",
+      "Authentic Ayurvedic wellness products: herbal oils, tablets, and choornam.",
     start_url: "/",
     display: "standalone",
     background_color: "#ffffff",

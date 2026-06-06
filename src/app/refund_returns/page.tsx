@@ -28,10 +28,10 @@ export default function RefundReturnsPage() {
               </p>
 
               <ul className="list-disc pl-6 space-y-2 mb-6">
-                <li>Your order gets our immediate attention – we start preparing it with love the moment you place it</li>
+                <li>Your order gets our immediate attention. We start preparing it with love the moment you place it</li>
                 <li>We carefully pack and ship your products within 24 hours</li>
                 <li>Our trusted delivery partners work hard to bring your package to you within 5-7 working days</li>
-                <li>While we always aim to surprise you with early delivery, sometimes life happens and there might be small delays – we appreciate your patience!</li>
+                <li>While we always aim to surprise you with early delivery, sometimes life happens and there might be small delays, and we appreciate your patience!</li>
               </ul>
             </section>
 
@@ -39,7 +39,7 @@ export default function RefundReturnsPage() {
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">When Things Don't Go as Planned</h2>
               
               <p className="mb-4">
-                We're human, and sometimes mistakes happen. Whether it's a packaging mix-up, a bump during transit, or a rare inventory hiccup, we want you to know that these situations affect less than 2% of our orders. When they do occur, we're here to make things right – that's our promise to you.
+                We're human, and sometimes mistakes happen. Whether it's a packaging mix-up, a bump during transit, or a rare inventory hiccup, we want you to know that these situations affect less than 2% of our orders. When they do occur, we're here to make things right. That's our promise to you.
               </p>
 
               <p className="mb-6">
@@ -67,7 +67,7 @@ export default function RefundReturnsPage() {
                   <ul className="list-disc pl-6 space-y-1">
                     <li>Take some photos of the damage before you dispose of anything</li>
                     <li>Share that unboxing video if you have one</li>
-                    <li>Contact us within 2 days – we'll sort this out quickly</li>
+                    <li>Contact us within 2 days and we'll sort this out quickly</li>
                   </ul>
                 </div>
 
@@ -92,7 +92,7 @@ export default function RefundReturnsPage() {
               </p>
               
               <p className="mb-4">
-                If you accidentally ordered the wrong item (we've all been there!), we're happy to help with an exchange. We do need to charge ₹200 to cover the pickup and redelivery costs – this just covers what our logistics partners charge us, nothing more.
+                If you accidentally ordered the wrong item (we've all been there!), we're happy to help with an exchange. We do need to charge ₹200 to cover the pickup and redelivery costs. This just covers what our logistics partners charge us, nothing more.
               </p>
 
               <p className="mb-3">
@@ -131,7 +131,7 @@ export default function RefundReturnsPage() {
               <ul className="list-disc pl-6 space-y-2 mb-6">
                 <li>Reach out within 24 hours of ordering, or before we create your shipping label</li>
                 <li>Once our delivery partner picks up your package, we can't stop the journey (they're quite efficient!)</li>
-                <li>Heads up: Prepaid orders zip through our system super quickly – they're often processed instantly</li>
+                <li>Heads up: Prepaid orders zip through our system super quickly, so they're often processed instantly</li>
               </ul>
             </section>
 
@@ -143,17 +143,17 @@ export default function RefundReturnsPage() {
 
               <div className="space-y-4 mb-6">
                 <p>
-                  <strong>If delivery goes wrong on our end:</strong> We'll prioritize getting a replacement to you ASAP. If you'd rather not wait, we'll provide a coupon code for the full amount – think of it as a rain check for your wellness journey!
+                  <strong>If delivery goes wrong on our end:</strong> We'll prioritize getting a replacement to you ASAP. If you'd rather not wait, we'll provide a coupon code for the full amount. Think of it as a rain check for your wellness journey!
                 </p>
 
                 <p>
-                  <strong>If you change your mind after shipping:</strong> We understand plans change. If your order is already on its way and you no longer want it, we'll process your refund minus ₹200 for shipping costs. We hope you understand – once the wheels are in motion, there are real costs involved.
+                  <strong>If you change your mind after shipping:</strong> We understand plans change. If your order is already on its way and you no longer want it, we'll process your refund minus ₹200 for shipping costs. We hope you understand: once the wheels are in motion, there are real costs involved.
                 </p>
               </div>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold text-gray-900 mb-4">The Refund Process – Simple & Transparent</h2>
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">The Refund Process: Simple &amp; Transparent</h2>
               
               <h3 className="text-xl font-semibold text-gray-900 mb-3">For card and online payments:</h3>
               
@@ -176,7 +176,7 @@ export default function RefundReturnsPage() {
               </p>
 
               <p className="mb-4">
-                Remember: We're here because we care about your wellness journey. Every policy, every process is designed with your satisfaction in mind. If you ever have questions or concerns, please don't hesitate to reach out – we're always happy to help!
+                Remember: We're here because we care about your wellness journey. Every policy, every process is designed with your satisfaction in mind. If you ever have questions or concerns, please don't hesitate to reach out. We're always happy to help!
               </p>
 
               <p className="mb-6 text-right">
