@@ -7,12 +7,12 @@ Legend: 🟢 quick win · 🟡 medium · 🔴 larger effort · `[ ]` todo · `[x
 
 ## P0 — Foundation (do first, unblocks everything)
 
-- [ ] 🟡 Build a reusable `<JsonLd>` component (renders `<script type="application/ld+json">`).
-- [ ] 🟢 Add `Organization` + `WebSite` (with `SearchAction`) JSON-LD to homepage `/`.
-- [ ] 🟢 Add a `metadata` export to homepage `src/app/page.tsx` (currently inherits generic root). Keyword-led title + description + OG.
-- [ ] 🟢 Change `<html lang="en">` → `lang="en-IN"` in `src/app/layout.tsx`.
-- [ ] 🟢 Add `alternates.canonical` to product `generateMetadata` (and other pages) to kill `?category=` duplicates.
-- [ ] 🟡 Connect/verify **Google Search Console** + submit `sitemap.xml`. (Needed to measure everything below.)
+- [x] 🟡 Build a reusable `<JsonLd>` component (renders `<script type="application/ld+json">`). → `src/components/seo/JsonLd.tsx`
+- [x] 🟢 Add `Organization` + `WebSite` (with `SearchAction`) JSON-LD to homepage `/`. → schema in `src/lib/structuredData.ts`, rendered in `page.tsx`. (Also added `?search=` filtering to `/products` so the SearchAction target actually works.)
+- [x] 🟢 Add a `metadata` export to homepage `src/app/page.tsx` (currently inherits generic root). Keyword-led title + description + OG.
+- [x] 🟢 Change `<html lang="en">` → `lang="en-IN"` in `src/app/layout.tsx`.
+- [x] 🟢 Add `alternates.canonical` to product `generateMetadata` (and other pages) to kill `?category=` duplicates. → added to `/products/[slug]` and `/products` (also fixed OG urls to use `SITE_URL` not raw env var).
+- [ ] 🟡 Connect/verify **Google Search Console** + submit `sitemap.xml`. (Needed to measure everything below.) ⚠️ MANUAL — Poonam to do in GSC dashboard; sitemap already live at `/sitemap.xml`.
 
 ## P1 — Joint-oil commercial win (Flexio Oil — highest ROI)
 

@@ -3,16 +3,22 @@ import Link from "next/link";
 import { getProducts, getCategories } from "@/lib/woocommerce";
 import { ProductCard } from "@/components/product/ProductCard";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
+import { SITE_URL } from "@/lib/siteUrl";
 
 export const metadata: Metadata = {
   title: "All Products | The Poona Ayurveda",
   description: "Discover our complete range of authentic Ayurvedic products for holistic wellness. From herbal oils to tablets and choornam, find natural solutions for your health needs.",
   keywords: "ayurvedic products, herbal medicines, natural wellness, ayurvedic oils, tablets, choornam, holistic health",
+  alternates: {
+    // Canonical to the clean /products URL so ?category= / ?search=
+    // variants don't compete as duplicates.
+    canonical: "/products",
+  },
   openGraph: {
     title: "All Products | The Poona Ayurveda",
     description: "Discover our complete range of authentic Ayurvedic products for holistic wellness.",
     type: "website",
-    url: `${process.env.NEXT_PUBLIC_SITE_URL}/products`,
+    url: `${SITE_URL}/products`,
     siteName: "The Poona Ayurveda",
   },
   twitter: {
@@ -23,12 +29,13 @@ export const metadata: Metadata = {
 };
 
 interface ProductsPageProps {
-  searchParams: { category?: string };
+  searchParams: { category?: string; search?: string };
 }
 
 export default async function ProductsPage({ searchParams }: ProductsPageProps) {
   const selectedCategory = searchParams.category;
-  
+  const searchQuery = searchParams.search?.trim().toLowerCase() || "";
+
   // Fetch all products and categories
   const [allProducts, categories] = await Promise.all([
     getProducts({ per_page: 100 }),
@@ -36,11 +43,19 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
   ]);
 
   // Filter products by category if selected
-  const products = selectedCategory 
-    ? allProducts.filter((product: any) => 
+  const categoryFiltered = selectedCategory
+    ? allProducts.filter((product: any) =>
         product.categories?.some((cat: any) => cat.slug === selectedCategory)
       )
     : allProducts;
+
+  // Then narrow by free-text search (name match) if a query is present.
+  // Powers the WebSite SearchAction in JSON-LD.
+  const products = searchQuery
+    ? categoryFiltered.filter((product: any) =>
+        product.name?.toLowerCase().includes(searchQuery)
+      )
+    : categoryFiltered;
   
   // Find selected category info
   const selectedCategoryInfo = selectedCategory 

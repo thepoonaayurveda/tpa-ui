@@ -8,6 +8,7 @@ import { WhyPoonaAyurvedaBest } from "@/components/product/WhyPoonaAyurvedaBest"
 import { ProductFAQs } from "@/components/product/ProductFAQs";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { getManualRelatedProducts } from "@/lib/productRelationships";
+import { SITE_URL } from "@/lib/siteUrl";
 
 // Generate static params for better performance
 export async function generateStaticParams() {
@@ -46,6 +47,11 @@ export async function generateMetadata({
     title: `${product.name} | The Poona Ayurveda`,
     description: cleanDescription,
     keywords: `${product.name}, ayurveda, ayurvedic products, ${productCategories}`,
+    alternates: {
+      // Canonical to the clean slug URL so ?category= / tracking params
+      // don't fragment ranking signals across duplicate URLs.
+      canonical: `/products/${params.slug}`,
+    },
     openGraph: {
       title: product.name,
       description: cleanDescription,
@@ -55,7 +61,7 @@ export async function generateMetadata({
           alt: img.alt || product.name,
         })) || [],
       type: "website",
-      url: `${process.env.NEXT_PUBLIC_SITE_URL}/products/${params.slug}`,
+      url: `${SITE_URL}/products/${params.slug}`,
       siteName: "The Poona Ayurveda",
     },
     twitter: {
