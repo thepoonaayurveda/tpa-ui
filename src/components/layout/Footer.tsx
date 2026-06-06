@@ -27,8 +27,8 @@ export function Footer() {
           <div className="grid grid-cols-1 lg:grid-cols-3 lg:gap-16">
 
             {/* Our Company */}
-            <div>
-              <h4 className="text-xl font-semibold mb-4 text-white">Our Company</h4>
+            <nav aria-label="Our Company">
+              <p className="text-xl font-semibold mb-4 text-white">Our Company</p>
               <ul className="space-y-3 text-gray-300">
                 <li>
                   <Link
@@ -47,11 +47,11 @@ export function Footer() {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </nav>
 
             {/* Shop */}
-            <div>
-              <h4 className="text-xl font-semibold mb-4 text-white">Shop</h4>
+            <nav aria-label="Shop">
+              <p className="text-xl font-semibold mb-4 text-white">Shop</p>
               <ul className="space-y-3 text-gray-300">
                 <li>
                   <Link
@@ -86,11 +86,11 @@ export function Footer() {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </nav>
 
             {/* Customer Care */}
-            <div>
-              <h4 className="text-xl font-semibold mb-4 text-white">Customer Care</h4>
+            <nav aria-label="Customer Care">
+              <p className="text-xl font-semibold mb-4 text-white">Customer Care</p>
               <ul className="space-y-3 text-gray-300">
                 <li>
                   <Link
@@ -117,7 +117,7 @@ export function Footer() {
                   </Link>
                 </li>
               </ul>
-            </div>
+            </nav>
           </div>
         </div>
       </div>
