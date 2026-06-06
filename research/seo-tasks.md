@@ -30,7 +30,7 @@ _Full briefs (titles + supporting keywords + volumes) in strategy doc §3b._
 
 - [ ] 🟢 **Per-article SERP teardown** (do as step 1 of each brief, NOT upfront): open the top 3 ranking URLs for the article's primary keyword and note depth, structure, FAQ/schema use, ingredient framing, and claim language. Free, no Ahrefs credits. Skip the heavy stuff — no full competitor domain/backlink analysis until we actually rank (revisit at P3).
 
-- [ ] 🔴 **C1** — "Best Ayurvedic Oil for Joint Pain in India" (`best ayurvedic oil for joint pain` 150 + `best joint pain relief oil in india` 200). Commercial converter. → Flexio.
+- [x] 🔴 **C1** — "Best Ayurvedic Oil for Joint Pain in India" (`best ayurvedic oil for joint pain` 150 + `best joint pain relief oil in india` 200). Commercial converter. → Flexio. → `src/content/blog/best-ayurvedic-oil-for-joint-pain.mdx`, live at `/blog/best-ayurvedic-oil-for-joint-pain`. SERP teardown: Jiva/Apollo/Zeelab all Nirgundi-led, none emit schema, no criteria table — we win on auto-emitted BlogPosting+Breadcrumb+FAQPage + an ingredient/criteria table. Criteria-framed buyer's guide (no competitor-brand ranking), 8 FAQs, compliance-clean.
 - [ ] 🔴 **C2** — "Best Ayurvedic Oil for Knee Joint Pain" (`best ayurvedic oil for knee joint pain` 300). Highest-volume commercial term. → Flexio.
 - [ ] 🔴 **C3** — "Nirgundi Oil: Benefits for Joint Pain" (`nirgundi oil for joint pain` 200; exact-match to Flexio's hero ingredient). → Flexio.
 - [ ] 🟡 **C4** — "How to Use Massage Oil for Joint Pain" (`joint pain massage oil` 40 + how-to long tail ~580/mo combined). → Flexio.
