@@ -22,8 +22,8 @@ Legend: 🟢 quick win · 🟡 medium · 🔴 larger effort · `[ ]` todo · `[x
 - [x] 🟡 Make product titles keyword-led in `generateMetadata`. → per-product override map `src/lib/productSeo.ts`. Flexio title verified: "Flexio Oil – Ayurvedic Joint Pain Oil with Nirgundi | The Poona Ayurveda". Add more products to the map as keywords are validated.
 - [x] 🟡 Add a templated meta-description fallback per product (current fallback is blank when WooCommerce `short_description` is empty). → `getProductSeo`: override → Woo copy → generic template.
 - [x] 🟢 Ensure product page H1 contains the primary keyword (not just brand name); verify one H1 per page. → kept H1 clean/branded (trust-at-first-glance); added a keyword-rich subheading instead (`getProductTagline`). One H1 confirmed.
-- [ ] 🔴 Build `/blog` route + content setup (MDX or WooCommerce posts) — blocker for all content tasks.
-- [ ] 🟢 Add `Article`/`BlogPosting` + `BreadcrumbList` JSON-LD to blog posts (build once, reuse).
+- [x] 🔴 Build `/blog` route + content setup (MDX or WooCommerce posts) — blocker for all content tasks. → file-based **MDX** in `src/content/blog/*.mdx` (versioned, statically rendered, full heading/table/FAQ control for rich results + LLM citations). `src/lib/blog.ts` parses frontmatter → typed `BlogPost`. Routes: `/blog` index + `/blog/[slug]` (SSG via `generateStaticParams`). Shared MDX components + `<ProductCTA>` (defaults to Flexio) in `src/components/blog/`. Nav link added; empty-state handled (no posts yet). Build verified with a temp post, then removed.
+- [x] 🟢 Add `Article`/`BlogPosting` + `BreadcrumbList` JSON-LD to blog posts (build once, reuse). → `buildBlogPostingSchema` + `buildBlogSchema` in `structuredData.ts` (reuse Organization node). Post page emits BlogPosting + BreadcrumbList (+ `FAQPage` via existing `buildFaqSchema` when frontmatter has `faqs`); index emits `Blog` + BreadcrumbList. `/blog` + posts wired into `sitemap.ts`.
 
 ### Content — joint-pain cluster → Flexio Oil (KD≈0, commercial; write in this order)
 _Full briefs (titles + supporting keywords + volumes) in strategy doc §3b._

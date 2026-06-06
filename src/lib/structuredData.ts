@@ -140,6 +140,61 @@ export function buildFaqSchema(faqs: Faq[]) {
   };
 }
 
+/** Minimal post shape needed for BlogPosting schema. */
+type BlogPostingInput = {
+  slug: string;
+  title: string;
+  description: string;
+  date: string;
+  updated?: string;
+  author: string;
+  image?: string;
+};
+
+/**
+ * BlogPosting schema for a single blog post.
+ * `mainEntityOfPage` ties the article to its canonical URL; `publisher`
+ * references the shared Organization node so the brand stays consistent.
+ */
+export function buildBlogPostingSchema(post: BlogPostingInput) {
+  const url = `${SITE_URL}/blog/${post.slug}`;
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${url}#article`,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    headline: post.title,
+    description: post.description,
+    ...(post.image && { image: post.image }),
+    datePublished: post.date,
+    dateModified: post.updated || post.date,
+    author: { "@type": "Organization", name: post.author, "@id": ORGANIZATION_ID },
+    publisher: { "@id": ORGANIZATION_ID },
+  } as const;
+}
+
+/** Blog index schema, listing the posts as `blogPost` items. */
+export function buildBlogSchema(posts: BlogPostingInput[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": `${SITE_URL}/blog#blog`,
+    name: `${BRAND_NAME} Blog`,
+    url: `${SITE_URL}/blog`,
+    publisher: { "@id": ORGANIZATION_ID },
+    blogPost: posts.map((post) => ({
+      "@type": "BlogPosting",
+      headline: post.title,
+      description: post.description,
+      url: `${SITE_URL}/blog/${post.slug}`,
+      datePublished: post.date,
+      dateModified: post.updated || post.date,
+      ...(post.image && { image: post.image }),
+    })),
+  };
+}
+
 /**
  * BreadcrumbList schema. Mirrors the visual <Breadcrumb> trail.
  * Skips the trailing current item's URL (no href) per schema norms —

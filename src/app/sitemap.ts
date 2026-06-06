@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getProducts } from "@/lib/woocommerce";
+import { getAllPosts } from "@/lib/blog";
 import { SITE_URL } from "@/lib/siteUrl";
 
 export const revalidate = 3600;
@@ -10,6 +11,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticRoutes: MetadataRoute.Sitemap = [
     { url: `${SITE_URL}/`, lastModified: now, changeFrequency: "daily", priority: 1.0 },
     { url: `${SITE_URL}/products`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
+    { url: `${SITE_URL}/blog`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
     { url: `${SITE_URL}/about`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/contact`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${SITE_URL}/privacy-policy`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
@@ -30,5 +32,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     console.error("sitemap: failed to fetch products", error);
   }
 
-  return [...staticRoutes, ...productRoutes];
+  const blogRoutes: MetadataRoute.Sitemap = getAllPosts().map((post) => ({
+    url: `${SITE_URL}/blog/${post.slug}`,
+    lastModified: post.updated ? new Date(post.updated) : now,
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
+  return [...staticRoutes, ...productRoutes, ...blogRoutes];
 }
