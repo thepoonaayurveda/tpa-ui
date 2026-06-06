@@ -23,12 +23,13 @@ const MDX_EXT = ".mdx";
 export type BlogFaq = { question: string; answer: string };
 
 /** A heading in the article body, for the table of contents. */
-export type TocItem = { id: string; text: string; level: 2 | 3 };
+export type TocItem = { id: string; text: string; level: 2 };
 
 /**
- * Pull the H2/H3 headings out of raw MDX for the table of contents.
- * Skips fenced code blocks. IDs are generated with the same `Slugger`
- * the rendered headings use, so the anchors always line up.
+ * Pull the top-level (H2) headings out of raw MDX for the table of contents.
+ * We list only H2s to keep the TOC scannable; H3s still get ids (for direct
+ * linking) but aren't listed. Skips fenced code blocks. IDs use the same
+ * `Slugger` (with H3s counted) as the rendered headings, so anchors line up.
  */
 export function extractToc(content: string): TocItem[] {
   const slugger = new Slugger();
@@ -45,9 +46,13 @@ export function extractToc(content: string): TocItem[] {
     const match = line.match(/^(#{2,3})\s+(.+)$/);
     if (!match) continue;
 
-    const level = match[1].length as 2 | 3;
-    const text = stripMarkdown(match[2]);
-    items.push({ id: slugger.slug(text), text, level });
+    const level = match[1].length;
+    // Slug every heading so the slugger's dedupe counter stays in lockstep
+    // with the rendered headings; only surface H2s in the TOC.
+    const id = slugger.slug(stripMarkdown(match[2]));
+    if (level === 2) {
+      items.push({ id, text: stripMarkdown(match[2]), level: 2 });
+    }
   }
   return items;
 }

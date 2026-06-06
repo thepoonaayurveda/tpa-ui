@@ -44,13 +44,7 @@ export function TableOfContents({
       <ul className="m-0 list-none space-y-0.5 p-0">
         {items.map((item) => {
           const isActive = activeId === item.id;
-          const indent = flush
-            ? item.level === 3
-              ? "pl-3"
-              : "pl-0"
-            : item.level === 3
-            ? "pl-[22px]"
-            : "pl-[11px]";
+          const indent = flush ? "pl-0" : "pl-[11px]";
           const border = flush
             ? "border-l-0"
             : isActive
