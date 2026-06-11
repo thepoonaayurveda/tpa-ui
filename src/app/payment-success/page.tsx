@@ -18,6 +18,13 @@ function PaymentSuccessContent() {
   
   const orderId = searchParams.get('orderId');
 
+  // PhonePe often redirects the customer back before the payment has settled,
+  // so getOrderStatus returns PENDING on the first check even for a successful
+  // payment. We re-check a few times before giving up instead of freezing on
+  // the spinner. The server callback is the backstop if all retries are PENDING.
+  const MAX_VERIFY_ATTEMPTS = 5;
+  const VERIFY_RETRY_DELAY_MS = 3000;
+
   useEffect(() => {
     if (!orderId) {
       setError("Invalid payment session - no order ID found");
@@ -29,7 +36,7 @@ function PaymentSuccessContent() {
     verifyPaymentWithPhonePe();
   }, [orderId]);
 
-  const verifyPaymentWithPhonePe = async () => {
+  const verifyPaymentWithPhonePe = async (attempt = 1) => {
     try {
       // Since user reached the success page, we assume positive intent
       // but we need to verify with PhonePe using the proper API
@@ -95,9 +102,15 @@ function PaymentSuccessContent() {
             break;
             
           case 'PENDING':
-            console.log("Payment still PENDING - keeping verification state");
+            if (attempt < MAX_VERIFY_ATTEMPTS) {
+              console.log(`Payment PENDING - retry ${attempt + 1}/${MAX_VERIFY_ATTEMPTS} in ${VERIFY_RETRY_DELAY_MS}ms`);
+              setPaymentStatus('verifying');
+              setTimeout(() => verifyPaymentWithPhonePe(attempt + 1), VERIFY_RETRY_DELAY_MS);
+              return; // keep spinner; don't fall through to setVerifying(false)
+            }
+            console.log("Payment still PENDING after all retries");
             setPaymentStatus('verifying');
-            setError("Payment is still being processed. Please wait or check back later.");
+            setError("Your payment is still being confirmed. If money was deducted, your order is safe and we will confirm it shortly. You can also check your email or contact support with the order ID below.");
             break;
             
           default:

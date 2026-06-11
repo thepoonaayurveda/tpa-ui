@@ -1,26 +1,26 @@
 import { NextRequest, NextResponse } from "next/server";
 import { StandardCheckoutClient, Env } from "pg-sdk-node";
+import { updateOrder } from "@/lib/woocommerce";
 
 async function updateOrderStatus(orderId: string, status: 'processing' | 'failed', transactionId: string, notes?: string) {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_WC_URL}/api/orders/${orderId}/update-status`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        status: status,
-        transaction_id: transactionId,
-        payment_method: 'phonepe',
-        notes: notes,
-      }),
-    });
+    const updateData: any = {
+      status: status,
+      transaction_id: transactionId,
+      payment_method: 'phonepe',
+      customer_note: notes,
+      set_paid: status === 'processing',
+      meta_data: [
+        { key: '_payment_method_title', value: 'PhonePe' },
+        { key: '_transaction_id', value: transactionId },
+      ],
+    };
 
-    if (!response.ok) {
-      throw new Error(`Failed to update order status: ${response.status}`);
-    }
-
-    return await response.json();
+    // Call WooCommerce directly. The previous version fetched
+    // NEXT_PUBLIC_WC_URL/api/orders/... which is a Next.js route that only
+    // exists on the storefront host, not on the WooCommerce host, so it 404'd.
+    const updatedOrder = await updateOrder(parseInt(orderId), updateData);
+    return { success: true, order: updatedOrder };
   } catch (error) {
     console.error(`Error updating order ${orderId} status:`, error);
     throw error;
