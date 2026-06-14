@@ -50,7 +50,7 @@ _(Joint-oil long-tail articles C4–C7 above can also slip here if P1 fills up.)
 ### Content — allergy cluster → AllerGenie (informational, higher KD, ⚠️ compliance-sensitive)
 _Frame all as *manage/relieve/support*, NEVER *cure*. Briefs in strategy doc §3b._
 
-- [ ] 🟡 **C8** — "Ayurvedic Approach to Dust Allergy" (`how to cure dust allergy` 200 + permanently 700; KD 37).
+- [x] 🟡 **C8** — "Ayurvedic Approach to Dust Allergy" (`how to cure dust allergy` 200 + permanently 700; KD 37). → AllerGenie. → `src/content/blog/natural-dust-allergy-solution.mdx`, live at `/blog/natural-dust-allergy-solution`. SERP teardown: Jiva/Netmeds/Bajaj/IAFA all thin "home remedies" listicles, several overclaim ("treatment"/"permanent cure"), none emit FAQ/BlogPosting schema. We win on honest Kapha/Pratishyaya-Peenas framing, herb table, jala neti as a named routine, an explicit "can it be cured? no" honest section, AllerGenie as *support* (never cure), + auto-emitted schema. 8 FAQs, compliance-clean. Also fixed sidebar `BuyCard` to resolve product from post frontmatter via new `src/lib/blogProducts.ts` (was hardcoded to Flexio).
 - [ ] 🟡 **C9** — "Ayurvedic & Natural Remedies for Skin Allergy" (`how to cure skin allergy naturally` 250; KD 23).
 - [ ] 🟡 **C10** — "Managing Seasonal Sneezing & Cold Allergy" (`how to cure sneezing allergy` 30 + cold 150; KD 12–30).
 - [ ] 🟢 **C11** — "Can Allergies Be Cured? An Honest Ayurvedic View" (`can homeopathy cure allergy permanently` 90; KD 0; trust piece).

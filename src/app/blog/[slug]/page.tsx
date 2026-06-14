@@ -17,6 +17,7 @@ import {
   getPostBySlug,
   getRelatedPosts,
 } from "@/lib/blog";
+import { getBlogProduct } from "@/lib/blogProducts";
 import { Slugger } from "@/lib/slugify";
 import {
   buildBlogPostingSchema,
@@ -86,7 +87,17 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   const relatedPosts = getRelatedPosts(post.slug);
   // One slugger per render: heading ids match the TOC anchors exactly.
   const mdxComponents = makeMdxComponents(new Slugger());
-  const buyCard = <BuyCard />;
+  const product = getBlogProduct(post.product);
+  const buyCard = (
+    <BuyCard
+      slug={product.slug}
+      name={product.name}
+      tagline={product.tagline}
+      price={product.price}
+      pack={product.pack}
+      image={product.image}
+    />
+  );
 
   return (
     <div className="min-h-screen bg-white">
