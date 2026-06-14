@@ -4,7 +4,10 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CartProvider } from "@/components/providers/CartProvider";
 import { Roboto } from 'next/font/google';
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { SITE_URL } from "@/lib/siteUrl";
+
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -51,6 +54,7 @@ export default function RootLayout({
           <main className="min-h-screen">{children}</main>
           <Footer />
         </CartProvider>
+        {GA_ID && <GoogleAnalytics gaId={GA_ID} />}
       </body>
     </html>
   );
