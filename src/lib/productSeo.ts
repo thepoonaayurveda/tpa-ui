@@ -60,7 +60,7 @@ export function getProductSeo(product: {
   const description =
     override?.description ||
     wooDescription ||
-    `Buy ${product.name} from ${BRAND}: authentic Ayurvedic formulation, crafted on traditional methods. Made in India, COD available.`;
+    `Buy ${product.name} from ${BRAND}: authentic Ayurvedic formulation, crafted on traditional methods. Made in India.`;
 
   return { title, description };
 }

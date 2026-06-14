@@ -373,7 +373,7 @@ export function CompactProductInfo({ product }: CompactProductInfoProps) {
             </div>
             <div className="flex items-center">
               <CheckIcon className="h-3 w-3 mr-2 text-green-600" />
-              Cash on delivery available
+              100% secure prepaid checkout
             </div>
           </div>
         )}

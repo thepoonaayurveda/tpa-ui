@@ -12,7 +12,7 @@ import { organizationSchema, websiteSchema } from "@/lib/structuredData";
 export const metadata: Metadata = {
   title: "The Poona Ayurveda: Authentic Ayurvedic Oils, Tablets & Wellness",
   description:
-    "Shop authentic Ayurvedic products from The Poona Ayurveda: herbal joint-pain oils, tablets, and choornam crafted on traditional formulations. Made in India, COD available.",
+    "Shop authentic Ayurvedic products from The Poona Ayurveda: herbal joint-pain oils, tablets, and choornam crafted on traditional formulations. Made in India.",
   alternates: {
     canonical: "/",
   },

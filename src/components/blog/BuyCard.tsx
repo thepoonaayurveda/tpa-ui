@@ -6,7 +6,7 @@ import { withBlogUtm } from "@/lib/utm";
  * Persistent product buy card shown in the blog sidebar (sticky on desktop)
  * and inline once on mobile. Trust-led, not pushy: image, name, price, a
  * clear Buy action to the product page, and the India practicalities buyers
- * look for (COD, made in India). Defaults to Flexio Oil, the joint-cluster
+ * look for (secure checkout, made in India). Defaults to Flexio Oil, the joint-cluster
  * target; pass props to point a post at a different product.
  */
 export function BuyCard({
@@ -64,7 +64,7 @@ export function BuyCard({
         </Link>
 
         <p className="mt-2.5 text-center text-[11px] leading-snug text-gray-400">
-          Cash on delivery · Ships across India 🇮🇳
+          Secure prepaid checkout · Ships across India 🇮🇳
         </p>
       </div>
     </div>

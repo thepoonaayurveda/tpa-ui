@@ -79,7 +79,6 @@ export default function TermsConditionsPage() {
                 <li>Digital wallets</li>
                 <li>Net banking</li>
                 <li>UPI payments</li>
-                <li>Cash on delivery (where available)</li>
               </ul>
               <p className="mt-4">
                 <strong>Order Processing:</strong> Orders are processed upon receipt of payment confirmation. We reserve the right to cancel orders in case of product unavailability or pricing errors.
